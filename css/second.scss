@@ -1,0 +1,110 @@
+
+$blue: rgb(97, 196, 217);
+$white: rgb(255, 255, 255);
+$green: rgb(11, 77, 60);
+$black: rgb(14, 14, 14);
+$grey: rgb(141, 141, 141);
+$light: rgb(248, 250, 249);
+
+
+@mixin size {
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+.second {
+    position: relative;
+    @include size;
+    background: url('../img/second/background.png') left center no-repeat;
+
+    &:after {
+        content: url(../img/second/snack.png);
+        position: absolute;
+        bottom: -130px;
+    }
+}
+
+
+.second__container {
+    padding-top: 115px;
+    position: relative;
+}
+
+.reason {
+    width: 406px;
+    margin: 0px auto 57px;
+    ;
+
+    &__heading {
+        font-size: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $black;
+        margin: 0px 0px 23px;
+    }
+
+    &__explanation {
+        font-size: 18px;
+        color: $grey;
+        margin: 0px;
+
+    }
+}
+
+// description 
+.description {
+    margin: 0 auto;
+
+    &__image {
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        background: $light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative
+    }
+
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+    }
+
+    &__item {
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+
+    }
+
+    &__explain-heading {
+        color: $black;
+        font-size: 27px;
+    }
+
+    &__explain-text {
+        color: $grey;
+        font-size: 18px;
+    }
+}
+
+.description__item:after {
+    content: url(../img/second/rounds.png);
+    position: absolute;
+    top: 18%;
+    right: -10%;
+}
+
+.description__item:last-child:after {
+    content: "";
+}

@@ -1,0 +1,89 @@
+.second {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("../img/second/background.png") left center no-repeat;
+}
+
+.second:after {
+  content: url(../img/second/snack.png);
+  position: absolute;
+  bottom: -130px;
+}
+
+.second__container {
+  padding-top: 115px;
+  position: relative;
+}
+
+.reason {
+  width: 406px;
+  margin: 0px auto 57px;
+}
+
+.reason__heading {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0e0e0e;
+  margin: 0px 0px 23px;
+}
+
+.reason__explanation {
+  font-size: 18px;
+  color: #8d8d8d;
+  margin: 0px;
+}
+
+.description {
+  margin: 0 auto;
+}
+
+.description__image {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #f8faf9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.description__list {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.description__item {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.description__explain-heading {
+  color: #0e0e0e;
+  font-size: 27px;
+}
+
+.description__explain-text {
+  color: #8d8d8d;
+  font-size: 18px;
+}
+
+.description__item:after {
+  content: url(../img/second/rounds.png);
+  position: absolute;
+  top: 18%;
+  right: -10%;
+}
+
+.description__item:last-child:after {
+  content: "";
+}

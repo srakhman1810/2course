@@ -1,0 +1,141 @@
+.first {
+  background-color: #61c4d9;
+  background-image: url(../img/first/background.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.first:after {
+  content: url(../img/first/background2.png);
+  position: absolute;
+  bottom: -54px;
+  right: 100px;
+}
+
+.first__container {
+  position: relative;
+  padding-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 53px;
+  font-size: 24px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  color: white;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 634px;
+}
+
+.menu__item {
+  list-style-type: none;
+}
+
+.menu__link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.call__number {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.call__number:before {
+  content: url("../img/first/phone.png");
+  margin-right: 2px;
+}
+
+.content {
+  color: white;
+}
+
+.bars {
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bars__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+
+.bars__heading {
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 0px 0px 22px;
+}
+
+.bars__text {
+  font-size: 21px;
+  margin: 0px 0px 32px;
+}
+
+.bars__button {
+  width: 156px;
+  height: 58px;
+  background: white;
+  border: 1px;
+  border-radius: 50px;
+  font-size: 19px;
+  color: #0b4d3c;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.bars__button:hover {
+  cursor: pointer;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 467px;
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.advantages__item {
+  width: 125px;
+  display: flex;
+}
+
+.advantages__item-one:before {
+  content: url("../img/first/one.png");
+  margin-right: 10px;
+}
+
+.advantages__item-two:before {
+  content: url("../img/first/two.png");
+  margin-right: 10px;
+}
+
+.advantages__item-three:before {
+  content: url("../img/first/three.png");
+  margin-right: 10px;
+}
