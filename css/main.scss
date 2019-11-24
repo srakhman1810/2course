@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap&subset=cyrillic-ext');
+
+$blue: rgb(97, 196, 217);
+$white: rgb(255, 255, 255);
+$green: rgb(11, 77, 60);
+$black: rgb(14, 14, 14);
+$grey: rgb(141, 141, 141);
+$light: rgb(248, 250, 249);
+
+
+@mixin size {
+    height: 100vh;
+    width: 100%;
+}
+
+html body {
+    margin: 0px;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1101px;
+    min-height: 650px;
+}
+
+//  section1
+// header 
+
+.first {
+    background-color: $blue;
+    background-image: url(../img/first/background.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    @include size;
+    position: relative;
+
+    &:after {
+        content: url(../img/first/background2.png);
+        position: absolute;
+        bottom: -54px;
+        right: 100px;
+    }
+
+}
+
+.first__container {
+    position: relative;
+    padding-top: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 53px;
+    font-size: 24px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    color: $white;
+
+}
+
+.menu {
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 634px;
+    }
+
+    &__item {
+        list-style-type: none;
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+}
+
+.call__number {
+    font-size: 24px;
+    text-decoration: none;
+    color: $white;
+    font-style: normal;
+    text-transform: uppercase;
+
+    &:before {
+        content: url('../img/first/phone.png');
+        margin-right: 2px;
+    }
+}
+
+// content 
+// bars
+.content {
+    color: $white;
+}
+
+.bars {
+    margin-bottom: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+    }
+
+
+    &__heading {
+        font-size: 60px;
+        text-transform: uppercase;
+        margin: 0px 0px 22px;
+    }
+
+    &__text {
+        font-size: 21px;
+        margin: 0px 0px 32px;
+        ;
+
+    }
+}
+
+.bars__button {
+    width: 156px;
+    height: 58px;
+    background: $white;
+    border: 1px;
+    border-radius: 50px;
+    font-size: 19px;
+    color: $green;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+// advantages
+.advantages__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 467px;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.advantages__item {
+    width: 125px;
+    display: flex;
+}
+
+@each $advantages in (one, two, three) {
+    .advantages__item-#{$advantages}:before {
+        content: url('../img/first/#{$advantages}.png');
+        margin-right: 10px;
+    }
+}
+
+// section 2
+// reason
+.second {
+    position: relative;
+    @include size;
+    background: url('../img/second/background.png') left center no-repeat;
+
+    &:after {
+        content: url(../img/second/snack.png);
+        position: absolute;
+        bottom: -130px;
+    }
+}
+
+
+.second__container {
+    padding-top: 115px;
+    position: relative;
+}
+
+.reason {
+    width: 406px;
+    margin: 0px auto 57px;
+    ;
+
+    &__heading {
+        font-size: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $black;
+        margin: 0px 0px 23px;
+    }
+
+    &__explanation {
+        font-size: 18px;
+        color: $grey;
+        margin: 0px;
+
+    }
+}
+
+// description 
+.description {
+    margin: 0 auto;
+
+    &__image {
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        background: $light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative
+    }
+
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+    }
+
+    &__item {
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+
+    }
+
+    &__explain-heading {
+        color: $black;
+        font-size: 27px;
+    }
+
+    &__explain-text {
+        color: $grey;
+        font-size: 18px;
+    }
+}
+
+.description__item:after {
+    content: url(../img/second/rounds.png);
+    position: absolute;
+    top: 18%;
+    right: -10%;
+}
+
+.description__item:last-child:after {
+    content: "";
+}
+
+// section 6
+
+.sixth {
+    @include size;
+    position: relative;
+
+    &__container {
+        padding-top: 69px;
+    }
+
+    &:after {
+        content: url(../img/sixth/background.png);
+        position: absolute;
+        bottom: -130px;
+    }
+
+}
+
+.heading-review {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+    color: $black;
+    margin: 0px 0px 44px;
+    position: relative;
+
+
+    &:after {
+        content: url(../img/sixth/strawberry.png);
+        position: absolute;
+        right: 20px;
+        bottom: 0px;
+
+    }
+}
+
+.review {
+    margin: 0 auto 27px;
+    width: 945px;
+    height: 345px;
+    background-color: $light;
+    background-image: url('../img/sixth/background2.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:before {
+        content: url(../img/sixth/ellipse.png);
+        position: absolute;
+        top: -1px;
+    }
+
+    &__block {
+        display: flex;
+        width: 711px;
+        height: 260px;
+        align-items: flex-start;
+
+    }
+
+    &__image {
+        margin-right: 20px;
+    }
+}
+
+
+.review__content {
+    width: 433px;
+    height: 217px;
+
+    &-heading {
+        font-size: 30px;
+        collor: $black;
+    }
+
+    &-text {
+        font-size: 18px;
+        color: $grey;
+    }
+
+    &-author {
+        color: $grey;
+    }
+}
+
+.clients {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        list-style-type: none;
+        margin-right: 11px;
+
+        &:nth-last-child {
+            margin-right: none;
+        }
+    }
+
+    &-image {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        border: 5px solid;
+        border-color: $green;
+
+
+    }
+
+    &:after{
+        content: url(../img/sixth/berries.png);
+        position: relative;
+        left: 20px;
+        bottom: 60px;
+    }
+}
