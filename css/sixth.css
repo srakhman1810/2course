@@ -1,37 +1,29 @@
 .sixth {
   height: 100vh;
   width: 100%;
-  position: relative;
-}
-
-.sixth__container {
-  padding-top: 69px;
-}
-
-.sixth:after {
-  content: url(../img/sixth/background.png);
-  position: absolute;
-  bottom: -130px;
-}
+  position: relative; }
+  .sixth__container {
+    padding-top: 59px; }
+  .sixth:after {
+    content: url(../img/sixth/background.png);
+    position: absolute;
+    bottom: -130px; }
 
 .heading-review {
   text-align: center;
   text-transform: uppercase;
   font-size: 48px;
   color: #0e0e0e;
-  margin: 0px 0px 44px;
-  position: relative;
-}
-
-.heading-review:after {
-  content: url(../img/sixth/strawberry.png);
-  position: absolute;
-  right: 20px;
-  bottom: 0px;
-}
+  margin: 0px 0px 28px;
+  position: relative; }
+  .heading-review:after {
+    content: url(../img/sixth/strawberry.png);
+    position: absolute;
+    right: -66px;
+    bottom: -21px; }
 
 .review {
-  margin: 0 auto 27px;
+  margin: 0 auto 24px;
   width: 945px;
   height: 345px;
   background-color: #f8faf9;
@@ -41,70 +33,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.review:before {
-  content: url(../img/sixth/ellipse.png);
-  position: absolute;
-  top: -1px;
-}
-
-.review__block {
-  display: flex;
-  width: 711px;
-  height: 260px;
-  align-items: flex-start;
-}
-
-.review__image {
-  margin-right: 20px;
-}
+  position: relative; }
+  .review:before {
+    content: url(../img/sixth/ellipse.png);
+    position: absolute;
+    top: -1px; }
+  .review__block {
+    display: flex;
+    width: 864px;
+    height: 245px;
+    align-items: flex-start; }
+  .review__image {
+    margin-right: 20px; }
 
 .review__content {
   width: 433px;
-  height: 217px;
-}
-
-.review__content-heading {
-  font-size: 30px;
-  collor: #0e0e0e;
-}
-
-.review__content-text {
-  font-size: 18px;
-  color: #8d8d8d;
-}
-
-.review__content-author {
-  color: #8d8d8d;
-}
+  height: 217px; }
+  .review__content-heading {
+    font-size: 30px;
+    collor: #0e0e0e; }
+  .review__content-text {
+    font-size: 18px;
+    color: #8d8d8d; }
+  .review__content-author {
+    color: #8d8d8d; }
 
 .clients__list {
   display: flex;
-  justify-content: center;
-}
-
+  justify-content: center; }
 .clients__item {
   list-style-type: none;
-  margin-right: 11px;
-}
-
-.clients__item:nth-last-child {
-  margin-right: none;
-}
-
+  margin-right: 11px; }
+  .clients__item:nth-last-child {
+    margin-right: none; }
 .clients-image {
   width: 65px;
   height: 65px;
   border-radius: 50%;
   border: 5px solid;
-  border-color: #0b4d3c;
-}
-
+  border-color: #0b4d3c; }
 .clients:after {
   content: url(../img/sixth/berries.png);
   position: relative;
-  left: 20px;
-  bottom: 60px;
-}
+  left: -80px;
+  bottom: 67px; }

@@ -5,14 +5,15 @@ $black: rgb(14, 14, 14);
 $grey: rgb(141, 141, 141);
 $light: rgb(248, 250, 249);
 
-
 @mixin size {
     height: 100vh;
     width: 100%;
 }
 
 
+
 .first {
+    margin: 0 auto;
     background-color: $blue;
     background-image: url(../img/first/background.png);
     background-repeat: no-repeat;
@@ -20,18 +21,20 @@ $light: rgb(248, 250, 249);
     @include size;
     position: relative;
 
+
     &:after {
         content: url(../img/first/background2.png);
         position: absolute;
-        bottom: -54px;
-        right: 100px;
+        bottom: -57px;
+        right: 189px;
     }
 
 }
 
 .first__container {
     position: relative;
-    padding-top: 20px;
+    padding-top: 12px;
+   
 }
 
 .header {
@@ -55,7 +58,9 @@ $light: rgb(248, 250, 249);
         display: flex;
         justify-content: space-between;
         text-align: center;
-        width: 634px;
+        width: 630px;
+        margin: 0px;
+        padding-left: 0px;
     }
 
     &__item {
@@ -90,32 +95,44 @@ $light: rgb(248, 250, 249);
 }
 
 .bars {
-    margin-bottom: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    margin-bottom: 66px;
+    margin-top: 33px;
 
 
     &__information {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         width: 400px;
+       
     }
 
 
     &__heading {
-        font-size: 60px;
+        font-size: 59px;
         text-transform: uppercase;
-        margin: 0px 0px 22px;
+        margin: 0px 0px 25px;
+        
     }
 
     &__text {
-        font-size: 21px;
+        font-size: 20px;
         margin: 0px 0px 32px;
         ;
 
     }
+
+    &__image {
+    position: absolute;
+    right: 0px;
+    top: -55px;
+    right: -55px;
+    }
+
 }
 
 .bars__button {
@@ -124,11 +141,11 @@ $light: rgb(248, 250, 249);
     background: $white;
     border: 1px;
     border-radius: 50px;
-    font-size: 19px;
+    font-size: 18px;
     color: $green;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
 
     &:hover {
         cursor: pointer;
@@ -136,12 +153,14 @@ $light: rgb(248, 250, 249);
 
 }
 
+
+
 // advantages
 .advantages__list {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    width: 467px;
+    width: 485px;
     font-size: 16px;
     padding: 0px;
     margin: 0px;

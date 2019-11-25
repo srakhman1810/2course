@@ -5,18 +5,19 @@ $black: rgb(14, 14, 14);
 $grey: rgb(141, 141, 141);
 $light: rgb(248, 250, 249);
 
-
 @mixin size {
     height: 100vh;
     width: 100%;
 }
 
+
 .sixth {
     @include size;
     position: relative;
 
+
     &__container {
-        padding-top: 69px;
+        padding-top: 59px;
     }
 
     &:after {
@@ -32,21 +33,21 @@ $light: rgb(248, 250, 249);
     text-transform: uppercase;
     font-size: 48px;
     color: $black;
-    margin: 0px 0px 44px;
+    margin: 0px 0px 28px;
     position: relative;
 
 
     &:after {
         content: url(../img/sixth/strawberry.png);
         position: absolute;
-        right: 20px;
-        bottom: 0px;
+        right: -66px;
+        bottom: -21px;
 
     }
 }
 
 .review {
-    margin: 0 auto 27px;
+    margin: 0 auto 24px;
     width: 945px;
     height: 345px;
     background-color: $light;
@@ -66,8 +67,8 @@ $light: rgb(248, 250, 249);
 
     &__block {
         display: flex;
-        width: 711px;
-        height: 260px;
+        width: 864px;
+        height: 245px;
         align-items: flex-start;
 
     }
@@ -126,7 +127,7 @@ $light: rgb(248, 250, 249);
     &:after{
         content: url(../img/sixth/berries.png);
         position: relative;
-        left: 20px;
-        bottom: 60px;
+        left: -80px;
+        bottom: 67px;
     }
 }
