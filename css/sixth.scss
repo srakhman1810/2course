@@ -13,48 +13,46 @@ $light: rgb(248, 250, 249);
 
 .sixth {
     @include size;
+    padding-top: 59px;
     position: relative;
-
-
-    &__container {
-        padding-top: 59px;
-    }
 
     &:after {
         content: url(../img/sixth/background.png);
         position: absolute;
-        bottom: -130px;
+        bottom: 0px;
     }
 
 }
 
-.heading-review {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 48px;
-    color: $black;
-    margin: 0px 0px 28px;
-    position: relative;
+.sixth__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 
-    &:after {
-        content: url(../img/sixth/strawberry.png);
-        position: absolute;
-        right: -66px;
-        bottom: -21px;
-
+    &>h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 48px;
+        color: $black;
+        margin: 0px 0px 28px;
+        position: relative;
     }
+
+}
+
+.sixth__container>h2:after {
+    content: url(../img/sixth/strawberry.png);
+    position: absolute;
+    left: 256%;
+    bottom: -38%;
 }
 
 .review {
-    margin: 0 auto 24px;
-    width: 945px;
-    height: 345px;
-    background-color: $light;
-    background-image: url('../img/sixth/background2.png');
-    background-repeat: no-repeat;
-    background-position: right top;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -65,17 +63,34 @@ $light: rgb(248, 250, 249);
         top: -1px;
     }
 
+
+    &__area {
+        padding-left: 0px;
+        margin: 0px auto 24px;
+        width: 940px;
+        height: 345px;
+        background-color: $light;
+        background-image: url('../img/sixth/background2.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        display: flex;
+        align-items: center;
+
+    }
+
     &__block {
         display: flex;
-        width: 864px;
-        height: 245px;
-        align-items: flex-start;
-
+        width: 713px;
+        height: 260px;
+        align-items: center;
+        margin-left: 42px;
+        margin-top: 24px;
     }
 
     &__image {
         margin-right: 20px;
     }
+
 }
 
 
@@ -83,17 +98,19 @@ $light: rgb(248, 250, 249);
     width: 433px;
     height: 217px;
 
-    &-heading {
+    &>h3 {
         font-size: 30px;
-        collor: $black;
+        color: $black;
+        margin: 0px 0px 10px;
     }
 
-    &-text {
+    &>p {
         font-size: 18px;
         color: $grey;
+        margin: 0px 0px 28px;
     }
 
-    &-author {
+    &>div {
         color: $grey;
     }
 }
@@ -101,13 +118,15 @@ $light: rgb(248, 250, 249);
 .clients {
 
     &__list {
+        margin: 0px;
+        padding-left: 0px;
         display: flex;
         justify-content: center;
     }
 
     &__item {
         list-style-type: none;
-        margin-right: 11px;
+        margin-right: 2px;
 
         &:nth-last-child {
             margin-right: none;
@@ -118,16 +137,14 @@ $light: rgb(248, 250, 249);
         width: 65px;
         height: 65px;
         border-radius: 50%;
-        border: 5px solid;
+        border: 4px solid;
         border-color: $green;
-
-
     }
 
-    &:after{
+    &:after {
         content: url(../img/sixth/berries.png);
         position: relative;
-        left: -80px;
-        bottom: 67px;
+        right: 193%;
+        bottom: 47px;
     }
 }

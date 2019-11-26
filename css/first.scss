@@ -8,18 +8,19 @@ $light: rgb(248, 250, 249);
 @mixin size {
     height: 100vh;
     width: 100%;
+
 }
 
 
-
 .first {
-    margin: 0 auto;
     background-color: $blue;
     background-image: url(../img/first/background.png);
     background-repeat: no-repeat;
     background-position: right center;
     @include size;
     position: relative;
+    padding-top: 12px;
+
 
 
     &:after {
@@ -33,14 +34,19 @@ $light: rgb(248, 250, 249);
 
 .first__container {
     position: relative;
-    padding-top: 12px;
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-grow: 1;
+
 }
 
 .logo {
@@ -92,6 +98,7 @@ $light: rgb(248, 250, 249);
 // bars
 .content {
     color: $white;
+    flex-grow: 3;
 }
 
 .bars {
@@ -100,40 +107,38 @@ $light: rgb(248, 250, 249);
     align-items: center;
     position: relative;
     margin-bottom: 66px;
-    margin-top: 33px;
+    margin-top: 85px;
 
-
-    &__information {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 400px;
-       
-    }
-
-
-    &__heading {
-        font-size: 59px;
-        text-transform: uppercase;
-        margin: 0px 0px 25px;
-        
-    }
-
-    &__text {
-        font-size: 20px;
-        margin: 0px 0px 32px;
-        ;
-
-    }
 
     &__image {
-    position: absolute;
-    right: 0px;
-    top: -55px;
-    right: -55px;
+        position: absolute;
+        right: 0px;
+        bottom: -97px;
+        right: -52px;
     }
 
 }
+
+.bars__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 400px;
+
+    &>h1 {
+        font-size: 59px;
+        text-transform: uppercase;
+        margin: 0px 0px 10px;
+        line-height: 1;
+    }
+
+    &>p {
+        font-size: 20px;
+        margin: 0px 0px 32px;
+    }
+
+}
+
 
 .bars__button {
     width: 156px;
@@ -156,19 +161,27 @@ $light: rgb(248, 250, 249);
 
 
 // advantages
-.advantages__list {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 485px;
-    font-size: 16px;
-    padding: 0px;
-    margin: 0px;
-}
 
-.advantages__item {
-    width: 125px;
-    display: flex;
+.advantages {
+    flex-grow: 1;
+
+
+    &__list {
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 485px;
+        font-size: 16px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &__item {
+        width: 125px;
+        display: flex;
+    }
+
 }
 
 @each $advantages in (one, two, three) {

@@ -1,12 +1,12 @@
 .first {
-  margin: 0 auto;
   background-color: #61c4d9;
   background-image: url(../img/first/background.png);
   background-repeat: no-repeat;
   background-position: right center;
   height: 100vh;
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding-top: 12px; }
   .first:after {
     content: url(../img/first/background2.png);
     position: absolute;
@@ -15,12 +15,16 @@
 
 .first__container {
   position: relative;
-  padding-top: 12px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch; }
 
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  flex-grow: 1; }
 
 .logo {
   width: 53px;
@@ -54,7 +58,8 @@
     margin-right: 2px; }
 
 .content {
-  color: white; }
+  color: white;
+  flex-grow: 3; }
 
 .bars {
   display: flex;
@@ -62,24 +67,26 @@
   align-items: center;
   position: relative;
   margin-bottom: 66px;
-  margin-top: 33px; }
-  .bars__information {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 400px; }
-  .bars__heading {
-    font-size: 59px;
-    text-transform: uppercase;
-    margin: 0px 0px 25px; }
-  .bars__text {
-    font-size: 20px;
-    margin: 0px 0px 32px; }
+  margin-top: 85px; }
   .bars__image {
     position: absolute;
     right: 0px;
-    top: -55px;
-    right: -55px; }
+    bottom: -97px;
+    right: -52px; }
+
+.bars__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 400px; }
+  .bars__information > h1 {
+    font-size: 59px;
+    text-transform: uppercase;
+    margin: 0px 0px 10px;
+    line-height: 1; }
+  .bars__information > p {
+    font-size: 20px;
+    margin: 0px 0px 32px; }
 
 .bars__button {
   width: 156px;
@@ -95,18 +102,20 @@
   .bars__button:hover {
     cursor: pointer; }
 
-.advantages__list {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  width: 485px;
-  font-size: 16px;
-  padding: 0px;
-  margin: 0px; }
-
-.advantages__item {
-  width: 125px;
-  display: flex; }
+.advantages {
+  flex-grow: 1; }
+  .advantages__list {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 485px;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px; }
+  .advantages__item {
+    width: 125px;
+    display: flex; }
 
 .advantages__item-one:before {
   content: url("../img/first/one.png");

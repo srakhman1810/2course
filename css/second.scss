@@ -1,4 +1,3 @@
-
 $blue: rgb(97, 196, 217);
 $white: rgb(255, 255, 255);
 $green: rgb(11, 77, 60);
@@ -14,9 +13,11 @@ $light: rgb(248, 250, 249);
 
 
 .second {
+    padding-top: 9px;
     position: relative;
     @include size;
     background: url('../img/second/background.png') left center no-repeat;
+
 
     &:after {
         content: url(../img/second/snack.png);
@@ -27,16 +28,20 @@ $light: rgb(248, 250, 249);
 
 
 .second__container {
-    padding-top: 106px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .reason {
     width: 406px;
-    margin: 0px auto 57px;
-    ;
+    margin: 0px auto 55px;
 
-    &__heading {
+
+    &>h2 {
         font-size: 48px;
         font-weight: bold;
         text-transform: uppercase;
@@ -44,7 +49,7 @@ $light: rgb(248, 250, 249);
         margin: 0px 0px 7px;
     }
 
-    &__explanation {
+    &>p {
         font-size: 18px;
         color: $grey;
         margin: 0px;
@@ -64,7 +69,7 @@ $light: rgb(248, 250, 249);
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 27px;
+        margin-bottom: 40px;
     }
 
 
@@ -74,6 +79,7 @@ $light: rgb(248, 250, 249);
         margin: 0px;
         padding: 0px;
         list-style-type: none;
+        width: 940px;
     }
 
     &__item {
@@ -86,23 +92,32 @@ $light: rgb(248, 250, 249);
 
     }
 
-    &__explain-heading {
+}
+
+.description__explain {
+
+    &>h3 {
         color: $black;
         font-size: 27px;
         margin: 0px 0px 18px;
     }
 
-    &__explain-text {
+    &>p {
         color: $grey;
         font-size: 18px;
         margin: 0px;
     }
+
 }
+
+
+
+
 
 .description__item:after {
     content: url(../img/second/rounds.png);
     position: absolute;
-    top: 18%;
+    top: 20%;
     right: -32%;
 }
 
