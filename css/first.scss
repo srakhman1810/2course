@@ -1,0 +1,193 @@
+$blue: rgb(97, 196, 217);
+$white: rgb(255, 255, 255);
+$green: rgb(11, 77, 60);
+$black: rgb(14, 14, 14);
+$grey: rgb(141, 141, 141);
+$light: rgb(248, 250, 249);
+
+@mixin size {
+    height: 100vh;
+    width: 100%;
+    min-height: 650px;
+    
+}
+
+
+.first {
+    background-color: $blue;
+    background-image: url(../img/first/background.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    @include size;
+    position: relative;
+    padding-top: 12px;
+
+
+
+    &:after {
+        content: url(../img/first/background2.png);
+        position: absolute;
+        bottom: -57px;
+        right: 189px;
+    }
+
+}
+
+.first__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.logo {
+    width: 53px;
+    font-size: 24px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    color: $white;
+
+}
+
+.menu {
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 630px;
+        margin: 0px;
+        padding-left: 0px;
+    }
+
+    &__item {
+        list-style-type: none;
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+}
+
+.call__number {
+    font-size: 24px;
+    text-decoration: none;
+    color: $white;
+    font-style: normal;
+    text-transform: uppercase;
+
+    &:before {
+        content: url('../img/first/phone.png');
+        margin-right: 2px;
+    }
+}
+
+// content 
+// bars
+.content {
+    color: $white;
+    flex-grow: 3;
+}
+
+.bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 66px;
+    margin-top: 85px;
+
+
+    &__image {
+        position: absolute;
+        right: 0px;
+        bottom: -97px;
+        right: -52px;
+    }
+
+}
+
+.bars__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 400px;
+
+    &>h1 {
+        font-size: 59px;
+        text-transform: uppercase;
+        margin: 0px 0px 10px;
+        line-height: 1;
+    }
+
+    &>p {
+        font-size: 20px;
+        margin: 0px 0px 32px;
+    }
+
+}
+
+
+.bars__button {
+    width: 156px;
+    height: 58px;
+    background: $white;
+    border: 1px;
+    border-radius: 50px;
+    font-size: 18px;
+    color: $green;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+
+
+// advantages
+
+.advantages {
+    flex-grow: 1;
+
+
+    &__list {
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 485px;
+        font-size: 16px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &__item {
+        width: 125px;
+        display: flex;
+    }
+
+}
+
+@each $advantages in (one, two, three) {
+    .advantages__item-#{$advantages}:before {
+        content: url('../img/first/#{$advantages}.png');
+        margin-right: 10px;
+    }
+}

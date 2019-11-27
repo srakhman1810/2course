@@ -1,0 +1,40 @@
+
+$blue: rgb(97, 196, 217);
+$white: rgb(255, 255, 255);
+$green: rgb(11, 77, 60);
+$black: rgb(14, 14, 14);
+$grey: rgb(141, 141, 141);
+$light: rgb(248, 250, 249);
+
+
+.footer {
+    background-color: $green;
+}
+
+.footer__container {
+    display: flex;
+}
+
+.social-networks__list {
+    display: flex;
+    list-style-type: none;
+}
+
+
+.contacts__address {
+    font-size: 21px;
+}
+
+.contacts__phone {
+    font-size: 21px;
+    text-decoration: none;
+    color: $green;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: light;
+
+    &:before {
+        content: url('../img/first/phone.png');
+        margin-right: 2px;
+    }
+}
