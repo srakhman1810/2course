@@ -20,6 +20,7 @@ html body {
   background-position: right center;
   height: 100vh;
   width: 100%;
+  min-height: 650px;
   position: relative;
   padding-top: 12px; }
   .first:after {
@@ -149,6 +150,7 @@ html body {
   position: relative;
   height: 100vh;
   width: 100%;
+  min-height: 650px;
   background: url("../img/second/background.png") left center no-repeat; }
   .second:after {
     content: url(../img/second/snack.png);
@@ -223,6 +225,7 @@ html body {
 .sixth {
   height: 100vh;
   width: 100%;
+  min-height: 650px;
   padding-top: 59px;
   position: relative; }
   .sixth:after {
