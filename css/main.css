@@ -344,4 +344,64 @@ html body {
     content: url("../img/first/phone.png");
     margin-right: 2px; }
 
+.fourth {
+  color: #0e0e0e;
+  height: 100vh;
+  width: 100%;
+  min-height: 650px;
+  background-image: url(../img/fourth/background.png);
+  background-position: right top 20px;
+  background-repeat: no-repeat;
+  background-color: #0b4d3c;
+  position: relative; }
+  .fourth:after {
+    content: url(../img/fourth/blueberries.png);
+    position: absolute;
+    top: -30px;
+    right: 15px; }
+  .fourth:before {
+    content: url(../img/fourth/rastberry.png);
+    position: absolute;
+    bottom: -42px;
+    left: 30px; }
+
+.fourth__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0e0e0e; }
+  .fourth__container > h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    margin: 0px 0px 58px; }
+
+.team {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 0px; }
+  .team__item {
+    width: 25%;
+    height: 403px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .team__direction > h5 {
+    font-size: 17px;
+    margin: 0px; }
+  .team__direction > p {
+    font-size: 17px;
+    margin: 0px;
+    color: #8d8d8d; }
+
+.team__item > h4 {
+  font-size: 21px;
+  margin: 0px; }
+
 /*# sourceMappingURL=main.css.map */

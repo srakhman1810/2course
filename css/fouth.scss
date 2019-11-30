@@ -1,0 +1,93 @@
+$blue: rgb(97, 196, 217);
+$white: rgb(255, 255, 255);
+$green: rgb(11, 77, 60);
+$black: rgb(14, 14, 14);
+$grey: rgb(141, 141, 141);
+$light: rgb(248, 250, 249);
+
+@mixin size {
+    height: 100vh;
+    width: 100%;
+    min-height: 650px;
+
+}
+
+.fourth {
+    color: $black;
+    @include size;
+    background-image: url(../img/fourth/background.png);
+    background-position: right top 20px;
+    background-repeat: no-repeat;
+    background-color: $green;
+    position: relative;
+
+
+    &:after {
+        content: url(../img/fourth/blueberries.png);
+        position: absolute;
+        top: -30px;
+        right: 15px;
+
+    }
+
+    &:before {
+        content: url(../img/fourth/rastberry.png);
+        position: absolute;
+        bottom: -42px;
+        left: 30px;
+    }
+}
+
+
+.fourth__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+
+    &>h2 {
+        font-size: 48px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
+        margin: 0px 0px 58px;
+    }
+
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+
+    &__item {
+        width: 25%;
+        height: 403px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    &__direction>h5 {
+        font-size: 17px;
+        margin: 0px; 
+    }
+
+    &__direction>p {
+        font-size: 17px;
+        margin: 0px;
+        color: $grey;
+    }
+
+}
+
+.team__item>h4 {
+    font-size: 21px;
+    margin: 0px;
+}
