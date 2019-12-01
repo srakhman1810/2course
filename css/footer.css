@@ -1,0 +1,25 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #0b4d3c; }
+
+.footer__container {
+  display: flex; }
+
+.social-networks__list {
+  display: flex;
+  list-style-type: none; }
+
+.contacts__address {
+  font-size: 21px; }
+
+.contacts__phone {
+  font-size: 21px;
+  text-decoration: none;
+  color: #0b4d3c;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: light; }
+  .contacts__phone:before {
+    content: url("../img/first/phone.png");
+    margin-right: 2px; }

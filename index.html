@@ -58,7 +58,11 @@
                     </article>
                     <article class="advantages">
                         <ul class="advantages__list">
-                            <li class="advantages__item advantages__item-one"> 100% натуральный продукт</li>
+                            <li class="advantages__item advantages__item-one">
+                                <svg class="advantages__icon">
+                                    <use xlink:href="./img/sprite.svg#leaves"> </use>
+                                </svg>
+                                100% натуральный продукт</li>
                             <li class="advantages__item advantages__item-two"> 3-5 дней доставка по РФ</li>
                             <li class="advantages__item advantages__item-three"> Не портит фигуру</li>
                         </ul>
@@ -76,7 +80,7 @@
                         <ul class="description__list">
                             <li class="description__item">
                                 <div class="description__image">
-                                    <img class="description__image-avatar" src="./img/second/icon1.png" alt="">
+                                    <img src="" alt="">
                                 </div>
                                 <div class="description__explain">
                                     <h3> Полезно</h3>
@@ -88,7 +92,7 @@
                             </li>
                             <li class="description__item">
                                 <div class="description__image">
-                                    <img class="description__image-avatar" src="./img/second/icon2.png" alt="">
+                                    <img src="" alt="">
                                 </div>
                                 <div class="description__explain">
                                     <h3> Вкусно</h3>
@@ -100,7 +104,7 @@
                             </li>
                             <li class="description__item">
                                 <div class="description__image">
-                                    <img class="description__image-avatar" src="./img/second/icon3.png" alt="">
+
                                 </div>
                                 <div class="description__explain">
                                     <h3> Питательно</h3>
@@ -447,14 +451,16 @@
                                 </label>
                                 <label class="checkbox">
                                     <input type="checkbox" name="checkbox" class="checkbox__choice" id="checkbox"
-                                        tabindex="11">
-                                    <div class="checkbox__square"> </div>
+                                        checked tabindex="11">
+                                    <div class="checkbox__square">
+                                        <img src="./img/eighth/mark.svg" alt="" class="mark">
+                                    </div>
                                     <div class="checkbox__answer"> Не перезванивать </div>
                                 </label>
                             </div>
                             <div class="buttons">
-                                <input type="submit" value="Заказать" class="comments__submit">
-                                <input type="reset" value="Очистить" class="comments__reset">
+                                <input type="submit" value="Заказать" class="button__submit">
+                                <input type="reset" value="Очистить" class="button__reset">
                             </div>
                         </div>
                     </form>
@@ -464,36 +470,36 @@
                 <div class="container ninth__container">
                     <img src="" alt="" class="map">
                 </div>
+                <footer class="footer">
+                    <div class="footer__container">
+                        <address class="contacts">
+                            <p class="contacts__address"> Москва, ул.Новый Арбат, д.31/12 </p>
+                            <a href="tel:+78009039090" class="contacts__phone"> 8 800 903 90 90 </a>
+                        </address>
+                        <article class="social">
+                            <ul class="social__list">
+                                <li class="social__item">
+                                    <a href="https://vk.com" class="social__link social__link--vk ">
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="https://www.facebook.com" class="social__link social__link--fb">
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="https://www.instagram.com" class="social__link social__link--inst">
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="https://twitter.com" class="social__link social__link--tw">
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </footer>
             </section>
         </div>
-        <footer class="footer">
-            <section class="footer__container">
-                <address class="contacts">
-                    <p class="contacts__address"> Москва, ул.Новый Арбат, д.31/12 </p>
-                    <a href="tel:+78009039090" class="contacts__phone"> 8 800 903 90 90 </a>
-                </address>
-                <article class="social">
-                    <ul class="social__list">
-                        <li class="social__item">
-                            <a href="https://vk.com" class="social__link social__link--vk ">
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="https://www.facebook.com" class="social__link social__link--fb">
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="https://www.instagram.com" class="social__link social__link--inst">
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="https://twitter.com" class="social__link social__link--tw">
-                            </a>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-        </footer>
     </div>
 </body>
 

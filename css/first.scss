@@ -142,6 +142,7 @@ $light: rgb(248, 250, 249);
 
 
 .bars__button {
+    outline: none;
     width: 156px;
     height: 58px;
     background: $white;
@@ -157,9 +158,12 @@ $light: rgb(248, 250, 249);
         cursor: pointer;
     }
 
+    &:focus {
+        background: $green;
+        color: $white;
+     }
+
 }
-
-
 
 // advantages
 
@@ -185,9 +189,11 @@ $light: rgb(248, 250, 249);
 
 }
 
-@each $advantages in (one, two, three) {
-    .advantages__item-#{$advantages}:before {
-        content: url('../img/first/#{$advantages}.png');
-        margin-right: 10px;
-    }
-}
+// @each $advantages in (one, two, three) {
+//     .advantages__item-#{$advantages}:before {
+//         content: url('../img/first/#{$advantages}.png');
+//         margin-right: 10px;
+//     }
+// }
+
+

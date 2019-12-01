@@ -90,6 +90,7 @@
     margin: 0px 0px 32px; }
 
 .bars__button {
+  outline: none;
   width: 156px;
   height: 58px;
   background: white;
@@ -102,6 +103,9 @@
   box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1); }
   .bars__button:hover {
     cursor: pointer; }
+  .bars__button:focus {
+    background: #0b4d3c;
+    color: white; }
 
 .advantages {
   flex-grow: 1; }
@@ -117,15 +121,3 @@
   .advantages__item {
     width: 125px;
     display: flex; }
-
-.advantages__item-one:before {
-  content: url("../img/first/one.png");
-  margin-right: 10px; }
-
-.advantages__item-two:before {
-  content: url("../img/first/two.png");
-  margin-right: 10px; }
-
-.advantages__item-three:before {
-  content: url("../img/first/three.png");
-  margin-right: 10px; }
