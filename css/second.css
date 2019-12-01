@@ -4,7 +4,8 @@
   height: 100vh;
   width: 100%;
   min-height: 650px;
-  background: url("../img/second/background.png") left center no-repeat; }
+  background: url("../img/second/background.png") left center no-repeat;
+  background-color: #0b4d3c; }
   .second:after {
     content: url(../img/second/snack.png);
     position: absolute;

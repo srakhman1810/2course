@@ -151,7 +151,8 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
-  background: url("../img/second/background.png") left center no-repeat; }
+  background: url("../img/second/background.png") left center no-repeat;
+  background-color: #0b4d3c; }
   .second:after {
     content: url(../img/second/snack.png);
     position: absolute;
@@ -222,12 +223,101 @@ html body {
 .description__item:last-child:after {
   content: ""; }
 
+.third {
+  height: 100vh;
+  width: 100%;
+  min-height: 650px;
+  background: #f8faf9; }
+
+.third__container {
+  display: flex; }
+
+.fourth {
+  color: #0e0e0e;
+  height: 100vh;
+  width: 100%;
+  min-height: 650px;
+  background-image: url(../img/fourth/background.png);
+  background-position: right top 20px;
+  background-repeat: no-repeat;
+  background-color: #0b4d3c;
+  position: relative; }
+  .fourth:after {
+    content: url(../img/fourth/blueberries.png);
+    position: absolute;
+    top: -30px;
+    right: 15px; }
+  .fourth:before {
+    content: url(../img/fourth/rastberry.png);
+    position: absolute;
+    bottom: -42px;
+    left: 30px; }
+
+.fourth__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0e0e0e; }
+  .fourth__container > h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    margin: 0px 0px 58px; }
+
+.team {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 0px; }
+  .team__item {
+    width: 25%;
+    height: 403px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .team__direction > h5 {
+    font-size: 17px;
+    margin: 0px; }
+  .team__direction > p {
+    font-size: 17px;
+    margin: 0px;
+    color: #8d8d8d; }
+
+.team__item > h4 {
+  font-size: 21px;
+  margin: 0px; }
+
+.fifth {
+  background: url(../img/fifth/background.png) center center/cover no-repeat;
+  color: white; }
+
+.fifth__container > h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0px; }
+
+.bars-type {
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 0px; }
+  .bars-type__item {
+    font-size: 48px; }
+  .bars-type__description > p {
+    font-size: 16px; }
+
 .sixth {
   height: 100vh;
   width: 100%;
   min-height: 650px;
   padding-top: 59px;
-  position: relative; }
+  position: relative;
+  background: #0b4d3c; }
   .sixth:after {
     content: url(../img/sixth/background.png);
     position: absolute;
@@ -320,6 +410,121 @@ html body {
   right: 193%;
   bottom: 47px; }
 
+.seventh {
+  height: 100vh;
+  width: 100%;
+  min-height: 650px;
+  background: #f8faf9;
+  position: relative; }
+  .seventh:after {
+    content: url(../img/seventh/blackberry.png);
+    position: absolute;
+    bottom: -110px;
+    right: 0px; }
+
+.seventh__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .seventh__container:after {
+    content: url(../img/seventh/background.png);
+    position: absolute; }
+  .seventh__container > h2 {
+    margin: 0px;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+  .seventh__container > div {
+    background: url(../img/seventh/video.png) no-repeat;
+    width: 670px;
+    height: 360px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0b4d3c; }
+
+.eighth {
+  background: url(../img/eighth/background.png) center center/cover no-repeat; }
+
+.eighth__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0b4d3c; }
+  .eighth__container > h2 {
+    margin: 0px;
+    font-size: 48px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 54px; }
+
+.form {
+  display: flex;
+  justify-content: space-between; }
+
+.personal-information {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 490px;
+  margin-right: 20px; }
+
+.cell__1 {
+  flex-basis: 225px;
+  margin-bottom: 20px; }
+.cell__2 {
+  flex-basis: 490px;
+  margin-bottom: 20px; }
+.cell__3 {
+  flex-basis: 100px; }
+.cell__name {
+  font-size: 18px;
+  margin-bottom: 8px; }
+.cell__input {
+  height: 59px;
+  width: 100%;
+  background: white;
+  padding: 10px 10px;
+  outline: none;
+  border: 1px solid transparent;
+  color: #0b4d3c;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-align: center; }
+.cell__input--comment {
+  height: 180px;
+  resize: none;
+  text-align: left; }
+.cell__comment {
+  margin-bottom: 21px; }
+
+.cell__input:focus {
+  border-color: #0b4d3c; }
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 430px; }
+  .comments__checkbox {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 40px; }
+
+.checkbox {
+  display: flex;
+  margin-right: 32px; }
+  .checkbox:nth-child(3) {
+    margin-right: 0px; }
+
+.ninth {
+  background: pink; }
+
 .footer {
   background-color: #0b4d3c; }
 
@@ -343,65 +548,5 @@ html body {
   .contacts__phone:before {
     content: url("../img/first/phone.png");
     margin-right: 2px; }
-
-.fourth {
-  color: #0e0e0e;
-  height: 100vh;
-  width: 100%;
-  min-height: 650px;
-  background-image: url(../img/fourth/background.png);
-  background-position: right top 20px;
-  background-repeat: no-repeat;
-  background-color: #0b4d3c;
-  position: relative; }
-  .fourth:after {
-    content: url(../img/fourth/blueberries.png);
-    position: absolute;
-    top: -30px;
-    right: 15px; }
-  .fourth:before {
-    content: url(../img/fourth/rastberry.png);
-    position: absolute;
-    bottom: -42px;
-    left: 30px; }
-
-.fourth__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #0e0e0e; }
-  .fourth__container > h2 {
-    font-size: 48px;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
-    margin: 0px 0px 58px; }
-
-.team {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0px;
-  padding-left: 0px; }
-  .team__item {
-    width: 25%;
-    height: 403px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; }
-  .team__direction > h5 {
-    font-size: 17px;
-    margin: 0px; }
-  .team__direction > p {
-    font-size: 17px;
-    margin: 0px;
-    color: #8d8d8d; }
-
-.team__item > h4 {
-  font-size: 21px;
-  margin: 0px; }
 
 /*# sourceMappingURL=main.css.map */

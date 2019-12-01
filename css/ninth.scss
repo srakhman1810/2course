@@ -1,0 +1,17 @@
+$blue: rgb(97, 196, 217);
+$white: rgb(255, 255, 255);
+$green: rgb(11, 77, 60);
+$black: rgb(14, 14, 14);
+$grey: rgb(141, 141, 141);
+$light: rgb(248, 250, 249);
+
+@mixin size {
+    height: 100vh;
+    width: 100%;
+    min-height: 650px;
+
+}
+
+.ninth {
+    background: pink;
+}

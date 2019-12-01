@@ -3,7 +3,8 @@
   width: 100%;
   min-height: 650px;
   padding-top: 59px;
-  position: relative; }
+  position: relative;
+  background: #0b4d3c; }
   .sixth:after {
     content: url(../img/sixth/background.png);
     position: absolute;

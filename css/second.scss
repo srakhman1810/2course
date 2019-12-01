@@ -18,6 +18,7 @@ $light: rgb(248, 250, 249);
     position: relative;
     @include size;
     background: url('../img/second/background.png') left center no-repeat;
+    background-color: $green;
 
 
     &:after {
