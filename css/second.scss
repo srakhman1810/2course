@@ -64,16 +64,9 @@ $light: rgb(248, 250, 249);
     margin: 0 auto;
 
     &__image {
-        width: 125px;
-        height: 125px;
-        border-radius: 50%;
-        background: $light;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 40px;
+       height: 80px;
+       width: 80px;
     }
-
 
     &__list {
         display: flex;
@@ -91,9 +84,7 @@ $light: rgb(248, 250, 249);
         align-items: center;
         text-align: center;
         position: relative;
-
     }
-
 }
 
 .description__explain {
@@ -109,12 +100,25 @@ $light: rgb(248, 250, 249);
         font-size: 18px;
         margin: 0px;
     }
-
 }
 
+.round {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: $light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
 
-
-
+.image-icon {
+    fill:none;
+    stroke:#000000;
+    stroke-width:0.7;
+    stroke-miterlimit:10;
+}
 
 .description__item:after {
     content: url(../img/second/rounds.png);

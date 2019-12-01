@@ -13,6 +13,6 @@ $light: rgb(248, 250, 249);
 }
 
 .ninth {
+    @include size;
     background: url(../img/ninth/map.png) center center / cover no-repeat;
-    position: relative;
 }

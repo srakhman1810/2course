@@ -42,6 +42,9 @@
                             </ul>
                         </nav>
                         <address class="call">
+                            <svg class="phone">
+                                <use class="phone-icon" xlink:href="./img/sprite.svg#phone"></use>
+                            </svg>
                             <a href="tel:+78009039090" class="call__number"> 8 800 903 90 90</a>
                         </address>
                     </header>
@@ -59,22 +62,28 @@
                     <article class="advantages">
                         <ul class="advantages__list">
                             <li class="advantages__item advantages__item-one">
-                                <svg class="advantages__icon">
-                                    <use xlink:href="./img/sprite.svg#leaves"> </use>
+                                <svg class="leaves-icon">
+                                    <use xlink:href="./img/sprite.svg#leaves" class="icon"> </use>
                                 </svg>
-                                100% натуральный продукт
+                                <p>
+                                    100% натуральный продукт
+                                </p>
                             </li>
                             <li class="advantages__item advantages__item-two">
-                                <svg class="advantages__icon">
-                                    <use xlink:href="./img/sprite.svg#track"> </use>
+                                <svg class="track-icon">
+                                    <use xlink:href="./img/sprite.svg#track" class="icon"> </use>
                                 </svg>
-                                3-5 дней доставка по РФ
+                                <p>
+                                    3-5 дней доставка по РФ
+                                </p>
                             </li>
                             <li class="advantages__item advantages__item-three">
-                                <svg class="advantages__icon">
-                                    <use xlink:href="./img/sprite.svg#measure"> </use>
+                                <svg class="measure-icon">
+                                    <use xlink:href="./img/sprite.svg#measure" class="icon"> </use>
                                 </svg>
-                                Не портит фигуру
+                                <p>
+                                    Не портит фигуру
+                                </p>
                             </li>
                         </ul>
                     </article>
@@ -90,8 +99,10 @@
                     <article class="description">
                         <ul class="description__list">
                             <li class="description__item">
-                                <div class="description__image">
-                                    <img src="" alt="">
+                                <div class="round">
+                                    <svg class="description__image">
+                                        <use xlink:href="./img/sprite.svg#1" alt="" class="image-icon"> </use>
+                                    </svg>
                                 </div>
                                 <div class="description__explain">
                                     <h3> Полезно</h3>
@@ -102,8 +113,10 @@
                                 </div>
                             </li>
                             <li class="description__item">
-                                <div class="description__image">
-                                    <img src="" alt="">
+                                <div class="round">
+                                    <svg class="description__image">
+                                        <use xlink:href="./img/sprite.svg#2" alt="" class="image-icon"> </use>
+                                    </svg>
                                 </div>
                                 <div class="description__explain">
                                     <h3> Вкусно</h3>
@@ -114,8 +127,10 @@
                                 </div>
                             </li>
                             <li class="description__item">
-                                <div class="description__image">
-
+                                <div class="round">
+                                    <svg class="description__image">
+                                        <use xlink:href="./img/sprite.svg#3" alt="" class="image-icon"> </use>
+                                    </svg>
                                 </div>
                                 <div class="description__explain">
                                     <h3> Питательно</h3>
@@ -481,36 +496,53 @@
                 <div class="container ninth__container">
                     <img src="" alt="" class="map">
                 </div>
-                <footer class="footer">
-                    <div class="footer__container">
-                        <address class="contacts">
-                            <p class="contacts__address"> Москва, ул.Новый Арбат, д.31/12 </p>
-                            <a href="tel:+78009039090" class="contacts__phone"> 8 800 903 90 90 </a>
-                        </address>
-                        <article class="social">
-                            <ul class="social__list">
-                                <li class="social__item">
-                                    <a href="https://vk.com" class="social__link social__link--vk ">
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="https://www.facebook.com" class="social__link social__link--fb">
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="https://www.instagram.com" class="social__link social__link--inst">
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="https://twitter.com" class="social__link social__link--tw">
-                                    </a>
-                                </li>
-                            </ul>
-                        </article>
-                    </div>
-                </footer>
             </section>
         </div>
+        <footer class="footer">
+            <div class="container footer__container">
+                <address class="contacts">
+                    <p> Москва, ул.Новый Арбат, д.31/12 </p>
+                    <div class="contacts__phone">
+                        <svg class="handset">
+                            <use class="handset-icon" xlink:href="./img/sprite.svg#phone"></use>
+                        </svg>
+                        <a href="tel:+78009039090" class="number"> 8 800 903 90 90 </a>
+                    </div>
+                </address>
+                <article class="social">
+                    <ul class="social__list">
+                        <li class="social__item">
+                            <svg class="site">
+                                <use class="social-icon" xlink:href="./img/sprite.svg#vk"></use>
+                            </svg>
+                            <a href="https://vk.com" class="social__link">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <svg class="site">
+                                <use class="social-icon" xlink:href="./img/sprite.svg#fb"></use>
+                            </svg>
+                            <a href="https://www.facebook.com" class="social__link">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <svg class="site">
+                                <use class="social-icon" xlink:href="./img/sprite.svg#inst"></use>
+                            </svg>
+                            <a href="https://www.instagram.com" class="social__link">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <svg class="site">
+                                <use class="social-icon" xlink:href="./img/sprite.svg#tw"></use>
+                            </svg>
+                            <a href="https://twitter.com" class="social__link">
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </footer>
     </div>
 </body>
 

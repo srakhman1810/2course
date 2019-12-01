@@ -1,4 +1,3 @@
-
 $blue: rgb(97, 196, 217);
 $white: rgb(255, 255, 255);
 $green: rgb(11, 77, 60);
@@ -9,34 +8,92 @@ $light: rgb(248, 250, 249);
 
 .footer {
     position: absolute;
-    bottom: 0;
-    background-color: $green;
+    bottom: 0px;
+    width: 100%;
+    background: $white;
+
+    &__container {
+        display: flex;
+        height: 93px;
+
+    }
 }
 
-.footer__container {
+.contacts {
+    width: 50%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &>p {
+        font-size: 21px;
+        margin: 0px;
+    }
+
 }
 
-.social-networks__list {
-    display: flex;
-    list-style-type: none;
+.handset {
+    height: 11px;
+    width: 11px;
+    margin-right: 7px;
+
+    &-icon {
+        fill: $green;
+    }
 }
 
 
-.contacts__address {
-    font-size: 21px;
-}
-
-.contacts__phone {
+.number {
     font-size: 21px;
     text-decoration: none;
     color: $green;
     font-style: normal;
     text-transform: uppercase;
     font-weight: light;
+}
 
-    &:before {
-        content: url('../img/first/phone.png');
-        margin-right: 2px;
+.social {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        margin:0px;
+        padding-left:0px;
+    }
+
+}
+
+.social__item {
+    margin-right:20px;
+
+    &:nth-child(4){
+        margin-right:0px;
     }
 }
+
+
+.site {
+    height: 23px;
+    width: 23px;
+    // margin-right: 20px;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:hover>.social-icon{
+        fill:$black;
+    }
+}
+
+.social-icon {
+    fill:$grey;
+
+}
+
+
+

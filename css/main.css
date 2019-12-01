@@ -6,7 +6,8 @@ html body {
 
 .wrapper {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
 
 .container {
   margin: 0 auto;
@@ -63,15 +64,22 @@ html body {
   text-decoration: none;
   font-size: 18px; }
 
-.call__number {
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-  font-style: normal;
-  text-transform: uppercase; }
-  .call__number:before {
-    content: url("../img/first/phone.png");
-    margin-right: 2px; }
+.call {
+  display: flex;
+  align-items: center; }
+  .call__number {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    font-style: normal;
+    text-transform: uppercase; }
+
+.phone {
+  height: 11px;
+  width: 12px;
+  margin-right: 7px; }
+  .phone-icon {
+    fill: white; }
 
 .content {
   color: white;
@@ -134,8 +142,29 @@ html body {
     padding: 0px;
     margin: 0px; }
   .advantages__item {
-    width: 125px;
     display: flex; }
+
+.icon {
+  fill: none;
+  stroke: #aef5fe;
+  stroke-width: 0.5;
+  stroke-miterlimit: 10; }
+
+.leaves-icon {
+  height: 50px;
+  width: 60px; }
+
+.track-icon {
+  height: 50px;
+  width: 80px; }
+
+.measure-icon {
+  height: 50px;
+  width: 65px; }
+
+.advantages__item > p {
+  width: 60px;
+  margin: 0px; }
 
 .second {
   padding-top: 9px;
@@ -174,14 +203,8 @@ html body {
 .description {
   margin: 0 auto; }
   .description__image {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    background: #f8faf9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px; }
+    height: 80px;
+    width: 80px; }
   .description__list {
     display: flex;
     justify-content: space-between;
@@ -205,6 +228,22 @@ html body {
   color: #8d8d8d;
   font-size: 18px;
   margin: 0px; }
+
+.round {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #f8faf9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; }
+
+.image-icon {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.7;
+  stroke-miterlimit: 10; }
 
 .description__item:after {
   content: url(../img/second/rounds.png);
@@ -581,31 +620,67 @@ html body {
   opacity: 0; }
 
 .ninth {
-  background: url(../img/ninth/map.png) center center/cover no-repeat;
-  position: relative; }
+  height: 100vh;
+  width: 100%;
+  min-height: 650px;
+  background: url(../img/ninth/map.png) center center/cover no-repeat; }
 
 .footer {
   position: absolute;
-  bottom: 0;
-  background-color: #0b4d3c; }
+  bottom: 0px;
+  width: 100%;
+  background: white; }
+  .footer__container {
+    display: flex;
+    height: 93px; }
 
-.footer__container {
-  display: flex; }
-
-.social-networks__list {
+.contacts {
+  width: 50%;
   display: flex;
-  list-style-type: none; }
+  flex-direction: column;
+  justify-content: center; }
+  .contacts > p {
+    font-size: 21px;
+    margin: 0px; }
 
-.contacts__address {
-  font-size: 21px; }
+.handset {
+  height: 11px;
+  width: 11px;
+  margin-right: 7px; }
+  .handset-icon {
+    fill: #0b4d3c; }
 
-.contacts__phone {
+.number {
   font-size: 21px;
   text-decoration: none;
   color: #0b4d3c;
   font-style: normal;
   text-transform: uppercase;
   font-weight: light; }
-  .contacts__phone:before {
-    content: url("../img/first/phone.png");
-    margin-right: 2px; }
+
+.social {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end; }
+  .social__list {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0px;
+    padding-left: 0px; }
+
+.social__item {
+  margin-right: 20px; }
+  .social__item:nth-child(4) {
+    margin-right: 0px; }
+
+.site {
+  height: 23px;
+  width: 23px; }
+  .site:hover {
+    cursor: pointer; }
+  .site:hover > .social-icon {
+    fill: #0e0e0e; }
+
+.social-icon {
+  fill: #8d8d8d; }

@@ -9,7 +9,7 @@ $light: rgb(248, 250, 249);
     height: 100vh;
     width: 100%;
     min-height: 650px;
-    
+
 }
 
 
@@ -82,16 +82,27 @@ $light: rgb(248, 250, 249);
 
 }
 
-.call__number {
-    font-size: 24px;
-    text-decoration: none;
-    color: $white;
-    font-style: normal;
-    text-transform: uppercase;
+.call {
+    display: flex;
+    align-items: center;
 
-    &:before {
-        content: url('../img/first/phone.png');
-        margin-right: 2px;
+    &__number {
+        font-size: 24px;
+        text-decoration: none;
+        color: $white;
+        font-style: normal;
+        text-transform: uppercase;
+    }
+
+}
+
+.phone {
+    height: 11px;
+    width: 12px;
+    margin-right: 7px;
+
+    &-icon {
+        fill: $white;
     }
 }
 
@@ -161,7 +172,7 @@ $light: rgb(248, 250, 249);
     &:focus {
         background: $green;
         color: $white;
-     }
+    }
 
 }
 
@@ -183,10 +194,38 @@ $light: rgb(248, 250, 249);
     }
 
     &__item {
-        width: 125px;
         display: flex;
     }
 
+}
+
+.icon {
+    fill: none;
+    stroke: #aef5fe;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.leaves-icon {
+    height: 50px;
+    width: 60px;
+   
+}
+
+.track-icon {
+    height: 50px;
+    width: 80px;
+   
+}
+
+.measure-icon {
+    height: 50px;
+    width: 65px;
+}
+
+.advantages__item>p {
+    width: 60px;
+    margin: 0px;
 }
 
 // @each $advantages in (one, two, three) {
@@ -195,5 +234,3 @@ $light: rgb(248, 250, 249);
 //         margin-right: 10px;
 //     }
 // }
-
-

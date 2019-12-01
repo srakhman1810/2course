@@ -35,14 +35,8 @@
 .description {
   margin: 0 auto; }
   .description__image {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    background: #f8faf9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px; }
+    height: 80px;
+    width: 80px; }
   .description__list {
     display: flex;
     justify-content: space-between;
@@ -66,6 +60,22 @@
   color: #8d8d8d;
   font-size: 18px;
   margin: 0px; }
+
+.round {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #f8faf9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; }
+
+.image-icon {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.7;
+  stroke-miterlimit: 10; }
 
 .description__item:after {
   content: url(../img/second/rounds.png);

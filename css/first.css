@@ -48,15 +48,22 @@
   text-decoration: none;
   font-size: 18px; }
 
-.call__number {
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-  font-style: normal;
-  text-transform: uppercase; }
-  .call__number:before {
-    content: url("../img/first/phone.png");
-    margin-right: 2px; }
+.call {
+  display: flex;
+  align-items: center; }
+  .call__number {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    font-style: normal;
+    text-transform: uppercase; }
+
+.phone {
+  height: 11px;
+  width: 12px;
+  margin-right: 7px; }
+  .phone-icon {
+    fill: white; }
 
 .content {
   color: white;
@@ -119,5 +126,26 @@
     padding: 0px;
     margin: 0px; }
   .advantages__item {
-    width: 125px;
     display: flex; }
+
+.icon {
+  fill: none;
+  stroke: #aef5fe;
+  stroke-width: 0.5;
+  stroke-miterlimit: 10; }
+
+.leaves-icon {
+  height: 50px;
+  width: 60px; }
+
+.track-icon {
+  height: 50px;
+  width: 80px; }
+
+.measure-icon {
+  height: 50px;
+  width: 65px; }
+
+.advantages__item > p {
+  width: 60px;
+  margin: 0px; }
