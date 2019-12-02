@@ -9,9 +9,7 @@ $light: rgb(248, 250, 249);
     height: 100vh;
     width: 100%;
     min-height: 650px;
-
 }
-
 
 .first {
     background-color: $blue;
@@ -22,8 +20,6 @@ $light: rgb(248, 250, 249);
     position: relative;
     padding-top: 12px;
 
-
-
     &:after {
         content: url(../img/first/background2.png);
         position: absolute;
@@ -31,14 +27,13 @@ $light: rgb(248, 250, 249);
         right: 189px;
     }
 
-}
-
-.first__container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+    }
 
 }
 
@@ -47,7 +42,6 @@ $light: rgb(248, 250, 249);
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-
 }
 
 .logo {
@@ -56,7 +50,6 @@ $light: rgb(248, 250, 249);
     text-transform: uppercase;
     word-wrap: break-word;
     color: $white;
-
 }
 
 .menu {
@@ -79,7 +72,6 @@ $light: rgb(248, 250, 249);
         text-decoration: none;
         font-size: 18px;
     }
-
 }
 
 .call {
@@ -106,8 +98,6 @@ $light: rgb(248, 250, 249);
     }
 }
 
-// content 
-// bars
 .content {
     color: $white;
     flex-grow: 3;
@@ -120,7 +110,6 @@ $light: rgb(248, 250, 249);
     position: relative;
     margin-bottom: 66px;
     margin-top: 85px;
-
 
     &__image {
         position: absolute;
@@ -148,9 +137,7 @@ $light: rgb(248, 250, 249);
         font-size: 20px;
         margin: 0px 0px 32px;
     }
-
 }
-
 
 .bars__button {
     outline: none;
@@ -173,14 +160,10 @@ $light: rgb(248, 250, 249);
         background: $green;
         color: $white;
     }
-
 }
-
-// advantages
 
 .advantages {
     flex-grow: 1;
-
 
     &__list {
         color: $white;
@@ -208,14 +191,12 @@ $light: rgb(248, 250, 249);
 
 .leaves-icon {
     height: 50px;
-    width: 60px;
-   
+    width: 60px; 
 }
 
 .track-icon {
     height: 50px;
-    width: 80px;
-   
+    width: 80px;  
 }
 
 .measure-icon {

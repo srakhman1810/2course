@@ -13,17 +13,25 @@ $light: rgb(248, 250, 249);
 }
 
 .fifth {
+    @include size;
     background: url(../img/fifth/background.png) center center / cover no-repeat;
     color: $white;
+    position: relative;
 }
 
 .fifth__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+
+    
     &>h2 {
         font-size: 48px;
         text-transform: uppercase;
         text-align: left;
-        margin:0px;
+        margin: 0px;
+
     }
 }
 
@@ -31,12 +39,50 @@ $light: rgb(248, 250, 249);
     list-style-type: none;
     margin: 0px;
     padding-left: 0px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
 
-    &__item {
+
+    &__item>h3 {
         font-size: 48px;
+        margin: 0px;
+        transform: rotate(180deg);
+        writing-mode: vertical-lr;
+        text-align: center;
+        width: 100px;
+        line-height: 2;
     }
 
-    &__description>p{
+    &__item>p {
+        overflow: hidden;
+        width: 0;
         font-size: 16px;
+        margin: 0px;
+        width: 0px;
+        // width: 370px;
+        // padding: 50px 100px 0 27px;
     }
 }
+
+.bars-type__item {
+    background-color: rgba($black, .6);
+    display: flex;
+    justify-content: flex-end;
+
+    &--one>h3 {
+        background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat;
+     }
+
+    &--two>h3{
+        background: url(../img/fifth/Granola-Bars-with-calamondin.png) center center / cover no-repeat;
+    }
+
+     &--three>h3{
+        background: url(../img/fifth/shutterstock_684121381.png) center center / cover no-repeat;
+     }
+
+}
+

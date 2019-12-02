@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(./normalize.css);
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap&subset=cyrillic-ext");
 html body {
@@ -29,13 +30,12 @@ html body {
     position: absolute;
     bottom: -57px;
     right: 189px; }
-
-.first__container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch; }
+  .first__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch; }
 
 .header {
   display: flex;
@@ -172,8 +172,7 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
-  background: url("../img/second/background.png") left center no-repeat;
-  background-color: #0b4d3c; }
+  background: url("../img/second/background.png") left center no-repeat; }
   .second:after {
     content: url(../img/second/snack.png);
     position: absolute;
@@ -261,7 +260,9 @@ html body {
   background: #f8faf9; }
 
 .third__container {
-  display: flex; }
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .fourth {
   color: #0e0e0e;
@@ -271,7 +272,6 @@ html body {
   background-image: url(../img/fourth/background.png);
   background-position: right top 20px;
   background-repeat: no-repeat;
-  background-color: #0b4d3c;
   position: relative; }
   .fourth:after {
     content: url(../img/fourth/blueberries.png);
@@ -323,32 +323,75 @@ html body {
   font-size: 21px;
   margin: 0px; }
 
-.fifth {
-  background: url(../img/fifth/background.png) center center/cover no-repeat;
-  color: white; }
+.employee {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center; }
 
-.fifth__container > h2 {
-  font-size: 48px;
-  text-transform: uppercase;
-  text-align: left;
-  margin: 0px; }
+.triangle {
+  height: 20px;
+  width: 20px;
+  fill: #0b4d3c; }
+
+.fifth {
+  height: 100vh;
+  width: 100%;
+  min-height: 650px;
+  background: url(../img/fifth/background.png) center center/cover no-repeat;
+  color: white;
+  position: relative; }
+
+.fifth__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .fifth__container > h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0px; }
 
 .bars-type {
   list-style-type: none;
   margin: 0px;
-  padding-left: 0px; }
-  .bars-type__item {
-    font-size: 48px; }
-  .bars-type__description > p {
-    font-size: 16px; }
+  padding-left: 0px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%; }
+  .bars-type__item > h3 {
+    font-size: 48px;
+    margin: 0px;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    text-align: center;
+    width: 100px;
+    line-height: 2; }
+  .bars-type__item > p {
+    overflow: hidden;
+    width: 0;
+    font-size: 16px;
+    margin: 0px;
+    width: 0px; }
+
+.bars-type__item {
+  background-color: rgba(14, 14, 14, 0.6);
+  display: flex;
+  justify-content: flex-end; }
+  .bars-type__item--one > h3 {
+    background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center/cover no-repeat; }
+  .bars-type__item--two > h3 {
+    background: url(../img/fifth/Granola-Bars-with-calamondin.png) center center/cover no-repeat; }
+  .bars-type__item--three > h3 {
+    background: url(../img/fifth/shutterstock_684121381.png) center center/cover no-repeat; }
 
 .sixth {
   height: 100vh;
   width: 100%;
   min-height: 650px;
   padding-top: 59px;
-  position: relative;
-  background: #0b4d3c; }
+  position: relative; }
   .sixth:after {
     content: url(../img/sixth/background.png);
     position: absolute;

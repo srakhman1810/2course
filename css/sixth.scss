@@ -16,7 +16,6 @@ $light: rgb(248, 250, 249);
     @include size;
     padding-top: 59px;
     position: relative;
-    background: $green;
 
     &:after {
         content: url(../img/sixth/background.png);
