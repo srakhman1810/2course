@@ -1,32 +1,16 @@
-$blue: rgb(97, 196, 217);
-$white: rgb(255, 255, 255);
-$green: rgb(11, 77, 60);
-$black: rgb(14, 14, 14);
-$grey: rgb(141, 141, 141);
-$light: rgb(248, 250, 249);
-
-@mixin size {
-    height: 100vh;
-    width: 100%;
-    min-height: 650px;
-}
-
-
 
 .second {
-    padding-top: 9px;
+    // padding-top: rem(9px);
     position: relative;
     @include size;
     background: url('../img/second/background.png') left center no-repeat;
 
-
-    &:after {
+    &:before {
         content: url(../img/second/snack.png);
         position: absolute;
-        bottom: -130px;
+        bottom: rem(-130px);
     }
 }
-
 
 .second__container {
     position: relative;
@@ -34,26 +18,25 @@ $light: rgb(248, 250, 249);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    padding-top: rem(9px);
 }
 
 .reason {
-    width: 406px;
-    margin: 0px auto 55px;
-
+    width: rem(406px);
+    margin: rem(0px) auto rem(55px);
 
     &>h2 {
-        font-size: 48px;
+        font-size: rem(48px);
         font-weight: bold;
         text-transform: uppercase;
         color: $black;
-        margin: 0px 0px 7px;
+        margin: rem(0px) rem(0px) rem(7px);
     }
 
     &>p {
-        font-size: 18px;
+        font-size: rem(18px);
         color: $grey;
-        margin: 0px;
+        margin: rem(0px);
 
     }
 }
@@ -63,21 +46,21 @@ $light: rgb(248, 250, 249);
     margin: 0 auto;
 
     &__image {
-       height: 80px;
-       width: 80px;
+       height: rem(80px);
+       width: rem(80px);
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
-        margin: 0px;
-        padding: 0px;
+        margin: rem(0px);
+        padding: rem(0px);
         list-style-type: none;
-        width: 940px;
+        width: rem(940px);
     }
 
     &__item {
-        width: 260px;
+        width: rem(260px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -90,26 +73,26 @@ $light: rgb(248, 250, 249);
 
     &>h3 {
         color: $black;
-        font-size: 27px;
-        margin: 0px 0px 18px;
+        font-size: rem(27px);
+        margin: rem(0px) rem(0px) rem(18px);
     }
 
     &>p {
         color: $grey;
-        font-size: 18px;
-        margin: 0px;
+        font-size: rem(18px);
+        margin: rem(0px);
     }
 }
 
 .round {
-    width: 125px;
-    height: 125px;
+    width: rem(125px);
+    height: rem(125px);
     border-radius: 50%;
     background: $light;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
 }
 
 .image-icon {

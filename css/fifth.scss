@@ -1,69 +1,59 @@
-$blue: rgb(97, 196, 217);
-$white: rgb(255, 255, 255);
-$green: rgb(11, 77, 60);
-$black: rgb(14, 14, 14);
-$grey: rgb(141, 141, 141);
-$light: rgb(248, 250, 249);
-
-@mixin size {
-    height: 100vh;
-    width: 100%;
-    min-height: 650px;
-
-}
 
 .fifth {
     @include size;
     background: url(../img/fifth/background.png) center center / cover no-repeat;
     color: $white;
     position: relative;
+
+    &:before {
+        content: url(../img/fifth/rastberry.png);
+        position: absolute;
+        top: rem(-58px);
+        left: rem(30px);
+    }
 }
 
 .fifth__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
-    
+ 
     &>h2 {
-        font-size: 48px;
+        font-size: rem(48px);
         text-transform: uppercase;
         text-align: left;
-        margin: 0px;
-
+        margin: rem(0px);
     }
 }
 
 .bars-type {
     list-style-type: none;
-    margin: 0px;
-    padding-left: 0px;
+    margin: rem(0px);
+    padding-left: rem(0px);
     display: flex;
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
 
-
     &__item>h3 {
-        font-size: 48px;
-        margin: 0px;
+        font-size: rem(48px);
+        margin: rem(0px);
         transform: rotate(180deg);
         writing-mode: vertical-lr;
         text-align: center;
-        width: 100px;
+        width: rem(100px);
         line-height: 2;
     }
 
     &__item>p {
         overflow: hidden;
         width: 0;
-        font-size: 16px;
-        margin: 0px;
-        width: 0px;
-        // width: 370px;
-        // padding: 50px 100px 0 27px;
+        font-size: rem(16px);
+        margin: rem(0px);
+        width: rem(0px);
+        // width: rem(370px);
+        // padding: rem(50px) rem(100px) 0 rem(27px);
     }
 }
 
@@ -83,6 +73,5 @@ $light: rgb(248, 250, 249);
      &--three>h3{
         background: url(../img/fifth/shutterstock_684121381.png) center center / cover no-repeat;
      }
-
 }
 

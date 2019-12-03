@@ -1,0 +1,55 @@
+.sidebar {
+    position: fixed;
+    top: 30%;
+    right: 2%;
+
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+    }
+}
+
+.sidebar__item {
+    margin-bottom: rem(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &:hover {
+        cursor: pointer;
+    }  
+}
+
+.link {
+    width: rem(7px);
+    height: rem(7px);
+    border-radius: 50%;
+    background: $green;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: none;;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 1px solid $green;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    &:active:before{
+        display:flex;
+    }
+
+    &:focus:before {
+        display: flex;
+    }
+}
+
+
+
+

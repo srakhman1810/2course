@@ -1,15 +1,3 @@
-$blue: rgb(97, 196, 217);
-$white: rgb(255, 255, 255);
-$green: rgb(11, 77, 60);
-$black: rgb(14, 14, 14);
-$grey: rgb(141, 141, 141);
-$light: rgb(248, 250, 249);
-
-@mixin size {
-    height: 100vh;
-    width: 100%;
-    min-height: 650px;
-}
 
 .first {
     background-color: $blue;
@@ -18,16 +6,24 @@ $light: rgb(248, 250, 249);
     background-position: right center;
     @include size;
     position: relative;
-    padding-top: 12px;
+    // padding-top: rem(12px);
 
     &:after {
         content: url(../img/first/background2.png);
         position: absolute;
-        bottom: -57px;
-        right: 189px;
+        bottom: rem(-57px);
+        right: 0;
+    }
+
+    &:before {
+        content: url(../img/first/background3.png);
+        position: absolute;
+        bottom: rem(-57px);
+        left: 0;
     }
 
     &__container {
+        padding-top: rem(12px);
         position: relative;
         display: flex;
         flex-direction: column;
@@ -45,11 +41,13 @@ $light: rgb(248, 250, 249);
 }
 
 .logo {
-    width: 53px;
-    font-size: 24px;
+    width: rem(69px);
+    font-size: rem(24px);
     text-transform: uppercase;
     word-wrap: break-word;
     color: $white;
+    font-family: 'MuseoSansCyrl', sans-serif ;
+    letter-spacing: rem(1px);
 }
 
 .menu {
@@ -58,9 +56,9 @@ $light: rgb(248, 250, 249);
         display: flex;
         justify-content: space-between;
         text-align: center;
-        width: 630px;
-        margin: 0px;
-        padding-left: 0px;
+        width: rem(630px);
+        margin: rem(0px);
+        padding-left: rem(0px);
     }
 
     &__item {
@@ -70,7 +68,7 @@ $light: rgb(248, 250, 249);
     &__link {
         color: $white;
         text-decoration: none;
-        font-size: 18px;
+        font-size: rem(18px);
     }
 }
 
@@ -79,7 +77,7 @@ $light: rgb(248, 250, 249);
     align-items: center;
 
     &__number {
-        font-size: 24px;
+        font-size: rem(24px);
         text-decoration: none;
         color: $white;
         font-style: normal;
@@ -89,9 +87,9 @@ $light: rgb(248, 250, 249);
 }
 
 .phone {
-    height: 11px;
-    width: 12px;
-    margin-right: 7px;
+    height: rem(11px);
+    width: rem(12px);
+    margin-right: rem(7px);
 
     &-icon {
         fill: $white;
@@ -108,14 +106,14 @@ $light: rgb(248, 250, 249);
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-bottom: 66px;
-    margin-top: 85px;
+    margin-bottom: rem(66px);
+    margin-top: rem(85px);
 
     &__image {
         position: absolute;
-        right: 0px;
-        bottom: -97px;
-        right: -52px;
+        right: rem(0px);
+        bottom: -rem(97px);
+        right: -rem(52px);
     }
 
 }
@@ -124,33 +122,33 @@ $light: rgb(248, 250, 249);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 400px;
+    width: rem(400px);
 
     &>h1 {
-        font-size: 59px;
+        font-size: rem(59px);
         text-transform: uppercase;
-        margin: 0px 0px 10px;
+        margin: rem(0px) rem(0px) rem(10px);
         line-height: 1;
     }
 
     &>p {
-        font-size: 20px;
-        margin: 0px 0px 32px;
+        font-size: rem(20px);
+        margin: rem(0px) rem(0px) rem(32px);
     }
 }
 
 .bars__button {
     outline: none;
-    width: 156px;
-    height: 58px;
+    width: rem(156px);
+    height: rem(58px);
     background: $white;
-    border: 1px;
-    border-radius: 50px;
-    font-size: 18px;
+    border: rem(1px);
+    border-radius: rem(50px);
+    font-size: rem(18px);
     color: $green;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: rem(0px) rem(3px) rem(0px) rgba(0, 0, 0, 0.1);
 
     &:hover {
         cursor: pointer;
@@ -170,10 +168,10 @@ $light: rgb(248, 250, 249);
         display: flex;
         justify-content: space-between;
         list-style-type: none;
-        width: 485px;
-        font-size: 16px;
-        padding: 0px;
-        margin: 0px;
+        width: rem(485px);
+        font-size: rem(16px);
+        padding: rem(0px);
+        margin: rem(0px);
     }
 
     &__item {
@@ -190,28 +188,22 @@ $light: rgb(248, 250, 249);
 }
 
 .leaves-icon {
-    height: 50px;
-    width: 60px; 
+    height: rem(50px);
+    width: rem(60px); 
 }
 
 .track-icon {
-    height: 50px;
-    width: 80px;  
+    height: rem(50px);
+    width: rem(80px);  
 }
 
 .measure-icon {
-    height: 50px;
-    width: 65px;
+    height: rem(50px);
+    width: rem(65px);
 }
 
 .advantages__item>p {
-    width: 60px;
-    margin: 0px;
+    width: rem(60px);
+    margin: rem(0px);
 }
 
-// @each $advantages in (one, two, three) {
-//     .advantages__item-#{$advantages}:before {
-//         content: url('../img/first/#{$advantages}.png');
-//         margin-right: 10px;
-//     }
-// }

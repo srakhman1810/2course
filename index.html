@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1101, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
     <title>CHOCCO</title>
@@ -12,32 +12,32 @@
 <body>
     <div class="wrapper">
         <div class="page">
-            <section class="first">
+            <section class="first" id="first">
                 <div class="container first__container ">
                     <header class="header">
                         <div class=logo> chocco </div>
                         <nav class="menu">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link"> О нас </a>
+                                    <a href="#second" class="menu__link"> О нас </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link"> Батончики </a>
+                                    <a href="#third" class="menu__link"> Батончики </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link"> Команда </a>
+                                    <a href="#fourth" class="menu__link"> Команда </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link"> Меню </a>
+                                    <a href="#fifth" class="menu__link"> Меню </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link"> Отзывы </a>
+                                    <a href="#sixth" class="menu__link"> Отзывы </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link"> Как мы работаем</a>
+                                    <a href="#seventh" class="menu__link"> Как мы работаем</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link"> Контакты </a>
+                                    <a href="#ninth" class="menu__link"> Контакты </a>
                                 </li>
                             </ul>
                         </nav>
@@ -89,7 +89,7 @@
                     </article>
                 </div>
             </section>
-            <section class="second">
+            <section class="second" id="second">
                 <div class="container second__container">
                     <article class="reason">
                         <h2> почему chocco?</h2>
@@ -144,7 +144,7 @@
                     </article>
                 </div>
             </section>
-            <section class="third">
+            <section class="third" id="third">
                 <div class="container third__container">
                     <div class="bar">
                         <article class="image-block">
@@ -265,7 +265,7 @@
                     </div>
                 </div>
             </section>
-            <section class="fourth">
+            <section class="fourth" id="fourth">
                 <div class="container fourth__container">
                     <h2> команда </h2>
                     <ul class="team">
@@ -332,7 +332,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="fifth">
+            <section class="fifth" id="fifth">
                 <div class="container fifth__container">
                     <h2> меню </h2>
                     <ul class="bars-type">
@@ -368,7 +368,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="sixth">
+            <section class="sixth" id="sixth">
                 <div class="container sixth__container">
                     <h2> отзывы </h2>
                     <article class="review">
@@ -432,83 +432,88 @@
                     </article>
                 </div>
             </section>
-            <section class="seventh">
+            <section class="seventh" id="seventh">
                 <div class="container seventh__container">
                     <h2> как мы работаем </h2>
-                    <div> здесь будет видео </div>
+                    <div class="video-iframe">
+                        <iframe width="660" height="370" src="https://www.youtube.com/embed/JnpAfJ_jZk8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
             </section>
-            <section class="eighth">
+            <section class="eighth" id="eighth">
                 <div class="container eighth__container">
                     <h2> закажите доставку</h2>
-                    <form class="form" action="" method="post">
-                        <div class="personal-information">
-                            <label class="cell cell__1" for="">
-                                <div class="cell__name">Имя </div>
-                                <input class="cell__input" type="text" tabindex="1" placeholder="">
-                            </label>
-                            <label class="cell cell__1" for="">
-                                <div class="cell__name">Телефон </div>
-                                <input class="cell__input" type="text" tabindex="2" placeholder="">
-                            </label>
-                            <label class="cell cell__2" for="">
-                                <div class="cell__name"> Улица </div>
-                                <input class="cell__input" type="text" tabindex="3" placeholder="">
-                            </label>
-                            <label class="cell cell__3" for="">
-                                <div class="cell__name">Дом </div>
-                                <input class="cell__input" type="text" tabindex="4" placeholder="">
-                            </label>
-                            <label class="cell cell__3" for="">
-                                <div class="cell__name">Корпус </div>
-                                <input class="cell__input" type="text" tabindex="5" placeholder="">
-                            </label>
-                            <label class="cell cell__3" for="">
-                                <div class="cell__name">Квартира </div>
-                                <input class="cell__input" type="text" tabindex="6" placeholder="">
-                            </label>
-                            <label class="cell cell__3" for="">
-                                <div class="cell__name">Этаж </div>
-                                <input class="cell__input" type="text" tabindex="7" placeholder="">
-                            </label>
-                        </div>
-                        <div class="comments">
-                            <label class="cell cell__comment">
-                                <div class="cell__name">Комментарий</div>
-                                <textarea name="" class="cell__input cell__input--comment" tabindex="8" placeholder="">
+                    <div class="form-block">
+                        <form class="form" action="" method="post">
+                            <div class="personal-information">
+                                <label class="cell cell__1" for="">
+                                    <div class="cell__name">Имя </div>
+                                    <input class="cell__input" type="text" tabindex="1" placeholder="">
+                                </label>
+                                <label class="cell cell__1" for="">
+                                    <div class="cell__name">Телефон </div>
+                                    <input class="cell__input" type="text" tabindex="2" placeholder="">
+                                </label>
+                                <label class="cell cell__2" for="">
+                                    <div class="cell__name"> Улица </div>
+                                    <input class="cell__input" type="text" tabindex="3" placeholder="">
+                                </label>
+                                <label class="cell cell__3" for="">
+                                    <div class="cell__name">Дом </div>
+                                    <input class="cell__input" type="text" tabindex="4" placeholder="">
+                                </label>
+                                <label class="cell cell__3" for="">
+                                    <div class="cell__name">Корпус </div>
+                                    <input class="cell__input" type="text" tabindex="5" placeholder="">
+                                </label>
+                                <label class="cell cell__3" for="">
+                                    <div class="cell__name">Квартира </div>
+                                    <input class="cell__input" type="text" tabindex="6" placeholder="">
+                                </label>
+                                <label class="cell cell__3" for="">
+                                    <div class="cell__name">Этаж </div>
+                                    <input class="cell__input" type="text" tabindex="7" placeholder="">
+                                </label>
+                            </div>
+                            <div class="comments">
+                                <label class="cell cell__comment">
+                                    <div class="cell__name">Комментарий</div>
+                                    <textarea name="" class="cell__input cell__input--comment" tabindex="8"
+                                        placeholder="">
                                 </textarea>
-                            </label>
-                            <div class="comments__checkbox">
-                                <label class="checkbox">
-                                    <input type="radio" name="radio" class="checkbox__choice" checked id="check"
-                                        tabindex="9">
-                                    <div class="checkbox__circle"></div>
-                                    <div class="checkbox__answer"> Потребуется сдача </div>
                                 </label>
-                                <label class="checkbox">
-                                    <input type="radio" name="radio" class="checkbox__choice" checked id="check"
-                                        tabindex="9">
-                                    <div class="checkbox__circle"></div>
-                                    <div class="checkbox__answer"> Оплата по карте </div>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="checkbox" class="checkbox__choice" id="checkbox"
-                                        checked tabindex="11">
-                                    <div class="checkbox__square">
-                                        <img src="./img/eighth/mark.svg" alt="" class="mark">
-                                    </div>
-                                    <div class="checkbox__answer"> Не перезванивать </div>
-                                </label>
+                                <div class="comments__checkbox">
+                                    <label class="checkbox">
+                                        <input type="radio" name="radio" class="checkbox__choice" checked id="check"
+                                            tabindex="9">
+                                        <div class="checkbox__circle"></div>
+                                        <div class="checkbox__answer"> Потребуется сдача </div>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="radio" name="radio" class="checkbox__choice" checked id="check"
+                                            tabindex="9">
+                                        <div class="checkbox__circle"></div>
+                                        <div class="checkbox__answer"> Оплата по карте </div>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox" class="checkbox__choice" id="checkbox"
+                                            checked tabindex="11">
+                                        <div class="checkbox__square">
+                                            <img src="./img/eighth/mark.svg" alt="" class="mark">
+                                        </div>
+                                        <div class="checkbox__answer"> Не перезванивать </div>
+                                    </label>
+                                </div>
+                                <div class="buttons">
+                                    <input type="submit" value="Заказать" class="button__submit">
+                                    <input type="reset" value="Очистить" class="button__reset">
+                                </div>
                             </div>
-                            <div class="buttons">
-                                <input type="submit" value="Заказать" class="button__submit">
-                                <input type="reset" value="Очистить" class="button__reset">
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </section>
-            <section class="ninth">
+            <section class="ninth" id="ninth">
                 <div class="container ninth__container">
                     <img src="" alt="" class="map">
                 </div>
@@ -559,6 +564,19 @@
                 </article>
             </div>
         </footer>
+        <nav class="sidebar">
+            <ul class="sidebar__list">
+                <li class="sidebar__item"> <a href="#first" class="link link--active"> </a> </li>
+                <li class="sidebar__item"> <a href="#second" class="link link--active"> </a> </li>
+                <li class="sidebar__item"> <a href="#third" class="link link--active"> </a> </li>
+                <li class="sidebar__item"> <a href="#fourth" class="link link--active"> </a> </li>
+                <li class="sidebar__item"> <a href="#fifth" class="link link--active"> </a> </li>
+                <li class="sidebar__item"> <a href="#sixth" class="link link--active"> </a> </li>
+                <li class="sidebar__item"> <a href="#seventh" class="link link--active"> </a> </li>
+                <li class="sidebar__item"> <a href="#eighth" class="link link--active"> </a> </li>
+                <li class="sidebar__item"> <a href="#ninth" class="link link--active"> </a> </li>
+            </ul>
+        </nav>
     </div>
 </body>
 

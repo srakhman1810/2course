@@ -1,20 +1,13 @@
-$blue: rgb(97, 196, 217);
-$white: rgb(255, 255, 255);
-$green: rgb(11, 77, 60);
-$black: rgb(14, 14, 14);
-$grey: rgb(141, 141, 141);
-$light: rgb(248, 250, 249);
-
 
 .footer {
     position: absolute;
-    bottom: 0px;
+    bottom: rem(0px);
     width: 100%;
     background: $white;
 
     &__container {
         display: flex;
-        height: 93px;
+        height: rem(93px);
 
     }
 }
@@ -26,25 +19,23 @@ $light: rgb(248, 250, 249);
     justify-content: center;
 
     &>p {
-        font-size: 21px;
-        margin: 0px;
+        font-size: rem(21px);
+        margin: rem(0px);
     }
-
 }
 
 .handset {
-    height: 11px;
-    width: 11px;
-    margin-right: 7px;
+    height: rem(11px);
+    width: rem(11px);
+    margin-right: rem(7px);
 
     &-icon {
         fill: $green;
     }
 }
 
-
 .number {
-    font-size: 21px;
+    font-size: rem(21px);
     text-decoration: none;
     color: $green;
     font-style: normal;
@@ -61,26 +52,23 @@ $light: rgb(248, 250, 249);
         display: flex;
         list-style-type: none;
         align-items: center;
-        margin:0px;
-        padding-left:0px;
+        margin:rem(0px);
+        padding-left:rem(0px);
     }
-
 }
 
 .social__item {
-    margin-right:20px;
+    margin-right:rem(20px);
 
     &:nth-child(4){
-        margin-right:0px;
+        margin-right:rem(0px);
     }
 }
 
-
 .site {
-    height: 23px;
-    width: 23px;
-    // margin-right: 20px;
-
+    height: rem(23px);
+    width: rem(23px);
+    
     &:hover{
         cursor: pointer;
     }
@@ -92,7 +80,6 @@ $light: rgb(248, 250, 249);
 
 .social-icon {
     fill:$grey;
-
 }
 
 

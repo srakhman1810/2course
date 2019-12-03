@@ -1,34 +1,25 @@
-$blue: rgb(97, 196, 217);
-$white: rgb(255, 255, 255);
-$green: rgb(11, 77, 60);
-$black: rgb(14, 14, 14);
-$grey: rgb(141, 141, 141);
-$light: rgb(248, 250, 249);
-
-@mixin size {
-    height: 100vh;
-    width: 100%;
-    min-height: 650px;
-}
-
 
 .seventh {
     @include size;
-    background: $light;
+    background-color: $light;
     position: relative; 
 
     &:after {
         content: url(../img/seventh/blackberry.png);
         position: absolute;
-        bottom: -110px;
-        right: 0px;
+        bottom: rem(-110px);
+        right: rem(0px);
     }
 
-
+    &:before {
+        content: url(../img/seventh/berries.png);
+        position: absolute;
+        left: 1%;
+        top: -17%;
+    }
 }
 
 .seventh__container {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,25 +27,19 @@ $light: rgb(248, 250, 249);
     position: relative;
 
     &:after {
-        content: url(../img/seventh/background.png);
-       position: absolute;
-    
+    content: url(../img/seventh/background.png);
+    position: absolute;
     }
  
     &>h2 {
-        margin:0px;
-        font-size: 48px;
+        margin:rem(0px);
+        font-size: rem(48px);
         text-transform: uppercase;
-        margin-bottom: 50px;
+        margin-bottom: rem(50px);
     }
+}
 
-    &>div {
-        background: url(../img/seventh/video.png) no-repeat;
-        width: 670px;
-        height: 360px;
-        font-size: 30px;
-        font-weight: bold;
-        color: $green;
-        
-    }
+.video {
+    width: 66rem;
+    text-align: center;
 }
