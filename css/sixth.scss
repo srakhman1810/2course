@@ -1,7 +1,6 @@
 
 .sixth {
     @include size;
-    // padding-top: rem(59px);
     position: relative;
     font-size: rem(18px);
 
@@ -20,18 +19,18 @@
 }
 
 .sixth__container {
+    padding-top: 4%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-     padding-top: rem(59px);
 
     &>h2 {
         text-align: center;
         text-transform: uppercase;
         font-size: rem(48px);
         color: $black;
-        margin: rem(0px) rem(0px) rem(28px);
+        margin: 0% 0% 3%;
         position: relative;
     }
 }
@@ -47,12 +46,12 @@
     &:before {
         content: url(../img/sixth/ellipse.png);
         position: absolute;
-        top: rem(-1px);
+        top: 0%;
     }
 
     &__area {
-        padding-left: rem(0px);
-        margin: rem(0px) auto rem(24px);
+        padding-left: 0%;
+        margin: 0% auto 3%;
         width: rem(940px);
         height: rem(345px);
         background-color: $light;
@@ -68,12 +67,12 @@
         width: rem(713px);
         height: rem(260px);
         align-items: center;
-        margin-left: rem(42px);
-        margin-top: rem(24px);
+        margin-left: 5%;
+        margin-top: 3%;
     }
 
     &__image {
-        margin-right: rem(20px);
+        margin-right: 3%;
         width: rem(254px);
         height: rem(250px)
     }
@@ -86,12 +85,12 @@
     &>h3 {
         font-size: rem(30px);
         color: $black;
-        margin: rem(0px) rem(0px) rem(10px);
+        margin: 0% 0% 3%;
     }
 
     &>p {
         color: $grey;
-        margin: rem(0px) rem(0px) rem(28px);
+        margin: 0% 0% 5%;
     }
 
     &>div {
@@ -103,15 +102,15 @@
 .clients {
 
     &__list {
-        margin: rem(0px);
-        padding-left: rem(0px);
+        margin: 0%;
+        padding-left: 0%;
         display: flex;
         justify-content: center;
     }
 
     &__item {
         list-style-type: none;
-        margin-right: rem(2px);
+        margin-right: 1%;
 
         &:nth-last-child {
             margin-right: none;

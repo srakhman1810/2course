@@ -6,10 +6,8 @@
     src: url(../fonts/Museo-Sans-Cyr/MuseoSansCyrl_1.otf);
 }
 
-
-
 html body {
-    font-size: 10px;
+    font-size: 16px;
     margin: 0px; 
     font-family: 'Alegreya Sans', sans-serif;
 }
@@ -32,7 +30,7 @@ $light: rgb(248, 250, 249);
 .container {
     margin: 0 auto;
     max-width: 94rem;
-    width: 85%;
+    width: 80%;
     height: 100vh;
 }
 

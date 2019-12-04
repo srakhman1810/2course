@@ -6,31 +6,29 @@
     background-position: right center;
     @include size;
     position: relative;
-    // padding-top: rem(12px);
 
     &:after {
         content: url(../img/first/background2.png);
         position: absolute;
-        bottom: rem(-57px);
-        right: 0;
+        bottom: -8%;
+        right: 0%;
     }
 
     &:before {
         content: url(../img/first/background3.png);
         position: absolute;
-        bottom: rem(-57px);
-        left: 0;
+        bottom: -8%;
+        left: 0%;
     }
 
     &__container {
-        padding-top: rem(12px);
+        padding-top: 1%;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: stretch;
     }
-
 }
 
 .header {
@@ -57,8 +55,8 @@
         justify-content: space-between;
         text-align: center;
         width: rem(630px);
-        margin: rem(0px);
-        padding-left: rem(0px);
+        margin: 0%;
+        padding-left: 0%;
     }
 
     &__item {
@@ -75,6 +73,8 @@
 .call {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 10rem;
 
     &__number {
         font-size: rem(24px);
@@ -83,13 +83,12 @@
         font-style: normal;
         text-transform: uppercase;
     }
-
 }
 
 .phone {
     height: rem(11px);
     width: rem(12px);
-    margin-right: rem(7px);
+    margin-right: 1%;
 
     &-icon {
         fill: $white;
@@ -106,16 +105,15 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-bottom: rem(66px);
-    margin-top: rem(85px);
+    margin-bottom: 8%;
+    margin-top: 8%;
 
     &__image {
         position: absolute;
-        right: rem(0px);
+        right: 0%;
         bottom: -rem(97px);
         right: -rem(52px);
     }
-
 }
 
 .bars__information {
@@ -127,13 +125,13 @@
     &>h1 {
         font-size: rem(59px);
         text-transform: uppercase;
-        margin: rem(0px) rem(0px) rem(10px);
+        margin: 0% 0% 3%;
         line-height: 1;
     }
 
     &>p {
         font-size: rem(20px);
-        margin: rem(0px) rem(0px) rem(32px);
+        margin: 0% 0% 9%;
     }
 }
 
@@ -148,7 +146,7 @@
     color: $green;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: rem(0px) rem(3px) rem(0px) rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 
     &:hover {
         cursor: pointer;
@@ -170,14 +168,13 @@
         list-style-type: none;
         width: rem(485px);
         font-size: rem(16px);
-        padding: rem(0px);
-        margin: rem(0px);
+        padding: 0%;
+        margin: 0%;
     }
 
     &__item {
         display: flex;
     }
-
 }
 
 .icon {

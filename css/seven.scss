@@ -7,8 +7,8 @@
     &:after {
         content: url(../img/seventh/blackberry.png);
         position: absolute;
-        bottom: rem(-110px);
-        right: rem(0px);
+        bottom: -17%;
+        right: 0%;
     }
 
     &:before {
@@ -32,14 +32,14 @@
     }
  
     &>h2 {
-        margin:rem(0px);
+        margin:0%;
         font-size: rem(48px);
         text-transform: uppercase;
-        margin-bottom: rem(50px);
+        margin-bottom: 5%;
     }
 }
 
-.video {
-    width: 66rem;
-    text-align: center;
+.iframe {
+    width: rem(660px);
+    height: rem(370px);
 }

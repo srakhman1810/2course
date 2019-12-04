@@ -1,7 +1,7 @@
 
 .footer {
     position: absolute;
-    bottom: rem(0px);
+    bottom: 0%;
     width: 100%;
     background: $white;
 
@@ -20,14 +20,14 @@
 
     &>p {
         font-size: rem(21px);
-        margin: rem(0px);
+        margin: 0%;
     }
 }
 
 .handset {
     height: rem(11px);
     width: rem(11px);
-    margin-right: rem(7px);
+    margin-right: 1%;
 
     &-icon {
         fill: $green;
@@ -52,16 +52,16 @@
         display: flex;
         list-style-type: none;
         align-items: center;
-        margin:rem(0px);
-        padding-left:rem(0px);
+        margin:0%;
+        padding-left:0%;
     }
 }
 
 .social__item {
-    margin-right:rem(20px);
+    margin-right:20%;
 
     &:nth-child(4){
-        margin-right:rem(0px);
+        margin-right:0%;
     }
 }
 

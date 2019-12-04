@@ -11,11 +11,11 @@
     color: $green;
 
     &>h2 {
-        margin: rem(0px);
+        margin: 0%;
         font-size: rem(48px);
         text-transform: uppercase;
         line-height: 1;
-        margin-bottom: rem(54px);
+        margin-bottom: 4%;
     }
 }
 
@@ -31,19 +31,19 @@
     justify-content: space-between;
     align-content: flex-start;
     width: rem(490px);
-    margin-right: rem(20px);
+    margin-right: 5%;
 }
 
 .cell {
 
     &__1 {
         flex-basis: rem(225px);
-        margin-bottom: rem(20px);
+        margin-bottom: 5%;
     }
 
     &__2 {
         flex-basis: rem(490px);
-        margin-bottom: rem(20px);
+        margin-bottom: 5%;
     }
 
     &__3 {
@@ -51,14 +51,14 @@
     }
 
     &__name {
-        margin-bottom: rem(8px);
+        margin-bottom: 2%;
     }
 
     &__input {
         height: rem(59px);
         width: 100%;
         background: $white;
-        padding: rem(10px) rem(10px);
+        padding: 3% 3%;
         outline: none;
         border: rem(1px) solid transparent;
         color: $green;
@@ -68,7 +68,7 @@
     }
 
     &__comment {
-        margin-bottom: rem(27px);
+        margin-bottom: 7%;
     }
 
 
@@ -95,7 +95,7 @@
         display: flex;
         flex-flow: row wrap;
         width: 100%;
-        margin-bottom: rem(40px);
+        margin-bottom: 13%;
     }
 
 }
@@ -103,16 +103,16 @@
 .checkbox {
     display: flex;
     align-items: center;
-    margin-right: rem(32px);
+    margin-right: 2%;
 
     &:nth-child(3) {
-        margin-right: rem(0px);
+        margin-right: 0%;
     }
 }
 
 .button__submit {
     outline: none;
-    margin-right: rem(29px);
+    margin-right: 10%;
     width: rem(156px);
     height: rem(58px);
     background: $green;
@@ -122,7 +122,7 @@
     color: $white;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: rem(0px) rem(3px) rem(0px) rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 
     &:hover {
         cursor: pointer;
@@ -191,5 +191,7 @@
 
 .mark{
     opacity: 0;
+    width: 15px;
+    height: 13px;
 }
 

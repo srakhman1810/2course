@@ -271,13 +271,14 @@
                     <ul class="team">
                         <li class="team__item">
                             <img src="./img/fourth/team1.png" alt="" class="team__image">
-                            <div class="employee">
+                            <a href="#" class="employee">
                                 <svg class="triangle">
                                     <use class="triangle-icon" xlink:href="./img/sprite.svg#down"> </use>
+                                    <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up"> </use>
                                 </svg>
-                                <h4> Борис Фёдорович</h4>
-                            </div>
-                            <div class="team__direction team__direction--active">
+                                <span class="employee__name"> Борис Фёдорович</span>
+                            </a>
+                            <div class="team__direction">
                                 <h5> Главный технолог </h5>
                                 <p class="click"> Отвечает за вкусовые качества
                                     и калорийность.
@@ -286,13 +287,14 @@
                         </li>
                         <li class="team__item">
                             <img src="./img/fourth/team2.png" alt="" class="team__image">
-                            <div class="employee">
+                            <a href="#" class="employee">
                                 <svg class="triangle">
                                     <use class="triangle-icon" xlink:href="./img/sprite.svg#down"> </use>
+                                    <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up"> </use>
                                 </svg>
-                                <h4> Алла Иванова </h4>
-                            </div>
-                            <div class="team__direction team__direction--active">
+                                <span class="employee__name"> Алла Иванова </span>
+                            </a>
+                            <div class="team__direction">
                                 <h5> Специалист по упаковке </h5>
                                 <p> Автор запоминающегося стиля
                                     наших батончиков.
@@ -301,13 +303,14 @@
                         </li>
                         <li class="team__item">
                             <img src="./img/fourth/team3.png" alt="" class="team__image">
-                            <div class="employee">
+                            <a href="#" class="employee">
                                 <svg class="triangle">
-                                    <use class="triangle-icon" xlink:href="./img/sprite.svg#down"> </use>
+                                    <use class="triangle-icon" xlink:href="./img/sprite.svg#down" style="display:none"> </use>
+                                    <use style="display: block" class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up"> </use>
                                 </svg>
-                                <h4> Кирилл Матросов </h4>
-                            </div>
-                            <div class="team__direction team__direction--active">
+                                <span class="employee__name"> Кирилл Матросов </span>
+                            </a>
+                            <div style="height:5rem" class="team__direction team__direction--active">
                                 <h5> Оператор </h5>
                                 <p> С радостью поможет подобрать
                                     батончики и оформить заказ.
@@ -316,13 +319,14 @@
                         </li>
                         <li class="team__item">
                             <img src="./img/fourth/team4.png" alt="" class="team__image">
-                            <div class="employee">
+                            <a href="#" class="employee">
                                 <svg class="triangle">
                                     <use class="triangle-icon" xlink:href="./img/sprite.svg#down"> </use>
+                                    <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up"> </use>
                                 </svg>
-                                <h4> Милла Рыжкова</h4>
-                            </div>
-                            <div class="team__direction team__direction--active">
+                                <span class="employee__name"> Милла Рыжкова</span>
+                            </a>
+                            <div class="team__direction">
                                 <h5> PR, маркетинг </h5>
                                 <p> По всем вопросам сотрудничества
                                     и рекламы писать только Миле.
@@ -336,34 +340,50 @@
                 <div class="container fifth__container">
                     <h2> меню </h2>
                     <ul class="bars-type">
-                        <li class="bars-type__item bars-type__item--one ">
-                            <h3> Батончик с молоком </h3>
-                            <p class="active"> Рекомендуем употреблять батончики вместе с кокосовым
-                                или миндальным молоком. Так и вкуснее, и полезнее.
-                                Ну чего ещё хотеть от жизни? Батончик – он твой
-                                лучший друг и радует всех вокруг. Как классно, что можно
-                                питаться полезно и вкусно, а не как попало. Бабуля, конечно,
-                                за такую еду не похвалит, но кто её будет спрашивать – никто.
-                                Надо бы, кстати, бабулю поздравить с днём Победы.
-                            </p>
+                        <li class="bars-type__item">
+                            <a href="#" class="link-acco link-acco--one"> <span class="heading-acco"> Батончик с молоком </span> </a>
+                            <div class="grey-block grey-block--active">
+                                <p class="text text--active"> Рекомендуем употреблять батончики вместе с кокосовым
+                                    или миндальным молоком. Так и вкуснее, и полезнее.
+                                    Ну чего ещё хотеть от жизни? Батончик – он твой
+                                    лучший друг и радует всех вокруг. Как классно, что можно
+                                    питаться полезно и вкусно, а не как попало. Бабуля, конечно,
+                                    за такую еду не похвалит, но кто её будет спрашивать – никто.
+                                    Надо бы, кстати, бабулю поздравить с днём Победы.
+                                </p>
+                                <svg class="x">
+                                    <use xlink:href="./img/sprite.svg#x" alt="" class="x-icon"> </use>
+                                </svg>
+                            </div>
                         </li>
-                        <li class="bars-type__item bars-type__item--two">
-                            <h3> С мёдом и фруктами </h3>
-                            <!-- <p class="active"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Id beatae sint inventore adipisci doloribus, quibusdam quidem
-                                nobis enim cum suscipit incidunt l
-                                ibero molestiae illo iusto accusamus
-                                dignissimos magnam vel voluptate?
-                            </p> -->
+                        <li class="bars-type__item">
+                            <a href="#" class="link-acco link-acco--two"> <span class="heading-acco"> С мёдом и фруктами </span> </a>
+                            <div class="grey-block">
+                                <p> Lorem ipsum dolor sit amet
+                                    consectetur, adipisicing elit. Delectus
+                                    sapiente dicta iste quo exercitationem optio
+                                    harum eum qui distinctio quibusdam, culpa
+                                    illo corrupti nulla repellat earum quae
+                                    asperiores ex omnis?
+                                </p>
+                                <svg class="x">
+                                    <use xlink:href="./img/sprite.svg#x" alt="" class="x-icon"> </use>
+                                </svg>
+                            </div>
                         </li>
-                        <li class="bars-type__item bars-type__item--three">
-                            <h3> Дикие ягоды </h3>
-                            <!-- <p class="active"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Id beatae sint inventore adipisci doloribus, quibusdam quidem
-                                nobis enim cum suscipit incidunt l
-                                ibero molestiae illo iusto accusamus
-                                dignissimos magnam vel voluptate?
-                            </p> -->
+                        <li class="bars-type__item">
+                            <a href="#" class="link-acco link-acco--three"> <span class="heading-acco"> Дикие ягоды </span> </a>
+                            <div class="grey-block">
+                                <p> Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Laudantium, adipisci. Sit perspiciatis,
+                                    odio, perferendis ut eligendi consequuntur pariatur
+                                    accusamus culpa molestiae similique porro nobis?
+                                    Quas dolores dolorem culpa harum ab.
+                                </p>
+                                <svg class="x">
+                                    <use xlink:href="./img/sprite.svg#x" alt="" class="x-icon"> </use>
+                                </svg>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -435,82 +455,83 @@
             <section class="seventh" id="seventh">
                 <div class="container seventh__container">
                     <h2> как мы работаем </h2>
-                    <div class="video-iframe">
-                        <iframe width="660" height="370" src="https://www.youtube.com/embed/JnpAfJ_jZk8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video">
+                        <iframe class=iframe src="https://www.youtube.com/embed/4VODDRWDTws" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </section>
             <section class="eighth" id="eighth">
                 <div class="container eighth__container">
                     <h2> закажите доставку</h2>
-                    <div class="form-block">
-                        <form class="form" action="" method="post">
-                            <div class="personal-information">
-                                <label class="cell cell__1" for="">
-                                    <div class="cell__name">Имя </div>
-                                    <input class="cell__input" type="text" tabindex="1" placeholder="">
-                                </label>
-                                <label class="cell cell__1" for="">
-                                    <div class="cell__name">Телефон </div>
-                                    <input class="cell__input" type="text" tabindex="2" placeholder="">
-                                </label>
-                                <label class="cell cell__2" for="">
-                                    <div class="cell__name"> Улица </div>
-                                    <input class="cell__input" type="text" tabindex="3" placeholder="">
-                                </label>
-                                <label class="cell cell__3" for="">
-                                    <div class="cell__name">Дом </div>
-                                    <input class="cell__input" type="text" tabindex="4" placeholder="">
-                                </label>
-                                <label class="cell cell__3" for="">
-                                    <div class="cell__name">Корпус </div>
-                                    <input class="cell__input" type="text" tabindex="5" placeholder="">
-                                </label>
-                                <label class="cell cell__3" for="">
-                                    <div class="cell__name">Квартира </div>
-                                    <input class="cell__input" type="text" tabindex="6" placeholder="">
-                                </label>
-                                <label class="cell cell__3" for="">
-                                    <div class="cell__name">Этаж </div>
-                                    <input class="cell__input" type="text" tabindex="7" placeholder="">
-                                </label>
-                            </div>
-                            <div class="comments">
-                                <label class="cell cell__comment">
-                                    <div class="cell__name">Комментарий</div>
-                                    <textarea name="" class="cell__input cell__input--comment" tabindex="8"
-                                        placeholder="">
+                    <form class="form" action="" method="post">
+                        <div class="personal-information">
+                            <label class="cell cell__1" for="">
+                                <div class="cell__name">Имя </div>
+                                <input class="cell__input" type="text" tabindex="1" placeholder="">
+                            </label>
+                            <label class="cell cell__1" for="">
+                                <div class="cell__name">Телефон </div>
+                                <input class="cell__input" type="text" tabindex="2" placeholder="">
+                            </label>
+                            <label class="cell cell__2" for="">
+                                <div class="cell__name"> Улица </div>
+                                <input class="cell__input" type="text" tabindex="3" placeholder="">
+                            </label>
+                            <label class="cell cell__3" for="">
+                                <div class="cell__name">Дом </div>
+                                <input class="cell__input" type="text" tabindex="4" placeholder="">
+                            </label>
+                            <label class="cell cell__3" for="">
+                                <div class="cell__name">Корпус </div>
+                                <input class="cell__input" type="text" tabindex="5" placeholder="">
+                            </label>
+                            <label class="cell cell__3" for="">
+                                <div class="cell__name">Квартира </div>
+                                <input class="cell__input" type="text" tabindex="6" placeholder="">
+                            </label>
+                            <label class="cell cell__3" for="">
+                                <div class="cell__name">Этаж </div>
+                                <input class="cell__input" type="text" tabindex="7" placeholder="">
+                            </label>
+                        </div>
+                        <div class="comments">
+                            <label class="cell cell__comment">
+                                <div class="cell__name">Комментарий</div>
+                                <textarea name="" class="cell__input cell__input--comment" tabindex="8" placeholder="">
                                 </textarea>
+                            </label>
+                            <div class="comments__checkbox">
+                                <label class="checkbox">
+                                    <input type="radio" name="radio" class="checkbox__choice" checked id="check"
+                                        tabindex="9">
+                                    <div class="checkbox__circle"></div>
+                                    <div class="checkbox__answer"> Потребуется сдача </div>
                                 </label>
-                                <div class="comments__checkbox">
-                                    <label class="checkbox">
-                                        <input type="radio" name="radio" class="checkbox__choice" checked id="check"
-                                            tabindex="9">
-                                        <div class="checkbox__circle"></div>
-                                        <div class="checkbox__answer"> Потребуется сдача </div>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="radio" name="radio" class="checkbox__choice" checked id="check"
-                                            tabindex="9">
-                                        <div class="checkbox__circle"></div>
-                                        <div class="checkbox__answer"> Оплата по карте </div>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="checkbox" class="checkbox__choice" id="checkbox"
-                                            checked tabindex="11">
-                                        <div class="checkbox__square">
-                                            <img src="./img/eighth/mark.svg" alt="" class="mark">
-                                        </div>
-                                        <div class="checkbox__answer"> Не перезванивать </div>
-                                    </label>
-                                </div>
-                                <div class="buttons">
-                                    <input type="submit" value="Заказать" class="button__submit">
-                                    <input type="reset" value="Очистить" class="button__reset">
-                                </div>
+                                <label class="checkbox">
+                                    <input type="radio" name="radio" class="checkbox__choice" checked id="check"
+                                        tabindex="9">
+                                    <div class="checkbox__circle"></div>
+                                    <div class="checkbox__answer"> Оплата по карте </div>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="checkbox" class="checkbox__choice" id="checkbox"
+                                        checked tabindex="11">
+                                    <div class="checkbox__square">
+                                        <svg class="mark">
+                                            <use xlink:href="./img/sprite.svg#mark" alt="" class="mark-icon"> </use>
+                                        </svg>
+                                    </div>
+                                    <div class="checkbox__answer"> Не перезванивать </div>
+                                </label>
                             </div>
-                        </form>
-                    </div>
+                            <div class="buttons">
+                                <input type="submit" value="Заказать" class="button__submit">
+                                <input type="reset" value="Очистить" class="button__reset">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </section>
             <section class="ninth" id="ninth">

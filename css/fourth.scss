@@ -3,15 +3,15 @@
     color: $black;
     @include size;
     background-image: url(../img/fourth/background.png);
-    background-position: right top rem(20px);
+    background-position: right top 5%;
     background-repeat: no-repeat;
     position: relative;
 
     &:after {
         content: url(../img/fourth/blueberries.png);
         position: absolute;
-        top: rem(-30px);
-        right: rem(15px);
+        top: -5%;
+        right: 1%;
     }
 }
 
@@ -27,7 +27,7 @@
         text-transform: uppercase;
         text-align: center;
         line-height: 1;
-        margin: rem(0px) rem(0px) rem(58px);
+        margin: 0% 0% 4%;
     }
 }
 
@@ -35,47 +35,60 @@
     display: flex;
     justify-content: center;
     list-style-type: none;
-    margin: rem(0px);
-    padding-left: rem(0px);
+    margin: 0%;
+    padding-left: 0%;
 
     &__item {
         width: 25%;
-        height: rem(403px);
+        height: rem(405px);
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-        
     }
+
+    &__image {
+        width: rem(220px);
+        height: rem(288px);
+        margin-bottom: 3%;
+    }    
 }
 
 .team__direction {
     overflow: hidden;
-    height: 0;
+    height: 0%;
 
     &>h5 {
         font-size: rem(17px);
-        margin: rem(0px); 
+        margin: 0%; 
     }
     
     &>p {
         font-size: rem(17px);
-        margin: rem(0px);
+        margin: 0%;
         color: $grey;
     }
+
 }
 
 .employee{
     display: flex;
-    flex-direction: row-reverse;
+    flex-flow: row-reverse;
     align-items: center;
     font-size: rem(21px);
-    margin: rem(0px);
+    color: $black;
+    text-decoration: none;
 }
 
 .triangle {
-    height: rem(20px);
-    width: rem(20px);
+    height: rem(18px);
+    width: rem(18px);
     fill: $green;
+
+    &-icon--active {
+        display: none;
+    }
 }
+
+

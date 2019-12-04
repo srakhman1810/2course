@@ -1,6 +1,5 @@
 
 .second {
-    // padding-top: rem(9px);
     position: relative;
     @include size;
     background: url('../img/second/background.png') left center no-repeat;
@@ -8,40 +7,39 @@
     &:before {
         content: url(../img/second/snack.png);
         position: absolute;
-        bottom: rem(-130px);
+        bottom: -20%;
     }
 }
 
 .second__container {
+    padding-top: 1%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: rem(9px);
 }
 
 .reason {
     width: rem(406px);
-    margin: rem(0px) auto rem(55px);
+    margin: 0 auto 4%;
 
     &>h2 {
         font-size: rem(48px);
         font-weight: bold;
         text-transform: uppercase;
         color: $black;
-        margin: rem(0px) rem(0px) rem(7px);
+        margin: 0% 0% 3%;
     }
 
     &>p {
         font-size: rem(18px);
         color: $grey;
-        margin: rem(0px);
+        margin: 0%;
 
     }
 }
 
-// description 
 .description {
     margin: 0 auto;
 
@@ -53,8 +51,8 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        margin: rem(0px);
-        padding: rem(0px);
+        margin: 0%;
+        padding: 0%;
         list-style-type: none;
         width: rem(940px);
     }
@@ -74,7 +72,7 @@
     &>h3 {
         color: $black;
         font-size: rem(27px);
-        margin: rem(0px) rem(0px) rem(18px);
+        margin: 0% 0% 3%;
     }
 
     &>p {
@@ -92,7 +90,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: rem(40px);
+    margin-bottom: 13%;
 }
 
 .image-icon {

@@ -5,13 +5,13 @@
 
     &__list {
         list-style-type: none;
-        padding-left: 0;
-        margin: 0;
+        padding-left: 0%;
+        margin: 0%;
     }
 }
 
 .sidebar__item {
-    margin-bottom: rem(15px);
+    margin-bottom: 250%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@
         transform: translate(-50%, -50%);
     }
 
-    &:active:before{
+    &:hover:before{
         display:flex;
     }
 
