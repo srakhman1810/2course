@@ -1,6 +1,7 @@
 
 .eighth {
     background: url(../img/eighth/background.png) center center / cover no-repeat;
+    padding:10%;
 }
 
 .eighth__container {
@@ -16,6 +17,7 @@
         text-transform: uppercase;
         line-height: 1;
         margin-bottom: 4%;
+        text-align: center;
     }
 }
 
@@ -23,6 +25,16 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+
+    
+    @include tablets {
+       flex-direction: column;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        
+    }
 }
 
 .personal-information {
@@ -32,6 +44,13 @@
     align-content: flex-start;
     width: rem(490px);
     margin-right: 5%;
+
+
+    @include mobile {
+       width: rem(465px);
+    }
+
+
 }
 
 .cell {
@@ -88,7 +107,15 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    width: rem(430px);
+    width: rem(490px);
+
+
+    @include mobile {
+        width: rem(465px);
+     }
+ 
+
+
 
     &__checkbox {
         height: rem(59px);
@@ -96,7 +123,16 @@
         flex-flow: row wrap;
         width: 100%;
         margin-bottom: 13%;
+
+
+    @include tablets {
+        justify-content: center;
     }
+
+    @include mobile {
+        justify-content: center;
+    }
+}
 
 }
 
@@ -195,3 +231,21 @@
     height: 13px;
 }
 
+
+
+.buttons {
+
+    
+    @include tablets {
+    
+    display: flex;
+    justify-content: center;
+    }
+
+    @include mobile {
+
+    display: flex;
+    justify-content: center;
+    }
+
+}

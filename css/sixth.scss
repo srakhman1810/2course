@@ -50,31 +50,61 @@
     }
 
     &__area {
-        padding-left: 0%;
-        margin: 0% auto 3%;
-        width: rem(940px);
-        height: rem(345px);
-        background-color: $light;
-        background-image: url('../img/sixth/background2.png');
-        background-repeat: no-repeat;
-        background-position: right top;
         display: flex;
         align-items: center;
+        list-style-type: none;
+        padding-left: 0%;
+        margin:0%;
+        margin-bottom: 5%;
+
     }
 
     &__block {
         display: flex;
-        width: rem(713px);
-        height: rem(260px);
+        // width: rem(713px);
+        // height: rem(260px);
         align-items: center;
-        margin-left: 5%;
-        margin-top: 3%;
+        justify-content: center;
+        // margin-left: 5%;
+        // margin-top: 3%;
+        // margin: 0% auto 3%;
+        // width: 90%;
+        // height: 40%;
+        background-color: $light;
+        background-image: url('../img/sixth/background2.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        padding: 5%;
+
+
+        @include tablets {
+            flex-direction: column;
+            text-align: center;
+            margin-left: 0%;
+        }
+    
+        @include mobile {
+            flex-direction: column;
+            text-align: center;
+            margin-left: 0%;
+        }
     }
+
 
     &__image {
         margin-right: 3%;
-        width: rem(254px);
-        height: rem(250px)
+        width: 40%;
+        height: 90%;
+        
+        @include tablets {
+            margin-right: 0%;
+            width: 50%;
+        }
+    
+        @include mobile {
+            margin-right: 0%;
+            width: 50%;
+        }
     }
 }
 

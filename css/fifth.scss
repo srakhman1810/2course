@@ -4,6 +4,7 @@
     color: $white;
     position: relative;
 
+
     &:before {
         content: url(../img/fifth/rastberry.png);
         position: absolute;
@@ -16,6 +17,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include tablets {
+        height: 100vh;
+    }
+
+    @include mobile {
+        height: 100vh;
+    }
 
     &>h2 {
         font-size: rem(48px);
@@ -47,7 +55,7 @@
 .link-acco {
     position: relative;
     text-decoration: none;
-    width: rem(100px);
+    width: rem(75px);
     height: 100%;
     display: block;
    
@@ -86,7 +94,7 @@
     background-color: rgba($black, .6);
 
     &--active {
-    width: rem(530px);
+    width: 86%;
     }
 
 }

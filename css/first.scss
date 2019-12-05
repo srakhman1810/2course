@@ -6,12 +6,19 @@
     background-position: right center;
     @include size;
     position: relative;
+    padding-bottom: 5%;
 
     &:after {
         content: url(../img/first/background2.png);
         position: absolute;
         bottom: -8%;
         right: 0%;
+        @include tablets {
+           bottom: 43%;
+        }
+        @include mobile {
+            bottom: 43%;
+        }   
     }
 
     &:before {
@@ -19,10 +26,19 @@
         position: absolute;
         bottom: -8%;
         left: 0%;
+        @include tablets {
+            bottom: 42%;
+            left: 5%;
+         }
+        @include mobile {
+             bottom: 42%;
+             left: 5%;
+
+         }
+        
     }
 
     &__container {
-        padding-top: 1%;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -46,35 +62,100 @@
     color: $white;
     font-family: 'MuseoSansCyrl', sans-serif ;
     letter-spacing: rem(1px);
+    text-align: center;
 }
 
 .menu {
+    
+    @include tablets{ 
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: $dark;  
+        position: absolute;
+        top:0;
+        left:0; 
+        display: flex;
+        align-items: center; 
+        display: none;
+    }
+    @include mobile{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($black, .6); 
+        position: absolute;
+        top:0;
+        left:0; 
+        display: flex;
+        align-items: center; 
+        display: none;
+    }      
+    
+    .link-menu:hover .menu {
+        display:flex;
+    }
 
+
+    
     &__list {
+        width: rem(600px);
         display: flex;
         justify-content: space-between;
         text-align: center;
-        width: rem(630px);
-        margin: 0%;
-        padding-left: 0%;
+        margin: 0% auto;
+        padding-left: 0%; 
+        
+        @include tablets{ 
+            flex-direction: column; 
+        }
+        @include mobile{
+            flex-direction: column;  
+        }      
     }
 
     &__item {
         list-style-type: none;
+        @include tablets{ 
+           margin-bottom: 3%;
+        }
+        @include mobile{
+            margin-bottom: 3%; 
+        }      
     }
 
     &__link {
         color: $white;
         text-decoration: none;
         font-size: rem(18px);
+        white-space: nowrap;
+    }     
+}
+
+.x-menu {
+    width: rem(20px);
+    height: rem(20px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    top: 2%;
+    right: 5%;
+    list-style-type: none;
+    display: none;
+    @include tablets {
+    display: flex;
+    }
+    @include mobile {
+    display: flex;
     }
 }
+
 
 .call {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 10rem;
+    text-align: center;
 
     &__number {
         font-size: rem(24px);
@@ -82,18 +163,44 @@
         color: $white;
         font-style: normal;
         text-transform: uppercase;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    @include tablets {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
     }
 }
 
 .phone {
     height: rem(11px);
     width: rem(12px);
-    margin-right: 1%;
 
     &-icon {
         fill: $white;
     }
 }
+
+.side-menu {
+    width: rem(30px);
+    height: rem(30px);
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    display: none;
+
+    @include tablets{ 
+       display: block;
+    }
+    @include mobile{
+       display: block;
+    }    
+}
+
 
 .content {
     color: $white;
@@ -108,18 +215,36 @@
     margin-bottom: 8%;
     margin-top: 8%;
 
+    @include tablets {
+        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-top: 0%;
+    }
+    @include mobile {
+        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-top: 0%;
+    }
+
     &__image {
         position: absolute;
         right: 0%;
         bottom: -rem(97px);
         right: -rem(52px);
+        @include tablets {
+        position: static;
+        }
+        @include mobile {
+        position: static;
+        }
+
     }
 }
 
 .bars__information {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: flex-start;
     width: rem(400px);
 
     &>h1 {
@@ -132,6 +257,16 @@
     &>p {
         font-size: rem(20px);
         margin: 0% 0% 9%;
+    }
+
+    @include tablets {
+        align-items: center;
+        text-align: center;
+    }
+
+    @include mobile {
+        align-items: center; 
+        text-align: center;  
     }
 }
 
@@ -160,6 +295,16 @@
 
 .advantages {
     flex-grow: 1;
+    display: flex;
+ 
+    @include tablets {
+        justify-content: center;
+    }
+
+    @include mobile {
+        justify-content: center; 
+    }
+    
 
     &__list {
         color: $white;
@@ -175,6 +320,7 @@
     &__item {
         display: flex;
     }
+
 }
 
 .icon {
@@ -203,4 +349,3 @@
     width: rem(60px);
     margin: rem(0px);
 }
-

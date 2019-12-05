@@ -1,24 +1,32 @@
 
 .second {
     position: relative;
-    @include size;
     background: url('../img/second/background.png') left center no-repeat;
+    @include size;
 
     &:before {
         content: url(../img/second/snack.png);
         position: absolute;
-        bottom: -20%;
+        bottom: -15%;
     }
 }
 
 .second__container {
-    padding-top: 1%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+    @include tablets {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    @include mobile {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    }
+ }
 
 .reason {
     width: rem(406px);
@@ -51,11 +59,21 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 0%;
         padding: 0%;
         list-style-type: none;
-        width: rem(940px);
+        max-width: rem(940px);
+        @include tablets {
+            flex-direction: column;
+        }
+    
+        @include mobile {
+            flex-direction: column;
+        }
+
     }
+    
 
     &__item {
         width: rem(260px);
@@ -64,8 +82,31 @@
         align-items: center;
         text-align: center;
         position: relative;
+        @include tablets {
+            margin-bottom:10%;
+        }
+    
+        @include mobile {
+            margin-bottom: 10%;
+            flex-direction: row;
+            text-align: left;
+            width: 100%;
+    
+        }
     }
 }
+
+.description__item:nth-last-child(1){
+    @include tablets {
+        margin-bottom:0%;
+    }
+
+    @include mobile {
+        margin-bottom: 0%;
+    }
+
+}
+
 
 .description__explain {
 
@@ -91,6 +132,12 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 13%;
+    @include mobile {
+        margin-bottom: 0%;
+        margin-right: 3%;
+        width: 47%;
+        height: rem(100px);
+    }
 }
 
 .image-icon {
@@ -104,7 +151,15 @@
     content: url(../img/second/rounds.png);
     position: absolute;
     top: 20%;
-    right: -32%;
+    right: -13%;
+
+    @include tablets {
+       display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+
 }
 
 .description__item:last-child:after {

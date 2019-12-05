@@ -7,7 +7,7 @@
 
     &__container {
         display: flex;
-        height: rem(93px);
+        max-height: rem(93px);
 
     }
 }
@@ -49,16 +49,18 @@
     justify-content: flex-end;
 
     &__list {
+        width: 100%;
         display: flex;
         list-style-type: none;
         align-items: center;
+        justify-content: flex-end;
         margin:0%;
         padding-left:0%;
     }
 }
 
 .social__item {
-    margin-right:20%;
+    margin-right:5%;
 
     &:nth-child(4){
         margin-right:0%;

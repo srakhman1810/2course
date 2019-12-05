@@ -33,6 +33,7 @@
 
 .team {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     list-style-type: none;
     margin: 0%;
@@ -46,12 +47,31 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+
+        @include tablets {
+            width: 50%;
+        }
+    
+        @include mobile {
+             width: 50%;
+        }
     }
 
     &__image {
-        width: rem(220px);
-        height: rem(288px);
+       width: 70%;
+       height: 70%;
         margin-bottom: 3%;
+
+        @include tablets {
+            width: 70%;
+            height: 70%;
+        }
+    
+        @include mobile {
+             width: 98%;
+             height: 70%;
+        }
+
     }    
 }
 
