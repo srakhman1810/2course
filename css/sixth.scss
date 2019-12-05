@@ -4,10 +4,26 @@
     position: relative;
     font-size: rem(18px);
 
+    @include tablets {
+       padding: 10%;
+    }
+    @include mobile {
+       padding: 20%;
+    }
+
+
     &:before {
         content: url(../img/sixth/background.png);
         position: absolute;
-        bottom: 0%;
+        bottom: -22%;
+        z-index: 1;
+
+        @include tablets {
+            display: none;
+        }
+        @include mobile {
+            display: none;
+        }
     }
 
     &:after {
@@ -15,6 +31,12 @@
         position: absolute;
         right: 11%;
         top: 4%;
+        @include tablets {
+           right: 0%;
+         }
+         @include mobile {
+            right: 0%;
+          }
     }
 }
 
@@ -32,22 +54,13 @@
         color: $black;
         margin: 0% 0% 3%;
         position: relative;
+        @include mobile {
+            font-size: rem(40px)
+        }
     }
 }
 
 .review {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    &:before {
-        content: url(../img/sixth/ellipse.png);
-        position: absolute;
-        top: 0%;
-    }
 
     &__area {
         display: flex;
@@ -61,49 +74,50 @@
 
     &__block {
         display: flex;
-        // width: rem(713px);
-        // height: rem(260px);
         align-items: center;
         justify-content: center;
-        // margin-left: 5%;
-        // margin-top: 3%;
-        // margin: 0% auto 3%;
-        // width: 90%;
-        // height: 40%;
         background-color: $light;
         background-image: url('../img/sixth/background2.png');
         background-repeat: no-repeat;
         background-position: right top;
         padding: 5%;
+        position: relative;
 
+        &:before {
+            content: url(../img/sixth/ellipse.png);
+            position: absolute;
+            top: 0%;
+        }
 
         @include tablets {
             flex-direction: column;
             text-align: center;
-            margin-left: 0%;
+            padding: 10% 4%;
         }
     
         @include mobile {
             flex-direction: column;
             text-align: center;
-            margin-left: 0%;
+            padding: 10% 2%;
         }
     }
 
 
     &__image {
         margin-right: 3%;
-        width: 40%;
-        height: 90%;
+        width: rem(254px);
+        height: rem(260px);
         
         @include tablets {
             margin-right: 0%;
-            width: 50%;
+            width: rem(204px);
+            height: rem(209px);
         }
     
         @include mobile {
             margin-right: 0%;
-            width: 50%;
+            width: rem(122px);
+            height: rem(125px);
         }
     }
 }

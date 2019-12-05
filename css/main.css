@@ -4,16 +4,19 @@
 @font-face {
   font-family: MuseoSansCyrl;
   src: url(../fonts/Museo-Sans-Cyr/MuseoSansCyrl_1.otf); }
-html body {
+html {
   font-size: 16px;
   margin: 0px;
   font-family: 'Alegreya Sans', sans-serif; }
   @media screen and (max-width: 768px) {
-    html body {
+    html {
       font-size: 15px; } }
   @media screen and (max-width: 480px) {
-    html body {
+    html {
       font-size: 14px; } }
+
+body {
+  margin: 0px; }
 
 .wrapper {
   width: 100%;
@@ -23,6 +26,7 @@ html body {
 
 .container {
   margin: 0 auto;
+  box-sizing: border-box;
   max-width: 94rem;
   width: 96%;
   height: 100vh; }
@@ -41,8 +45,8 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
-  position: relative;
-  padding-bottom: 5%; }
+  box-sizing: border-box;
+  position: relative; }
   @media screen and (max-width: 768px) {
     .first {
       min-height: 0%;
@@ -51,6 +55,14 @@ html body {
     .first {
       min-height: 0%;
       height: 0%; } }
+  @media screen and (max-width: 768px) {
+    .first {
+      padding: 5%;
+      background-position: right top; } }
+  @media screen and (max-width: 480px) {
+    .first {
+      padding: 5%;
+      background-position: right top; } }
   .first:after {
     content: url(../img/first/background2.png);
     position: absolute;
@@ -76,7 +88,6 @@ html body {
         bottom: 42%;
         left: 5%; } }
   .first__container {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -94,70 +105,21 @@ html body {
   text-transform: uppercase;
   word-wrap: break-word;
   color: white;
-  font-family: "MuseoSansCyrl", sans-serif;
+  font-family: 'MuseoSansCyrl', sans-serif;
   letter-spacing: 0.0625rem;
   text-align: center; }
 
-@media screen and (max-width: 768px) {
-  .menu {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: #313436;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    display: none; } }
-@media screen and (max-width: 480px) {
-  .menu {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(14, 14, 14, 0.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    display: none; } }
-.menu .link-menu:hover .menu {
-  display: flex; }
-.menu__list {
-  width: 37.5rem;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin: 0% auto;
-  padding-left: 0%; }
-  @media screen and (max-width: 768px) {
-    .menu__list {
-      flex-direction: column; } }
-  @media screen and (max-width: 480px) {
-    .menu__list {
-      flex-direction: column; } }
-.menu__item {
-  list-style-type: none; }
-  @media screen and (max-width: 768px) {
-    .menu__item {
-      margin-bottom: 3%; } }
-  @media screen and (max-width: 480px) {
-    .menu__item {
-      margin-bottom: 3%; } }
-.menu__link {
-  color: white;
-  text-decoration: none;
-  font-size: 1.125rem;
-  white-space: nowrap; }
+.hide-menu {
+  position: relative; }
+  .hide-menu:hover .menu {
+    display: flex; }
 
 .x-menu {
   width: 1.25rem;
   height: 1.25rem;
   position: absolute;
-  top: 0;
-  right: 0;
-  top: 2%;
-  right: 5%;
+  top: 3%;
+  right: 3%;
   list-style-type: none;
   display: none; }
   @media screen and (max-width: 768px) {
@@ -166,6 +128,75 @@ html body {
   @media screen and (max-width: 480px) {
     .x-menu {
       display: flex; } }
+
+.x-close:focus + .menu {
+  display: none; }
+
+.side-menu {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .side-menu {
+      display: block; } }
+  @media screen and (max-width: 480px) {
+    .side-menu {
+      display: block; } }
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: #313436;
+    z-index: 2;
+    position: absolute;
+    top: -122%;
+    right: -104%;
+    display: flex;
+    align-items: center;
+    display: none; } }
+@media screen and (max-width: 480px) {
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: #313436;
+    z-index: 2;
+    position: absolute;
+    top: -122%;
+    right: -104%;
+    display: flex;
+    align-items: center;
+    display: none; } }
+.menu__list {
+  display: flex;
+  margin: 0% auto;
+  padding-left: 0%; }
+  @media screen and (max-width: 768px) {
+    .menu__list {
+      flex-direction: column;
+      align-items: center; } }
+  @media screen and (max-width: 480px) {
+    .menu__list {
+      flex-direction: column;
+      align-items: center; } }
+.menu__item {
+  list-style-type: none;
+  margin-right: 1%; }
+  .menu__item:nth-last-child(1) {
+    margin-right: 0%; }
+  @media screen and (max-width: 768px) {
+    .menu__item {
+      margin-bottom: 3%;
+      margin-bottom: 20%; } }
+  @media screen and (max-width: 480px) {
+    .menu__item {
+      margin-bottom: 3%;
+      margin-bottom: 20%; } }
+.menu__link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.125rem;
+  white-space: nowrap; }
 
 .call {
   display: flex;
@@ -194,20 +225,6 @@ html body {
   .phone-icon {
     fill: white; }
 
-.side-menu {
-  width: 1.875rem;
-  height: 1.875rem;
-  position: absolute;
-  top: 1%;
-  right: 2%;
-  display: none; }
-  @media screen and (max-width: 768px) {
-    .side-menu {
-      display: block; } }
-  @media screen and (max-width: 480px) {
-    .side-menu {
-      display: block; } }
-
 .content {
   color: white;
   flex-grow: 3; }
@@ -233,7 +250,8 @@ html body {
     position: absolute;
     right: 0%;
     bottom: -rem(97px);
-    right: -rem(52px); }
+    right: -rem(52px);
+    z-index: 1; }
     @media screen and (max-width: 768px) {
       .bars__image {
         position: static; } }
@@ -247,10 +265,13 @@ html body {
   align-items: flex-start;
   width: 25rem; }
   .bars__information > h1 {
-    font-size: 3.6875rem;
+    font-size: 3.75rem;
     text-transform: uppercase;
     margin: 0% 0% 3%;
     line-height: 1; }
+    @media screen and (max-width: 480px) {
+      .bars__information > h1 {
+        font-size: 2.875rem; } }
   .bars__information > p {
     font-size: 1.25rem;
     margin: 0% 0% 9%; }
@@ -329,7 +350,8 @@ html body {
   background: url("../img/second/background.png") left center no-repeat;
   height: 100vh;
   width: 100%;
-  min-height: 650px; }
+  min-height: 650px;
+  box-sizing: border-box; }
   @media screen and (max-width: 768px) {
     .second {
       min-height: 0%;
@@ -338,10 +360,26 @@ html body {
     .second {
       min-height: 0%;
       height: 0%; } }
+  @media screen and (max-width: 480px) {
+    .second {
+      background: none; } }
   .second:before {
     content: url(../img/second/snack.png);
     position: absolute;
-    bottom: -15%; }
+    bottom: -13%;
+    left: 0%; }
+    @media screen and (max-width: 768px) {
+      .second:before {
+        left: -8%; } }
+    @media screen and (max-width: 480px) {
+      .second:before {
+        display: none; } }
+  @media screen and (max-width: 768px) {
+    .second {
+      padding: 5%; } }
+  @media screen and (max-width: 480px) {
+    .second {
+      padding: 5%; } }
 
 .second__container {
   position: relative;
@@ -349,24 +387,20 @@ html body {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  @media screen and (max-width: 768px) {
-    .second__container {
-      padding-top: 5%;
-      padding-bottom: 5%; } }
-  @media screen and (max-width: 480px) {
-    .second__container {
-      padding-top: 5%;
-      padding-bottom: 5%; } }
 
 .reason {
   width: 25.375rem;
-  margin: 0 auto 4%; }
+  margin: 0 0 4%;
+  text-align: center; }
   .reason > h2 {
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
     color: #0e0e0e;
     margin: 0% 0% 3%; }
+    @media screen and (max-width: 480px) {
+      .reason > h2 {
+        font-size: 2.5rem; } }
   .reason > p {
     font-size: 1.125rem;
     color: #8d8d8d;
@@ -380,7 +414,6 @@ html body {
   .description__list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin: 0%;
     padding: 0%;
     list-style-type: none;
@@ -425,8 +458,7 @@ html body {
   margin: 0rem; }
 
 .round {
-  width: 7.8125rem;
-  height: 7.8125rem;
+  padding: 4%;
   border-radius: 50%;
   background: #f8faf9;
   display: flex;
@@ -436,9 +468,7 @@ html body {
   @media screen and (max-width: 480px) {
     .round {
       margin-bottom: 0%;
-      margin-right: 3%;
-      width: 47%;
-      height: 6.25rem; } }
+      margin-right: 3%; } }
 
 .image-icon {
   fill: none;
@@ -465,6 +495,7 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
+  box-sizing: border-box;
   background: #f8faf9; }
   @media screen and (max-width: 768px) {
     .third {
@@ -485,6 +516,7 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
+  box-sizing: border-box;
   background-image: url(../img/fourth/background.png);
   background-position: right top 5%;
   background-repeat: no-repeat;
@@ -502,6 +534,15 @@ html body {
     position: absolute;
     top: -5%;
     right: 1%; }
+    @media screen and (max-width: 768px) {
+      .fourth:after {
+        right: 0%; } }
+    @media screen and (max-width: 480px) {
+      .fourth:after {
+        display: none; } }
+  @media screen and (max-width: 768px) {
+    .fourth {
+      padding: 10%; } }
 
 .fourth__container {
   display: flex;
@@ -533,26 +574,22 @@ html body {
     align-items: center; }
     @media screen and (max-width: 768px) {
       .team__item {
-        width: 50%; } }
-    @media screen and (max-width: 480px) {
-      .team__item {
-        width: 50%; } }
+        width: 50%;
+        height: 50%; } }
   .team__image {
-    width: 70%;
-    height: 70%;
+    width: 90%;
     margin-bottom: 3%; }
     @media screen and (max-width: 768px) {
       .team__image {
-        width: 70%;
-        height: 70%; } }
+        width: 87%; } }
     @media screen and (max-width: 480px) {
       .team__image {
-        width: 98%;
-        height: 70%; } }
+        width: 87%;
+        height: 13.5rem; } }
 
 .team__direction {
   overflow: hidden;
-  height: 0%; }
+  height: 0; }
   .team__direction > h5 {
     font-size: 1.0625rem;
     margin: 0%; }
@@ -567,7 +604,8 @@ html body {
   align-items: center;
   font-size: 1.3125rem;
   color: #0e0e0e;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-bottom: 5%; }
 
 .triangle {
   height: 1.125rem;
@@ -580,6 +618,7 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
+  box-sizing: border-box;
   background: url(../img/fifth/background.png) center center/cover no-repeat;
   color: white;
   position: relative; }
@@ -645,7 +684,7 @@ html body {
 .heading-acco {
   color: white;
   font-size: 3rem;
-  line-height: 2;
+  line-height: 1;
   letter-spacing: 0.125rem;
   position: absolute;
   top: 100%;
@@ -662,7 +701,7 @@ html body {
   font-size: 1rem;
   background-color: rgba(14, 14, 14, 0.6); }
   .grey-block--active {
-    width: 86%; }
+    width: 91%; }
 
 .text {
   margin: 0rem;
@@ -682,6 +721,7 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
+  box-sizing: border-box;
   position: relative;
   font-size: 1.125rem; }
   @media screen and (max-width: 768px) {
@@ -692,15 +732,34 @@ html body {
     .sixth {
       min-height: 0%;
       height: 0%; } }
+  @media screen and (max-width: 768px) {
+    .sixth {
+      padding: 10%; } }
+  @media screen and (max-width: 480px) {
+    .sixth {
+      padding: 20%; } }
   .sixth:before {
     content: url(../img/sixth/background.png);
     position: absolute;
-    bottom: 0%; }
+    bottom: -22%;
+    z-index: 1; }
+    @media screen and (max-width: 768px) {
+      .sixth:before {
+        display: none; } }
+    @media screen and (max-width: 480px) {
+      .sixth:before {
+        display: none; } }
   .sixth:after {
     content: url(../img/sixth/strawberry.png);
     position: absolute;
     right: 11%;
     top: 4%; }
+    @media screen and (max-width: 768px) {
+      .sixth:after {
+        right: 0%; } }
+    @media screen and (max-width: 480px) {
+      .sixth:after {
+        right: 0%; } }
 
 .sixth__container {
   padding-top: 4%;
@@ -715,56 +774,55 @@ html body {
     color: #0e0e0e;
     margin: 0% 0% 3%;
     position: relative; }
+    @media screen and (max-width: 480px) {
+      .sixth__container > h2 {
+        font-size: 2.5rem; } }
 
-.review {
-  margin: 0 auto;
+.review__area {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  list-style-type: none;
+  padding-left: 0%;
+  margin: 0%;
+  margin-bottom: 5%; }
+.review__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8faf9;
+  background-image: url("../img/sixth/background2.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 5%;
   position: relative; }
-  .review:before {
+  .review__block:before {
     content: url(../img/sixth/ellipse.png);
     position: absolute;
     top: 0%; }
-  .review__area {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    padding-left: 0%;
-    margin: 0%;
-    margin-bottom: 5%; }
-  .review__block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8faf9;
-    background-image: url("../img/sixth/background2.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-    padding: 5%; }
-    @media screen and (max-width: 768px) {
-      .review__block {
-        flex-direction: column;
-        text-align: center;
-        margin-left: 0%; } }
-    @media screen and (max-width: 480px) {
-      .review__block {
-        flex-direction: column;
-        text-align: center;
-        margin-left: 0%; } }
-  .review__image {
-    margin-right: 3%;
-    width: 40%;
-    height: 90%; }
-    @media screen and (max-width: 768px) {
-      .review__image {
-        margin-right: 0%;
-        width: 50%; } }
-    @media screen and (max-width: 480px) {
-      .review__image {
-        margin-right: 0%;
-        width: 50%; } }
+  @media screen and (max-width: 768px) {
+    .review__block {
+      flex-direction: column;
+      text-align: center;
+      padding: 10% 4%; } }
+  @media screen and (max-width: 480px) {
+    .review__block {
+      flex-direction: column;
+      text-align: center;
+      padding: 10% 2%; } }
+.review__image {
+  margin-right: 3%;
+  width: 15.875rem;
+  height: 16.25rem; }
+  @media screen and (max-width: 768px) {
+    .review__image {
+      margin-right: 0%;
+      width: 12.75rem;
+      height: 13.0625rem; } }
+  @media screen and (max-width: 480px) {
+    .review__image {
+      margin-right: 0%;
+      width: 7.625rem;
+      height: 7.8125rem; } }
 
 .review__content {
   width: 27.0625rem;
@@ -800,8 +858,11 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
+  box-sizing: border-box;
   background-color: #f8faf9;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box;
+  display: flexbx; }
   @media screen and (max-width: 768px) {
     .seventh {
       min-height: 0%;
@@ -810,16 +871,39 @@ html body {
     .seventh {
       min-height: 0%;
       height: 0%; } }
+  @media screen and (max-width: 768px) {
+    .seventh {
+      padding: 10%; } }
+  @media screen and (max-width: 480px) {
+    .seventh {
+      padding: 10%; } }
   .seventh:after {
     content: url(../img/seventh/blackberry.png);
     position: absolute;
     bottom: -17%;
     right: 0%; }
+    @media screen and (max-width: 768px) {
+      .seventh:after {
+        bottom: -22%;
+        right: -5%; } }
+    @media screen and (max-width: 480px) {
+      .seventh:after {
+        bottom: -26%;
+        right: -19%; } }
   .seventh:before {
     content: url(../img/seventh/berries.png);
     position: absolute;
     left: 1%;
-    top: -17%; }
+    top: -17%;
+    z-index: 1; }
+    @media screen and (max-width: 768px) {
+      .seventh:before {
+        left: -4%;
+        top: -17%; } }
+    @media screen and (max-width: 480px) {
+      .seventh:before {
+        left: -4%;
+        top: -17%; } }
 
 .seventh__container {
   display: flex;
@@ -834,15 +918,37 @@ html body {
     margin: 0%;
     font-size: 3rem;
     text-transform: uppercase;
-    margin-bottom: 5%; }
+    margin-bottom: 5%;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 1; }
+    @media screen and (max-width: 480px) {
+      .seventh__container > h2 {
+        font-size: 2.5rem; } }
+
+.video {
+  z-index: 1; }
 
 .iframe {
   width: 41.25rem;
   height: 23.125rem; }
+  @media screen and (max-width: 768px) {
+    .iframe {
+      width: 36.9375rem;
+      height: 20.6875rem; } }
+  @media screen and (max-width: 480px) {
+    .iframe {
+      width: 24.8125rem;
+      height: 13.9375rem; } }
 
 .eighth {
-  background: url(../img/eighth/background.png) center center/cover no-repeat;
-  padding: 10%; }
+  background: url(../img/eighth/background.png) center center/cover no-repeat; }
+  @media screen and (max-width: 768px) {
+    .eighth {
+      padding: 15%; } }
+  @media screen and (max-width: 480px) {
+    .eighth {
+      padding: 20%; } }
 
 .eighth__container {
   display: flex;
@@ -856,7 +962,15 @@ html body {
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 4%;
-    text-align: center; }
+    text-align: center;
+    white-space: nowrap; }
+    @media screen and (max-width: 768px) {
+      .eighth__container > h2 {
+        margin-bottom: 10%; } }
+    @media screen and (max-width: 480px) {
+      .eighth__container > h2 {
+        margin-bottom: 10%;
+        font-size: 2.5rem; } }
 
 .form {
   display: flex;
@@ -876,9 +990,13 @@ html body {
   align-content: flex-start;
   width: 30.625rem;
   margin-right: 5%; }
+  @media screen and (max-width: 768px) {
+    .personal-information {
+      margin-right: 0%; } }
   @media screen and (max-width: 480px) {
     .personal-information {
-      width: 29.0625rem; } }
+      width: 29.0625rem;
+      margin-right: 0%; } }
 
 .cell__1 {
   flex-basis: 14.0625rem;
@@ -1019,6 +1137,7 @@ html body {
   height: 100vh;
   width: 100%;
   min-height: 650px;
+  box-sizing: border-box;
   background: url(../img/ninth/map.png) center center/cover no-repeat; }
   @media screen and (max-width: 768px) {
     .ninth {
@@ -1028,6 +1147,12 @@ html body {
     .ninth {
       min-height: 0%;
       height: 0%; } }
+  @media screen and (max-width: 768px) {
+    .ninth {
+      padding: 25%; } }
+  @media screen and (max-width: 480px) {
+    .ninth {
+      padding: 25%; } }
 
 .footer {
   position: absolute;

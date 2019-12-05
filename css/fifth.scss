@@ -20,7 +20,6 @@
     @include tablets {
         height: 100vh;
     }
-
     @include mobile {
         height: 100vh;
     }
@@ -58,6 +57,7 @@
     width: rem(75px);
     height: 100%;
     display: block;
+
    
     &--one {
         background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat;
@@ -75,7 +75,7 @@
 .heading-acco {
     color: $white;
     font-size: rem(48px);
-    line-height: 2;
+    line-height: 1;
     letter-spacing: rem(2px);
     position: absolute;
     top: 100%;
@@ -84,6 +84,7 @@
     white-space: nowrap;
     transform: rotate(-90deg) translateY(-50%);
     margin-top: -40%;
+    
 }
 
 .grey-block {
@@ -94,7 +95,7 @@
     background-color: rgba($black, .6);
 
     &--active {
-    width: 86%;
+    width: 91%;
     }
 
 }

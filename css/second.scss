@@ -4,10 +4,28 @@
     background: url('../img/second/background.png') left center no-repeat;
     @include size;
 
+    @include mobile {
+        background: none;
+    }
+
     &:before {
         content: url(../img/second/snack.png);
         position: absolute;
-        bottom: -15%;
+        bottom: -13%;
+        left: 0%;
+        @include tablets {
+        left: -8%;
+        }
+        @include mobile {
+        display: none;
+        }
+    }
+
+    @include tablets {
+        padding: 5%;
+    }
+    @include mobile {
+        padding: 5%;
     }
 }
 
@@ -17,20 +35,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @include tablets {
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-
-    @include mobile {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    }
  }
 
 .reason {
     width: rem(406px);
-    margin: 0 auto 4%;
+    margin: 0 0 4%;
+    text-align: center;
 
     &>h2 {
         font-size: rem(48px);
@@ -38,6 +48,9 @@
         text-transform: uppercase;
         color: $black;
         margin: 0% 0% 3%;
+        @include mobile {
+            font-size: rem(40px);
+        }
     }
 
     &>p {
@@ -59,7 +72,6 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         margin: 0%;
         padding: 0%;
         list-style-type: none;
@@ -67,14 +79,12 @@
         @include tablets {
             flex-direction: column;
         }
-    
         @include mobile {
             flex-direction: column;
         }
 
     }
     
-
     &__item {
         width: rem(260px);
         display: flex;
@@ -85,7 +95,6 @@
         @include tablets {
             margin-bottom:10%;
         }
-    
         @include mobile {
             margin-bottom: 10%;
             flex-direction: row;
@@ -100,13 +109,10 @@
     @include tablets {
         margin-bottom:0%;
     }
-
     @include mobile {
-        margin-bottom: 0%;
+        margin-bottom:0%;
     }
-
 }
-
 
 .description__explain {
 
@@ -124,8 +130,7 @@
 }
 
 .round {
-    width: rem(125px);
-    height: rem(125px);
+    padding: 4%;
     border-radius: 50%;
     background: $light;
     display: flex;
@@ -135,8 +140,6 @@
     @include mobile {
         margin-bottom: 0%;
         margin-right: 3%;
-        width: 47%;
-        height: rem(100px);
     }
 }
 
@@ -159,7 +162,6 @@
     @include mobile {
       display: none;
     }
-
 }
 
 .description__item:last-child:after {

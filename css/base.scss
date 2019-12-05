@@ -25,6 +25,7 @@
     height: 100vh;
     width: 100%;
     min-height: 650px;
+    box-sizing: border-box;
 
     @include tablets {
         min-height: 0%;
@@ -37,7 +38,15 @@
     }
 }
 
-html body {
+$blue: rgb(97, 196, 217);
+$white: rgb(255, 255, 255);
+$green: rgb(11, 77, 60);
+$black: rgb(14, 14, 14);
+$grey: rgb(141, 141, 141);
+$light: rgb(248, 250, 249);
+$dark: rgb(49,52,54);
+
+html {
     font-size: 16px;
     margin: 0px; 
     font-family: 'Alegreya Sans', sans-serif;
@@ -50,6 +59,12 @@ html body {
     }
 }
 
+body {
+    margin: 0px;
+}
+
+
+
 .wrapper {
     width: 100%;
     height: 100%;
@@ -58,16 +73,9 @@ html body {
 }
 
 
-$blue: rgb(97, 196, 217);
-$white: rgb(255, 255, 255);
-$green: rgb(11, 77, 60);
-$black: rgb(14, 14, 14);
-$grey: rgb(141, 141, 141);
-$light: rgb(248, 250, 249);
-$dark: rgb(49,52,54);
-
 .container {
     margin: 0 auto;
+    box-sizing: border-box;
     max-width: 94rem;
     width: 96%;
     height: 100vh;

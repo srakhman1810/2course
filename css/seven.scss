@@ -3,12 +3,33 @@
     @include size;
     background-color: $light;
     position: relative; 
+    box-sizing: border-box;
+    display: flexbx;
+    @include tablets {
+        padding: 10%
+    }
+
+    @include mobile { 
+        padding: 10%;
+    }
+
 
     &:after {
         content: url(../img/seventh/blackberry.png);
         position: absolute;
         bottom: -17%;
         right: 0%;
+
+        @include tablets {
+            bottom: -22%;
+            right: -5%;
+        }
+        
+        @include mobile {
+            bottom: -26%;
+            right: -19%;
+        
+        }
     }
 
     &:before {
@@ -16,6 +37,16 @@
         position: absolute;
         left: 1%;
         top: -17%;
+        z-index: 1;
+
+        @include tablets {
+            left: -4%;
+            top: -17%;
+        }
+        @include mobile {
+            left: -4%;
+            top: -17%;
+        }
     }
 }
 
@@ -36,10 +67,29 @@
         font-size: rem(48px);
         text-transform: uppercase;
         margin-bottom: 5%;
+        text-align: center;
+        white-space: nowrap;
+        z-index: 1;
+        @include mobile {
+            font-size: rem(40px);
+        }
     }
 }
 
+.video {
+    z-index: 1;
+   
+}
 .iframe {
     width: rem(660px);
     height: rem(370px);
+    @include tablets {
+        width: rem(591px);
+        height: rem(331px); 
+    }
+    @include mobile {
+        width: rem(397px);
+        height: rem(223px);
+    }
+
 }

@@ -12,6 +12,16 @@
         position: absolute;
         top: -5%;
         right: 1%;
+        @include tablets {
+        right: 0%;
+        }
+        @include mobile {
+        display: none;
+        }
+    }
+
+    @include tablets {
+        padding: 10%
     }
 }
 
@@ -35,6 +45,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    
     list-style-type: none;
     margin: 0%;
     padding-left: 0%;
@@ -50,26 +61,23 @@
 
         @include tablets {
             width: 50%;
+            height: 50%;
         }
-    
-        @include mobile {
-             width: 50%;
-        }
+
     }
 
     &__image {
-       width: 70%;
-       height: 70%;
+       width: 90%;
         margin-bottom: 3%;
 
         @include tablets {
-            width: 70%;
-            height: 70%;
+            width: 87%;
+       
         }
     
         @include mobile {
-             width: 98%;
-             height: 70%;
+             width: 87%;
+             height: 13.5rem;
         }
 
     }    
@@ -77,7 +85,7 @@
 
 .team__direction {
     overflow: hidden;
-    height: 0%;
+    height: 0;
 
     &>h5 {
         font-size: rem(17px);
@@ -99,6 +107,7 @@
     font-size: rem(21px);
     color: $black;
     text-decoration: none;
+    margin-bottom: 5%;
 }
 
 .triangle {
