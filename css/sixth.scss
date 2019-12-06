@@ -54,6 +54,7 @@
         color: $black;
         margin: 0% 0% 3%;
         position: relative;
+        z-index: 1;
         @include mobile {
             font-size: rem(40px)
         }
@@ -83,6 +84,7 @@
         padding: 5%;
         position: relative;
 
+
         &:before {
             content: url(../img/sixth/ellipse.png);
             position: absolute;
@@ -92,12 +94,13 @@
         @include tablets {
             flex-direction: column;
             text-align: center;
-            padding: 10% 4%;
+            padding: 10% 2%;
         }
     
         @include mobile {
             flex-direction: column;
             text-align: center;
+            width: rem(320px);
             padding: 10% 2%;
         }
     }
@@ -112,19 +115,19 @@
             margin-right: 0%;
             width: rem(204px);
             height: rem(209px);
+            margin-bottom:3%;
         }
     
         @include mobile {
             margin-right: 0%;
             width: rem(122px);
             height: rem(125px);
+            margin-bottom:3%;
         }
     }
 }
 
 .review__content {
-    width: rem(433px);
-    height: rem(217px);
 
     &>h3 {
         font-size: rem(30px);

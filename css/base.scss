@@ -6,13 +6,14 @@
 }
 
 @function rem($px) {
-    @return $px / 16px + 0rem;
+    @return $px / 16px+0rem;
 }
+
 
 @mixin tablets {
     @media screen and (max-width:768px) {
-        @content; 
-    }
+        @content;
+    } 
 }
 
 @mixin mobile {
@@ -20,6 +21,7 @@
         @content;
     }
 }
+
 
 @mixin size {
     height: 100vh;
@@ -29,7 +31,7 @@
 
     @include tablets {
         min-height: 0%;
-         height: 0%;
+        height: 0%;
     }
 
     @include mobile {
@@ -44,17 +46,18 @@ $green: rgb(11, 77, 60);
 $black: rgb(14, 14, 14);
 $grey: rgb(141, 141, 141);
 $light: rgb(248, 250, 249);
-$dark: rgb(49,52,54);
+$dark: rgb(49, 52, 54);
 
 html {
     font-size: 16px;
-    margin: 0px; 
+    margin: 0px;
     font-family: 'Alegreya Sans', sans-serif;
 
-    @include tablets{
+    @include tablets {
         font-size: 15px;
     }
-    @include mobile{
+
+    @include mobile {
         font-size: 14px;
     }
 }

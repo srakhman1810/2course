@@ -2,11 +2,11 @@
     background: url(../img/eighth/background.png) center center / cover no-repeat;
 
     @include tablets {
-        padding: 15%;
+        padding: 10%;
     }
 
     @include mobile {
-        padding: 20%;
+        padding: 10%;
     }
 }
 
@@ -25,6 +25,7 @@
         margin-bottom: 4%;
         text-align: center;
         white-space: nowrap;
+        z-index: 1;
 
         @include tablets {
             margin-bottom: 10%;
@@ -32,7 +33,7 @@
 
         @include mobile {
             margin-bottom: 10%;
-            font-size: rem(40px);
+            font-size: rem(35px);
         }
     }
 }
@@ -57,16 +58,18 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: flex-start;
-    width: rem(490px);
-    margin-right: 5%;
+    width: 49%;
 
     @include tablets {
         margin-right: 0%;
+        width: 100%;
+        margin-bottom: 5%;
     }
 
     @include mobile {
-        width: rem(465px);
         margin-right: 0%;
+        width: 100%;
+        margin-bottom: 5%;
     }
 
 }
@@ -74,21 +77,17 @@
 .cell {
 
     &__1 {
-        flex-basis: rem(225px);
+        flex-basis: 49%;
         margin-bottom: 5%;
     }
 
     &__2 {
-        flex-basis: rem(490px);
+        flex-basis: 100%;
         margin-bottom: 5%;
     }
 
     &__3 {
-        flex-basis: rem(100px);
-    }
-
-    &__name {
-        margin-bottom: 2%;
+        flex-basis: 22%;
     }
 
     &__input {
@@ -105,7 +104,8 @@
     }
 
     &__comment {
-        margin-bottom: 7%;
+        margin-bottom: 3%;
+        width: 100%;
     }
 
 
@@ -124,16 +124,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: stretch;
-    width: rem(490px);
+    width: 49%;
+
+    @include tablets {
+        width: 100%;
+    }
 
     @include mobile {
-        width: rem(465px);
+        width: 100%;
     }
 
 
     &__checkbox {
-        height: rem(59px);
         display: flex;
         flex-flow: row wrap;
         width: 100%;
@@ -153,10 +155,17 @@
 .checkbox {
     display: flex;
     align-items: center;
-    margin-right: 2%;
+    margin-bottom: 2%;
 
     &:nth-child(3) {
         margin-right: 0%;
+    }
+    @include tablets {
+       margin-bottom: 4%;
+    }
+
+    @include mobile {
+        margin-bottom: 4%;
     }
 }
 
