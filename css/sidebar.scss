@@ -29,8 +29,8 @@
 }
 
 .link {
-    width: rem(7px);
-    height: rem(7px);
+    width: 0.4375rem;
+    height: 0.4375rem;
     border-radius: 50%;
     background: $green;
     position: relative;
@@ -38,8 +38,8 @@
     &:before {
         content: "";
         display: none;;
-        width: 16px;
-        height: 16px;
+        width: 1rem;
+        height: 1rem;
         border-radius: 50%;
         border: 1px solid $green;
         top: 50%;

@@ -4,7 +4,6 @@
     color: $white;
     position: relative;
 
-
     &:before {
         content: url(../img/fifth/rastberry.png);
         position: absolute;
@@ -28,7 +27,7 @@
     }
 
     &>h2 {
-        font-size: rem(48px);
+        font-size: 3rem;
         text-transform: uppercase;
         margin: rem(0px);
         position: absolute;
@@ -57,7 +56,7 @@
 .link-acco {
     position: relative;
     text-decoration: none;
-    width: rem(75px);
+    width: 4.6875rem;
     height: 100%;
     display: block;
 
@@ -77,9 +76,9 @@
 
 .heading-acco {
     color: $white;
-    font-size: rem(48px);
+    font-size: 3rem;
     line-height: 1;
-    letter-spacing: rem(2px);
+    letter-spacing: 2px;
     position: absolute;
     top: 100%;
     left: 50%;
@@ -94,16 +93,17 @@
     overflow: hidden;
     width: 0;
     position: relative;
-    font-size: rem(16px);
+    font-size: 1rem;
     background-color: rgba($black, .6);
 
     &--active {
-    width: 91%;
+    width: 100%;
+    max-width: 35rem;
     }
 
 }
 .text {
-    margin: rem(0px);
+    margin: 0%;
     padding: 10% 20% 0 5%;
     display: none;  
 
@@ -113,8 +113,8 @@
 }
 
 .x {
-    width: rem(18px);
-    height: rem(18px);
+    width: 1.125rem;
+    height: 1.125rem;
     position: absolute;
     top: 3%;
     right: 7%;

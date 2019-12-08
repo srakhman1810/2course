@@ -7,8 +7,7 @@
 
     &__container {
         display: flex;
-        max-height: rem(93px);
-
+        max-height: 5.8125rem;
     }
 }
 
@@ -19,14 +18,14 @@
     justify-content: center;
 
     &>p {
-        font-size: rem(21px);
+        font-size: 1.3125rem;
         margin: 0%;
     }
 }
 
 .handset {
-    height: rem(11px);
-    width: rem(11px);
+    height: 0.6875rem;
+    width: 0.6875rem;
     margin-right: 1%;
 
     &-icon {
@@ -35,7 +34,7 @@
 }
 
 .number {
-    font-size: rem(21px);
+    font-size: 1.3125rem;
     text-decoration: none;
     color: $green;
     font-style: normal;
@@ -68,8 +67,8 @@
 }
 
 .site {
-    height: rem(23px);
-    width: rem(23px);
+    height: 1.4375rem;
+    width: 1.4375rem;
     
     &:hover{
         cursor: pointer;

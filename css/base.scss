@@ -6,7 +6,6 @@ html {
     @include tablets {
         font-size: 15px;
     }
-
     @include mobile {
         font-size: 14px;  
     }
@@ -23,19 +22,10 @@ body {
     position: relative;
 }
 
-
 .container {
     margin: 0 auto;
     box-sizing: border-box;
-    max-width: 94rem;
+    max-width: 58.7rem;
     width: 96%;
     height: 100vh;
-
-    @include tablets {
-        height: 0%
-    }
-
-    @include mobile {
-        height: 0%;
-    }
 }

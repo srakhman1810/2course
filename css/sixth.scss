@@ -2,15 +2,14 @@
 .sixth {
     @include size;
     position: relative;
-    font-size: rem(18px);
+    font-size: 1.125rem;
 
-    @include tablets {
-       padding: 10%;
-    }
-    @include mobile {
-       padding: 20%;
-    }
-
+    // @include tablets {
+    //    padding: 10%;
+    // }
+    // @include mobile {
+    //    padding: 20%;
+    // }
 
     &:before {
         content: url(../img/sixth/background.png);
@@ -50,13 +49,13 @@
     &>h2 {
         text-align: center;
         text-transform: uppercase;
-        font-size: rem(48px);
+        font-size: 3rem;
         color: $black;
         margin: 0% 0% 3%;
         position: relative;
         z-index: 1;
         @include mobile {
-            font-size: rem(40px)
+            font-size: 2.5rem;
         }
     }
 }
@@ -100,7 +99,7 @@
         @include mobile {
             flex-direction: column;
             text-align: center;
-            width: rem(320px);
+            width: 20rem;
             padding: 10% 2%;
         }
     }
@@ -108,20 +107,20 @@
 
     &__image {
         margin-right: 3%;
-        width: rem(254px);
-        height: rem(260px);
+        width: 42.33rem;
+        height: 16.25rem;
         
         @include tablets {
             margin-right: 0%;
-            width: rem(204px);
-            height: rem(209px);
+            width: 12.75rem;
+            height: 13.0625rem;
             margin-bottom:3%;
         }
     
         @include mobile {
             margin-right: 0%;
-            width: rem(122px);
-            height: rem(125px);
+            width: 7.625rem;
+            height: 7.8125rem;
             margin-bottom:3%;
         }
     }
@@ -130,7 +129,7 @@
 .review__content {
 
     &>h3 {
-        font-size: rem(30px);
+        font-size: 1.875rem;
         color: $black;
         margin: 0% 0% 3%;
     }
@@ -158,6 +157,7 @@
     &__item {
         list-style-type: none;
         margin-right: 1%;
+        z-index: 2;
 
         &:nth-last-child {
             margin-right: none;
@@ -165,10 +165,10 @@
     }
 
     &-image {
-        width: rem(65px);
-        height: rem(65px);
+        width: 4.0625rem;
+        height: 4.0625rem;
         border-radius: 50%;
-        border: rem(4px) solid;
+        border: 3px solid;
         border-color: $green;
     }
 }

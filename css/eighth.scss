@@ -1,13 +1,5 @@
 .eighth {
     background: url(../img/eighth/background.png) center center / cover no-repeat;
-
-    @include tablets {
-        padding: 10%;
-    }
-
-    @include mobile {
-        padding: 10%;
-    }
 }
 
 .eighth__container {
@@ -19,7 +11,7 @@
 
     &>h2 {
         margin: 0%;
-        font-size: rem(48px);
+        font-size: 3rem;
         text-transform: uppercase;
         line-height: 1;
         margin-bottom: 4%;
@@ -27,13 +19,8 @@
         white-space: nowrap;
         z-index: 1;
 
-        @include tablets {
-            margin-bottom: 10%;
-        }
-
         @include mobile {
-            margin-bottom: 10%;
-            font-size: rem(35px);
+            font-size: 2.1875rem;
         }
     }
 }
@@ -41,7 +28,9 @@
 .form {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 1.125rem;
+    z-index: 1;
+    width: 100%;
 
 
     @include tablets {
@@ -91,16 +80,19 @@
     }
 
     &__input {
-        height: rem(59px);
+        height: 3.6875rem;
         width: 100%;
         background: $white;
         padding: 3% 3%;
         outline: none;
         border: rem(1px) solid transparent;
         color: $green;
-        font-size: rem(16px);
+        font-size: 1rem;
         box-sizing: border-box;
-        text-align: center;
+        text-align: left;
+        @include mobile {
+        height: 3rem;
+        }
     }
 
     &__comment {
@@ -110,9 +102,11 @@
 
 
     &__input--comment {
-        height: rem(180px);
+        height: 11.25rem;
         resize: none;
-        text-align: left;
+        @include mobile {
+        height: 8rem;
+        }
     }
 }
 
@@ -128,10 +122,12 @@
 
     @include tablets {
         width: 100%;
+        align-items: center;
     }
 
     @include mobile {
         width: 100%;
+        align-items: center;
     }
 
 
@@ -140,13 +136,16 @@
         flex-flow: row wrap;
         width: 100%;
         margin-bottom: 13%;
+        width:25rem;
 
         @include tablets {
             justify-content: center;
+            margin-bottom: 5%;
         }
 
         @include mobile {
             justify-content: center;
+            margin-bottom: 0%;
         }
     }
 
@@ -156,6 +155,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 2%;
+    font-size: 1rem;
 
     &:nth-child(3) {
         margin-right: 0%;
@@ -172,12 +172,12 @@
 .button__submit {
     outline: none;
     margin-right: 10%;
-    width: rem(156px);
-    height: rem(58px);
+    width: 9.75rem;
+    height: 3.625rem;
     background: $green;
     border: rem(1px);
-    border-radius: rem(50px);
-    font-size: rem(18px);
+    border-radius: 3.125rem;
+    font-size: 1rem;
     color: $white;
     text-transform: uppercase;
     font-weight: bold;
@@ -194,7 +194,7 @@
 }
 
 .button__reset {
-    font-size: rem(18px);
+    font-size: 1.125rem;
     color: $green;
     border: none;
     outline: none;
@@ -206,10 +206,10 @@
 }
 
 .checkbox__circle {
-    width: rem(25px);
-    height: rem(25px);
+    width: 1.5625rem;
+    height: 1.5625rem;
     border-radius: 50%;
-    margin-right: rem(10px);
+    margin-right: 0.625rem;
     background: $white;
     display: flex;
     align-items: center;
@@ -217,12 +217,11 @@
 
     &:before {
         content: "";
-        width: rem(13px);
-        height: rem(13px);
+        width: 0.8125rem;
+        height: 0.8125rem;
         border-radius: 50%;
         background: $green;
         opacity: 0;
-
     }
 }
 
@@ -239,10 +238,10 @@
 }
 
 .checkbox__square {
-    width: rem(25px);
-    height: rem(25px);
+    width: 1.5625rem;
+    height: 1.5625rem;
     background: $white;
-    margin-right: rem(10px);
+    margin-right: 0.625rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,10 +249,9 @@
 
 .mark {
     opacity: 0;
-    width: 15px;
-    height: 13px;
+    width: 0.9375rem;
+    height: 0.8125rem;
 }
-
 
 .buttons {
     @include tablets {

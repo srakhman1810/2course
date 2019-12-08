@@ -26,7 +26,7 @@
         }
         
         @include mobile {
-            bottom: -26%;
+            bottom: -8%;
             right: -19%;
         
         }
@@ -45,7 +45,7 @@
         }
         @include mobile {
             left: -4%;
-            top: -17%;
+            top: -5%;
         }
     }
 }
@@ -64,14 +64,14 @@
  
     &>h2 {
         margin:0%;
-        font-size: rem(48px);
+        font-size: 3rem;
         text-transform: uppercase;
         margin-bottom: 5%;
         text-align: center;
         white-space: nowrap;
         z-index: 1;
         @include mobile {
-            font-size: rem(40px);
+            font-size: 2.5rem;
         }
     }
 }
@@ -81,15 +81,15 @@
    
 }
 .iframe {
-    width: rem(660px);
-    height: rem(370px);
+    width: 41.25rem;
+    height: 23.125rem;
     @include tablets {
-        width: rem(591px);
-        height: rem(331px); 
+        width: 36.93rem;
+        height: 20.6875rem; 
     }
     @include mobile {
-        width: rem(360px);
-        height: rem(223px);
+        width: 22.5rem;
+        height: 13.9375rem;
     }
 
 }

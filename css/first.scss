@@ -7,12 +7,11 @@
     position: relative;
 
     @include tablets {
-        padding: 5%;
+        // padding: 5%;
         background-position: right top;
     }
-
     @include mobile {
-        padding: 5%;
+        // padding: 2%;
         background-position: right top;
     }
 
@@ -23,11 +22,13 @@
         right: 0%;
 
         @include tablets {
-            bottom: 43%;
+            bottom: 42%;
+            right: 16%;
         }
 
         @include mobile {
-            bottom: 43%;
+            bottom: 45%;
+            right: 0%;
         }
     }
 
@@ -39,7 +40,7 @@
 
         @include tablets {
             bottom: 42%;
-            left: 5%;
+            left: 16%;
         }
 
         @include mobile {
@@ -56,8 +57,6 @@
     }
 }
 
-
-// хедер
 .header {
     display: flex;
     justify-content: space-between;
@@ -66,29 +65,41 @@
 }
 
 .logo {
-    width: rem(69px);
-    font-size: rem(24px);
+    width: 4.3rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     word-wrap: break-word;
     color: $white;
     font-family: 'MuseoSansCyrl', sans-serif;
-    letter-spacing: rem(1px);
+    letter-spacing: 1px;
     text-align: center;
 }
 
-
 .hide-menu {
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+
+    @include tablets {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @include mobile {
+        display: flex;
+        justify-content: flex-end;
+    }
 
     &:hover .menu {
         display: flex;
     }
 }
 
-
 .x-menu {
-    width: rem(20px);
-    height: rem(20px);
+    width: 1.25rem;
+    height: 1.25rem;
     position: absolute;
     top: 3%;
     right: 3%;
@@ -97,33 +108,39 @@
 
     @include tablets {
         display: flex;
+        // width: trem(20px);
+        // height: trem(20px);
     }
 
     @include mobile {
         display: flex;
+        // width: mrem(20px);
+        // height: mrem(20px);
     }
 }
-
 
 .x-close:focus+.menu {
     display: none;
 }
 
-
 .side-menu {
-    width: rem(30px);
-    height: rem(30px);
+    width: 2.5rem;
+    height: 2.5rem;
     display: none;
+
 
     @include tablets {
         display: block;
+        // width: 2.5rem;
+        // height: 2.5rem;
     }
 
     @include mobile {
         display: block;
+        // width: 2.5rem;
+        // height: 2.5rem;
     }
 }
-
 
 .menu {
     @include tablets {
@@ -154,9 +171,10 @@
 
     &__list {
         display: flex;
-        margin: 0% auto;
+        margin: 0%;
         padding-left: 0%;
-
+        // width: 90%;
+        // justify-content: space-between;
 
         @include tablets {
             flex-direction: column;
@@ -171,7 +189,7 @@
 
     &__item {
         list-style-type: none;
-        margin-right: 1%;
+        margin-right: 2%;
 
         &:nth-last-child(1) {
             margin-right: 0%;
@@ -191,13 +209,10 @@
     &__link {
         color: $white;
         text-decoration: none;
-        font-size: rem(18px);
+        font-size: 1.125rem;
         white-space: nowrap;
     }
 }
-
-
-
 
 .call {
     display: flex;
@@ -205,15 +220,25 @@
     justify-content: space-between;
     width: 10rem;
     text-align: center;
+    z-index: 2;
 
     &__number {
-        font-size: rem(24px);
+        font-size: 1.5rem;
         text-decoration: none;
         color: $white;
         font-style: normal;
         text-transform: uppercase;
         white-space: nowrap;
         line-height: 1;
+
+        // @include tablets {
+        //     font-size: trem(24px);
+        // }
+
+        // @include mobile {
+        //     font-size: mrem(24px);
+
+        // }
     }
 
     @include tablets {
@@ -226,37 +251,51 @@
 }
 
 .phone {
-    height: rem(11px);
-    width: rem(12px);
+    height: 0.6875rem;
+    width: 0.75rem;
 
     &-icon {
         fill: $white;
     }
+
+    // @include tablets {
+    //     height: trem(11px);
+    //     width: trem(12px);
+    // }
+
+    // @include mobile {
+    //     height: mrem(11px);
+    //     width: mrem(12px);
+    // }
 }
 
-.content {
-    color: $white;
-    flex-grow: 3;
-}
+// .content {
+//     // color: $white;
+//     // flex-grow: 3;
+// }
 
 .bars {
+    color: $white;
+    flex-grow: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-bottom: 8%;
-    margin-top: 8%;
+    // margin-bottom: 8%;
+    // margin-top: 8%;
 
     @include tablets {
         flex-direction: column;
         flex-direction: column-reverse;
-        margin-top: 0%;
+        // margin-top: 0%;
+        margin-bottom: 5%
     }
 
     @include mobile {
         flex-direction: column;
         flex-direction: column-reverse;
         margin-top: 0%;
+        margin-bottom: 5%;
     }
 
     &__image {
@@ -266,13 +305,16 @@
 
         @include tablets {
             position: static;
-            width: 100%;
-            
+            width: 70%;
+            // top: -18%;
+            // right: 26%;
         }
 
         @include mobile {
             position: static;
-            width: 100%;
+            width: 60%;
+            // top: -18%;
+            // right: 26%;
         }
     }
 }
@@ -282,34 +324,42 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: rem(400px);
+    width: 25rem;
+    z-index: 3;
 
 
     &>h1 {
-        font-size: rem(60px);
+        font-size: 3.75rem;
         text-transform: uppercase;
         margin: 0% 0% 3%;
         line-height: 1;
-        z-index: 3;
-
+        // @include tablets {
+        //     font-size: trem(60px);
+        // }
 
         @include mobile {
-            font-size: rem(46px);
+            font-size: 3.3rem;
         }
     }
 
     &>p {
-        font-size: rem(20px);
+        font-size: 1.25rem;
         margin: 0% 0% 9%;
         white-space: pre-line;
+
+        @include mobile {
+            margin: 0% 0% 3%;
+        }
     }
 
     @include tablets {
+        // font-size: trem(20px);
         align-items: center;
         text-align: center;
     }
 
     @include mobile {
+        // font-size: mrem(20px);
         align-items: center;
         text-align: center;
     }
@@ -317,12 +367,12 @@
 
 .bars__button {
     outline: none;
-    width: rem(156px);
-    height: rem(58px);
+    width: 9.75rem;
+    height: 3.625rem;
     background: $white;
     border: rem(1px);
-    border-radius: rem(50px);
-    font-size: rem(18px);
+    border-radius: 3.125rem;
+    font-size: 1.125rem;
     color: $green;
     text-transform: uppercase;
     font-weight: bold;
@@ -336,21 +386,37 @@
         background: $green;
         color: $white;
     }
+
+    // @include tablets {
+    //     border-radius: trem(50px);
+    //     font-size: trem(18px);
+    //     width: trem(156px);
+    //     height: trem(58px);
+    // }
+
+    // @include mobile {
+    //     border-radius: mrem(50px);
+    //     font-size: mrem(18px);
+    //     width: mrem(156px);
+    //     height: mrem(58px);
+    // }
+
 }
 
 .advantages {
     flex-grow: 1;
     display: flex;
-    font-size: rem(16px);
+    font-size: 1rem;
     z-index: 1;
 
     @include tablets {
         justify-content: center;
+        // font-size: trem(16px);
     }
 
     @include mobile {
         justify-content: center;
-        font-size: rem(12px);
+        font-size: 0.8rem;
     }
 
     &__list {
@@ -358,9 +424,17 @@
         display: flex;
         justify-content: space-between;
         list-style-type: none;
-        width: rem(485px);
+        width: 30.31rem;
         padding: 0%;
         margin: 0%;
+
+        // @include tablets {
+        //     width: trem(485px);
+        // }
+
+        // @include mobile {
+        //     width: mrem(485px);
+        // }
     }
 
     &__item {
@@ -369,16 +443,22 @@
         margin-right: 2%;
         margin: rem(0px);
 
-
         &:nth-last-child(1) {
             margin-right: 0;
         }
     }
-
 }
 
 .advantages__item>p {
-    width: rem(60px);
+    width: 3.75rem;
+    margin: 0;
+    // @include tablets {
+    //     width: trem(60px);
+    // }
+
+    // @include mobile {
+    //     width: mrem(60px);
+    // }
 }
 
 .icon {
@@ -389,33 +469,31 @@
 }
 
 .leaves-icon {
-    height: rem(50px);
-    width: rem(60px);
+    height: 3.125rem;
+    width: 3.75rem;
 
     @include mobile {
-        height: 33px;
-        width: 40px;
+        height: 2.06rem;
+        width: 2.66rem;
     }
 }
 
 .track-icon {
-    height: rem(50px);
-    width: rem(80px);
+    height: 3.125rem;
+    width: 5rem;
 
     @include mobile {
-        height: 33px;
-        width: 50px;
+        height: 2.06rem;
+        width: 3.125rem;
     }
 }
 
 .measure-icon {
-    height: rem(50px);
-    width: rem(65px);
+    height: 3.125rem;
+    width: 4.06rem;
 
     @include mobile {
-        height: 33px;
-        width: 50px;
+        height: 2.06rem;
+        width: 3.125rem;
     }
-
 }
-
