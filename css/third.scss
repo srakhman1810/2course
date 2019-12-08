@@ -1,0 +1,10 @@
+.third {
+    @include size;
+    background: $light;
+}
+
+.third__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

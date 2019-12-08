@@ -1,32 +1,32 @@
-$blue: rgb(97, 196, 217);
-$white: rgb(255, 255, 255);
-$green: rgb(11, 77, 60);
-$black: rgb(14, 14, 14);
-$grey: rgb(141, 141, 141);
-$light: rgb(248, 250, 249);
-
-@mixin size {
-    height: 100vh;
-    width: 100%;
-    min-height: 650px;
-}
-
-
 
 .second {
-    padding-top: 9px;
     position: relative;
-    @include size;
     background: url('../img/second/background.png') left center no-repeat;
+    @include size;
 
+    @include mobile {
+        background: none;
+    }
 
-    &:after {
+    &:before {
         content: url(../img/second/snack.png);
         position: absolute;
-        bottom: -130px;
+        bottom: -13%;
+        left: 0%;
+        @include tablets {
+        left: -8%;
+        }
+        @include mobile {
+        display: none;
+        }
     }
+    // @include tablets {
+    //     padding: 5%;
+    // }
+    // @include mobile {
+    //     padding: 5%;
+    // }
 }
-
 
 .second__container {
     position: relative;
@@ -34,92 +34,134 @@ $light: rgb(248, 250, 249);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-}
+ }
 
 .reason {
-    width: 406px;
-    margin: 0px auto 55px;
-
+    width: 25.375rem;
+    margin: 0 0 4%;
+    text-align: center;
 
     &>h2 {
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: bold;
         text-transform: uppercase;
         color: $black;
-        margin: 0px 0px 7px;
+        margin: 0% 0% 3%;
+        @include mobile {
+            font-size: 2.5rem;
+        }
     }
 
     &>p {
-        font-size: 18px;
+        font-size: 1.125rem;
         color: $grey;
-        margin: 0px;
-
+        margin: 0%;
+        white-space: pre-line;
+        @include mobile {
+           font-size: 1rem;
+        }
     }
 }
 
-// description 
 .description {
     margin: 0 auto;
 
     &__image {
-        width: 125px;
-        height: 125px;
-        border-radius: 50%;
-        background: $light;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 40px;
+       height: 5rem;
+       width: 5rem;
     }
-
 
     &__list {
         display: flex;
         justify-content: space-between;
-        margin: 0px;
-        padding: 0px;
+        margin: 0%;
+        padding: 0%;
         list-style-type: none;
-        width: 940px;
+        max-width: 58.75rem;
+        @include tablets {
+            flex-direction: column;
+        }
+        @include mobile {
+            flex-direction: column;
+        }
     }
-
+    
     &__item {
-        width: 260px;
+        width: 16.25rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         position: relative;
-
+        @include tablets {
+            margin-bottom:10%;
+        }
+        @include mobile {
+            margin-bottom: 10%;
+            flex-direction: row;
+            text-align: left;
+            width: 100%;
+        }
     }
+}
 
+.description__item:nth-last-child(1){
+    @include tablets {
+        margin-bottom:0%;
+    }
+    @include mobile {
+        margin-bottom:0%;
+    }
 }
 
 .description__explain {
 
     &>h3 {
         color: $black;
-        font-size: 27px;
-        margin: 0px 0px 18px;
+        font-size: 1.5rem;
+        margin: 0% 0% 3%;
     }
 
     &>p {
         color: $grey;
-        font-size: 18px;
-        margin: 0px;
+        font-size: 1rem;
+        margin: rem(0px);
     }
-
 }
 
+.round {
+    padding: 4%;
+    border-radius: 50%;
+    background: $light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 13%;
+    @include mobile {
+        margin-bottom: 0%;
+        margin-right: 3%;
+    }
+}
 
-
-
+.image-icon {
+    fill:none;
+    stroke:#000000;
+    stroke-width:0.7;
+    stroke-miterlimit:10;
+}
 
 .description__item:after {
     content: url(../img/second/rounds.png);
     position: absolute;
     top: 20%;
-    right: -32%;
+    right: -13%;
+
+    @include tablets {
+       display: none;
+    }
+    @include mobile {
+      display: none;
+    }
 }
 
 .description__item:last-child:after {

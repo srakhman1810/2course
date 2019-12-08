@@ -1,0 +1,62 @@
+.sidebar {
+    position: fixed;
+    top: 30%;
+    right: 2%;
+
+    &__list {
+        list-style-type: none;
+        padding-left: 0%;
+        margin: 0%;
+    }
+    
+    @include tablets {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
+
+.sidebar__item {
+    margin-bottom: 250%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &:hover {
+        cursor: pointer;
+    }  
+}
+
+.link {
+    width: 0.4375rem;
+    height: 0.4375rem;
+    border-radius: 50%;
+    background: $green;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: none;;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        border: 1px solid $green;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover:before{
+        display:flex;
+    }
+
+    &:focus:before {
+        display: flex;
+    }
+}
+
+
+
+

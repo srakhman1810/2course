@@ -1,0 +1,120 @@
+.fourth {
+    color: $black;
+    @include size;
+    background-image: url(../img/fourth/background.png);
+    background-position: right top 5%;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:after {
+        content: url(../img/fourth/blueberries.png);
+        position: absolute;
+        top: -5%;
+        right: 1%;
+
+        @include tablets {
+            right: 0%;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    // @include tablets {
+    //     padding: 10%
+    // }
+}
+
+.fourth__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+
+    &>h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
+        margin: 0% 0% 4%;
+    }
+}
+
+.team {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    list-style-type: none;
+    margin: 0%;
+    padding-left: 0%;
+
+    &__item {
+        width: 25%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include tablets {
+            width: 40%; 
+        }
+
+    }
+
+    &__image {
+        width: 90%;
+        margin-bottom: 3%;
+        @include tablets {
+            width: 82%;
+        }
+    }
+}
+
+.employee {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    font-size: 1.3125rem;
+    color: $black;
+    text-decoration: none;
+    margin-bottom: 5%;
+    @include mobile {
+        font-size: 1rem;
+    }
+}
+
+.triangle {
+    height: 1rem;
+    width: 1rem;
+    fill: $green;
+    &-icon--active {
+        display: none;
+    }
+}
+
+.team__direction {
+    overflow: hidden;
+    height: 0;
+
+    &>h5 {
+        font-size: 1.0625rem;
+        margin: 0%;
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+
+    &>p {
+        font-size: 1.0625rem;
+        margin: 0%;
+        color: $grey;
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+
+}

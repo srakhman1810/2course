@@ -1,0 +1,122 @@
+.fifth {
+    @include size;
+    background: url(../img/fifth/background.png) center center / cover no-repeat;
+    color: $white;
+    position: relative;
+
+    &:before {
+        content: url(../img/fifth/rastberry.png);
+        position: absolute;
+        top: -10%;
+        left: 3%;
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+.fifth__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablets {
+        height: 100vh;
+    }
+    @include mobile {
+        height: 100vh;
+    }
+
+    &>h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin: rem(0px);
+        position: absolute;
+        top: 25%;
+        left: 16%;
+    }
+}
+
+.bars-type {
+    list-style-type: none;
+    margin: 0%;
+    padding-left: 0%;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+
+    &__item {
+        background-color: rgba($black, .6);
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.link-acco {
+    position: relative;
+    text-decoration: none;
+    width: 4.6875rem;
+    height: 100%;
+    display: block;
+
+   
+    &--one {
+        background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat;
+    }
+
+    &--two {
+        background: url(../img/fifth/Granola-Bars-with-calamondin.png) center center / cover no-repeat;
+    }
+
+    &--three {
+        background: url(../img/fifth/shutterstock_684121381.png) center center / cover no-repeat;
+    }
+}
+
+.heading-acco {
+    color: $white;
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform-origin: 0 0;
+    white-space: nowrap;
+    transform: rotate(-90deg) translateY(-50%);
+    margin-top: -40%;
+    
+}
+
+.grey-block {
+    overflow: hidden;
+    width: 0;
+    position: relative;
+    font-size: 1rem;
+    background-color: rgba($black, .6);
+
+    &--active {
+    width: 100%;
+    max-width: 35rem;
+    }
+
+}
+.text {
+    margin: 0%;
+    padding: 10% 20% 0 5%;
+    display: none;  
+
+    &--active {
+        display: block;
+    }
+}
+
+.x {
+    width: 1.125rem;
+    height: 1.125rem;
+    position: absolute;
+    top: 3%;
+    right: 7%;
+}
+

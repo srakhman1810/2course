@@ -1,40 +1,87 @@
 
-$blue: rgb(97, 196, 217);
-$white: rgb(255, 255, 255);
-$green: rgb(11, 77, 60);
-$black: rgb(14, 14, 14);
-$grey: rgb(141, 141, 141);
-$light: rgb(248, 250, 249);
-
-
 .footer {
-    background-color: $green;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background: $white;
+
+    &__container {
+        display: flex;
+        max-height: 5.8125rem;
+    }
 }
 
-.footer__container {
+.contacts {
+    width: 50%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &>p {
+        font-size: 1.3125rem;
+        margin: 0%;
+    }
 }
 
-.social-networks__list {
-    display: flex;
-    list-style-type: none;
+.handset {
+    height: 0.6875rem;
+    width: 0.6875rem;
+    margin-right: 1%;
+
+    &-icon {
+        fill: $green;
+    }
 }
 
-
-.contacts__address {
-    font-size: 21px;
-}
-
-.contacts__phone {
-    font-size: 21px;
+.number {
+    font-size: 1.3125rem;
     text-decoration: none;
     color: $green;
     font-style: normal;
     text-transform: uppercase;
     font-weight: light;
+}
 
-    &:before {
-        content: url('../img/first/phone.png');
-        margin-right: 2px;
+.social {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__list {
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: flex-end;
+        margin:0%;
+        padding-left:0%;
     }
 }
+
+.social__item {
+    margin-right:5%;
+
+    &:nth-child(4){
+        margin-right:0%;
+    }
+}
+
+.site {
+    height: 1.4375rem;
+    width: 1.4375rem;
+    
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:hover>.social-icon{
+        fill:$black;
+    }
+}
+
+.social-icon {
+    fill:$grey;
+}
+
+
+
