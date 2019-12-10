@@ -9,6 +9,7 @@
     @include tablets {
         background-position: right top;
     }
+
     @include mobile {
         background-position: right top;
     }
@@ -109,6 +110,8 @@
         justify-content: center;
         margin: 0%;
         padding-left: 0%;
+        text-align: center;
+    
 
         @include tablets {
             flex-direction: column;
@@ -124,20 +127,36 @@
     &__item {
         list-style-type: none;
         margin-right: 2%;
+        transition: 0.3s linear;
+       
 
         &:nth-last-child(1) {
             margin-right: 0%;
         }
 
         @include tablets {
+            width: 100%;
             margin-bottom: 3%;
             margin-bottom: 20%;
+            padding: 2%;
+
+            &:hover {
+                background: $light;
+                border-radius: 50px;
+            }
         }
 
         @include mobile {
             margin-bottom: 3%;
             margin-bottom: 20%;
+            padding: 2%;
+
+            &:hover {
+                background: $light;
+                border-radius: 50px;
+            }
         }
+
     }
 
     &__link {
@@ -145,8 +164,21 @@
         text-decoration: none;
         font-size: 1.125rem;
         white-space: nowrap;
+
+        @include tablets {
+            font-size: 1.5rem;
+
+            &:hover {
+            color: $dark;
+            }
+        }
+
+        @include mobile {
+            font-size: 1.5rem;
+        }
     }
 }
+
 
 .x-menu {
     width: 1.25rem;
@@ -169,9 +201,6 @@
 .x-close:focus+.menu {
     display: none;
 }
-
-
-
 
 .call {
     display: flex;
@@ -217,7 +246,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    
+
 
     @include tablets {
         flex-direction: column;
@@ -262,7 +291,7 @@
         text-transform: uppercase;
         margin: 0% 0% 3%;
         line-height: 1;
-       
+
         @include mobile {
             font-size: 3.3rem;
         }
@@ -396,10 +425,14 @@
 }
 
 // БУРГЕР
-.link-menu{
+.link-menu {
     position: absolute;
     top: 0.1%;
     right: 2%;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .side-menu {
@@ -414,4 +447,5 @@
     @include mobile {
         display: block;
     }
+
 }
