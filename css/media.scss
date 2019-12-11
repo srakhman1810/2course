@@ -5,18 +5,6 @@
     src: url(../fonts/Museo-Sans-Cyr/MuseoSansCyrl_1.otf);
 }
 
-// @function rem($px) {
-//     @return $px /16px+0rem;
-// }
-
-// @function trem($px) {
-//     @return $px /15px+0rem;
-// }
-
-// @function mrem($px) {
-//     @return $px /14px+0rem;
-// }
-
 @mixin tablets {
     @media screen and (max-width:768px) {
         @content;
