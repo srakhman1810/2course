@@ -1455,7 +1455,7 @@ body {
   width: 100%;
   background: white; }
   .footer__container {
-    height: 6vh;
+    height: 100%;
     display: flex; }
 
 .contacts {
