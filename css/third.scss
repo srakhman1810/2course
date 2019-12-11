@@ -111,14 +111,10 @@
         top: -19%;
         right: 0%;
     }
-
+    
     @include mobile {
         top: -4%;
         right: 0%;
-    }
-
-    &:hover .hide-table {
-        display: flex;
     }
 }
 
@@ -263,6 +259,14 @@
     font-style: italic;
     text-transform: uppercase;
     color: $white;
+
+    &:hover + .hide-table {
+        display: flex;
+    }
+    
+    &:focus + .hide-table {
+        display: flex;
+    }
 
     &__chocolate {
         width: 3.1875rem;

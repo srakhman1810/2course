@@ -9,9 +9,8 @@
     background: $white;
 
     &__container {
-        display: flex;
-        max-height: 5.8125rem;
-        width: 96%;
+       height: 6vh; 
+       display: flex;
     }
 }
 
