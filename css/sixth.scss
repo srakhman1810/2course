@@ -62,6 +62,7 @@
 
 .review {
     width: 100%;
+    overflow: hidden;
 
     &__area {
         display: flex;
@@ -83,8 +84,8 @@
         background-image: url('../img/sixth/background2.png');
         background-repeat: no-repeat;
         background-position: right top;
-        padding: 5%;
-        width:90%;
+        padding: 7%;
+        width:100%;
         position: relative;
 
 

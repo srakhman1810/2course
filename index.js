@@ -1,67 +1,120 @@
 
 // менюшка
 const link = document.querySelector('.link-menu'),
-       menu = document.querySelector('.menu'),
-       x = document.querySelector('.x-close');
-      
-link.addEventListener ('click', function(e) {
- menu.style.display = 'flex'; 
- document.body.style.overflow = "hidden";
+    menu = document.querySelector('.menu'),
+    x = document.querySelector('.x-close');
+
+link.addEventListener('click', function (e) {
+    menu.style.display = 'flex';
+    document.body.style.overflow = "hidden";
 });
 
-x.addEventListener ('click' , function(e) {
+x.addEventListener('click', function (e) {
     menu.style.display = 'none';
     document.body.style.overflow = "scroll";
 });
 
 // слайдер
 const left = document.querySelector('.left'),
-      right = document.querySelector('.right'),
-      block = document.querySelector('.slider-block'),
-      slider = document.querySelector('.slider'),
-      computed = getComputedStyle(slider);
+    right = document.querySelector('.right'),
+    slider = document.querySelector('.slider'),
+    computed = getComputedStyle(slider);
 
 
-right.addEventListener('click' , function(event) {
+right.addEventListener('click', function (event) {
     event.preventDefault();
-    let currentRight = parseInt(computed.right);
-  
-    if (!currentRight) {
-        currentRight = 0;
-    }
-
-    if (currentRight < 100) {
-        console.log(slider.style.right = currentRight + 100 + '%');
-    }
- 
-    // if ( block.style.width = 540 + 'px' && currentRight < 540 ) {
-    //     slider.style.right = currentRight + 540 + 'px';
-    // }
+    loop('right');
 });
 
-left.addEventListener('click' , function(event) {
+left.addEventListener('click', function (event) {
     event.preventDefault();
-    let currentRight = parseInt(computed.right);
-
-    if (!currentRight){
-        currentRight = 0;
-    }
-
-    if (currentRight > 0){
-        console.log (slider.style.right = currentRight - 800 + '%');
-    }
-
-    // if (block.style.width = 540  && currentRight > 0) {
-    //     slider.style.right = currentRight - 540 + 'px';
-    // }
-
-    // в право работает +100 , влево прибавляет еще 700, итого, чтобы 
-    // получить первый слайд надо отнять 800%
-    // c px проблем таких нет, но адаптива не будет! пытплась писать
-    //  отдельно на каждый размер экрана, но принимает значение последнего
-    // при ширине 100% не восринимает размеры , нужно писать в rem 
+    loop('left');
 });
 
-// аккордеон горизонтальный
-// аккордеон вертикальный
-// слайдшоу
+function loop(direction) {
+    if (direction === 'right') {
+        slider.appendChild(slider.firstElementChild);
+    } else {
+        slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+    }
+}
+
+// // горизонтальный аккордеон 
+const fifth = document.querySelector('#fifth'),
+    li = document.querySelectorAll('.bars-type__item'),
+    liLength = li.length;
+    
+fifth.addEventListener('click', function(event) {
+    for (let i = 0;
+        i < liLength;
+        i++) {
+        li[i].classList.remove('bars-type__item--active');
+    }
+});
+
+for (let i = 0;
+    i < liLength;
+    i++) {
+    li[i].addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (li[i].classList.contains('bars-type__item--active')) {
+            li[i].classList.remove('bars-type__item--active');
+        } else {
+            for (let i = 0;
+                i < liLength;
+                i++) {
+                li[i].classList.remove('bars-type__item--active');
+            }
+            li[i].classList.add('bars-type__item--active');
+        }
+    });
+}
+// вертикальный аккордеон
+const name = document.querySelectorAll('.employee'),
+      direction = document.querySelectorAll('.team-direction'),
+      nameLength = name.length,
+      directionLength = direction.length;
+
+
+      for (let i = 0;
+        i < nameLength;
+        i++) {
+            name[i].addEventListener('click', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+    
+            if (name[i].classList.contains('employee--active')) {
+                name[i].classList.remove('employee--active');
+            } else {
+                for (let i = 0;
+                    i < nameLength;
+                    i++) {
+                    name[i].classList.remove('employee--active');
+                }
+                name[i].classList.add('employee--active');
+            }
+
+            for (let i = 0;
+                i < directionLength;
+                i++) {
+                    if (name[i].classList.contains('employee--active')) {
+                        direction[i].classList.add('team-direction--active');
+                    } else { 
+                        direction[i].classList.remove('team-direction--active');
+                    }
+                }
+        });
+        }
+
+    
+    
+    
+     
+
+
+
+
+
+

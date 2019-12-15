@@ -1,6 +1,6 @@
 .fifth {
     @include size;
-    background: url(../img/fifth/background.png) center center / cover no-repeat;
+    background: url(../img/fifth/background.png) center center / cover no-repeat  rgba(0,0,0,.9);
     color: $white;
     position: relative;
 
@@ -41,15 +41,18 @@
     margin: 0%;
     padding-left: 0%;
     display: flex;
+    justify-content:flex-end;
     position: absolute;
     top: 0%;
     right: 0%;
     height: 100%;
-
+    width: 65%;
+    
     &__item {
         background-color: rgba($black, .6);
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
+    
     }
 }
 
@@ -59,7 +62,6 @@
     width: 4.6875rem;
     height: 100%;
     display: block;
-
    
     &--one {
         background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat;
@@ -95,21 +97,20 @@
     position: relative;
     font-size: 1rem;
     background-color: rgba($black, .6);
+    width: 0rem;
 
-    &--active {
-    width: 100%;
-    max-width: 35rem;
+    &>p {
+        margin: 0%;
+        padding: 10% 20% 0 5%;
     }
-
 }
-.text {
-    margin: 0%;
-    padding: 10% 20% 0 5%;
-    display: none;  
 
-    &--active {
-        display: block;
-    }
+.bars-type__item--active>.grey-block{
+    width: 88%;
+}
+
+.bars-type__item--active {
+     width:100%;
 }
 
 .x {

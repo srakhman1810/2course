@@ -20,10 +20,6 @@
             display: none;
         }
     }
-
-    // @include tablets {
-    //     padding: 10%
-    // }
 }
 
 .fourth__container {
@@ -46,7 +42,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
+    height:50%;
     list-style-type: none;
     margin: 0%;
     padding-left: 0%;
@@ -62,7 +58,6 @@
         @include tablets {
             width: 40%; 
         }
-
     }
 
     &__image {
@@ -72,6 +67,15 @@
             width: 82%;
         }
     }
+   
+    @include tablets {
+       height: 85%;
+    }
+
+    @include mobile {
+        height: 75%;
+    }
+
 }
 
 .employee {
@@ -96,7 +100,7 @@
     }
 }
 
-.team__direction {
+.team-direction {
     overflow: hidden;
     height: 0;
 
@@ -115,6 +119,10 @@
         @include mobile {
             font-size: 1rem;
         }
+    }
+
+    &--active {
+        height: 5rem;
     }
 
 }

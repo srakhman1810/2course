@@ -548,25 +548,18 @@ body {
   justify-content: center; }
 
 .slider-block {
-  display: flex;
-  align-items: center;
-  width: 50rem;
   height: 100%;
   overflow: hidden;
   margin: 0 10px; }
-  @media screen and (max-width: 768px) {
-    .slider-block {
-      width: 36rem; } }
-  @media screen and (max-width: 480px) {
-    .slider-block {
-      width: 20rem; } }
 
 .slider {
   height: 100%;
   display: flex;
   align-items: center;
   position: relative;
-  transition: 0.5s; }
+  transition: 0.5s linear;
+  right: 0%;
+  width: 200%; }
 
 .bar {
   display: flex;
@@ -574,21 +567,20 @@ body {
   align-items: flex-end;
   position: relative;
   height: 50%;
-  width: 50rem; }
+  width: 100%;
+  transition: 0.5s linear; }
   @media screen and (max-width: 768px) {
     .bar {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 70%;
-      width: 36rem; } }
+      height: 70%; } }
   @media screen and (max-width: 480px) {
     .bar {
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
-      height: 90%;
-      width: 20rem; } }
+      height: 90%; } }
 
 .image-block {
   display: flex;
@@ -870,6 +862,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  height: 50%;
   list-style-type: none;
   margin: 0%;
   padding-left: 0%; }
@@ -889,6 +882,12 @@ body {
     @media screen and (max-width: 768px) {
       .team__image {
         width: 82%; } }
+  @media screen and (max-width: 768px) {
+    .team {
+      height: 85%; } }
+  @media screen and (max-width: 480px) {
+    .team {
+      height: 75%; } }
 
 .employee {
   display: flex;
@@ -909,29 +908,31 @@ body {
   .triangle-icon--active {
     display: none; }
 
-.team__direction {
+.team-direction {
   overflow: hidden;
   height: 0; }
-  .team__direction > h5 {
+  .team-direction > h5 {
     font-size: 1.0625rem;
     margin: 0%; }
     @media screen and (max-width: 480px) {
-      .team__direction > h5 {
+      .team-direction > h5 {
         font-size: 1rem; } }
-  .team__direction > p {
+  .team-direction > p {
     font-size: 1.0625rem;
     margin: 0%;
     color: #8d8d8d; }
     @media screen and (max-width: 480px) {
-      .team__direction > p {
+      .team-direction > p {
         font-size: 1rem; } }
+  .team-direction--active {
+    height: 5rem; }
 
 .fifth {
   height: 100vh;
   width: 100%;
   min-height: 650px;
   box-sizing: border-box;
-  background: url(../img/fifth/background.png) center center/cover no-repeat;
+  background: url(../img/fifth/background.png) center center/cover no-repeat rgba(0, 0, 0, 0.9);
   color: white;
   position: relative; }
   @media screen and (max-width: 768px) {
@@ -972,14 +973,16 @@ body {
   margin: 0%;
   padding-left: 0%;
   display: flex;
+  justify-content: flex-end;
   position: absolute;
   top: 0%;
   right: 0%;
-  height: 100%; }
+  height: 100%;
+  width: 65%; }
   .bars-type__item {
     background-color: rgba(14, 14, 14, 0.6);
     display: flex;
-    justify-content: flex-end; }
+    justify-content: space-between; }
 
 .link-acco {
   position: relative;
@@ -1012,17 +1015,17 @@ body {
   width: 0;
   position: relative;
   font-size: 1rem;
-  background-color: rgba(14, 14, 14, 0.6); }
-  .grey-block--active {
-    width: 100%;
-    max-width: 35rem; }
+  background-color: rgba(14, 14, 14, 0.6);
+  width: 0rem; }
+  .grey-block > p {
+    margin: 0%;
+    padding: 10% 20% 0 5%; }
 
-.text {
-  margin: 0%;
-  padding: 10% 20% 0 5%;
-  display: none; }
-  .text--active {
-    display: block; }
+.bars-type__item--active > .grey-block {
+  width: 88%; }
+
+.bars-type__item--active {
+  width: 100%; }
 
 .x {
   width: 1.125rem;
@@ -1086,7 +1089,8 @@ body {
         font-size: 2.5rem; } }
 
 .review {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   .review__area {
     display: flex;
     align-items: center;
@@ -1104,8 +1108,8 @@ body {
     background-image: url("../img/sixth/background2.png");
     background-repeat: no-repeat;
     background-position: right top;
-    padding: 5%;
-    width: 90%;
+    padding: 7%;
+    width: 100%;
     position: relative; }
     .review__block:before {
       content: url(../img/sixth/ellipse.png);
