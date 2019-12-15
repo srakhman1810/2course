@@ -6,7 +6,7 @@
     box-sizing: border-box;
     display: flexbx;
     @include tablets {
-        padding: 10%
+        padding: 5%
     }
 
     @include mobile { 
@@ -57,10 +57,11 @@
     align-items: center;
     position: relative;
 
-    &:after {
-    content: url(../img/seventh/background.png);
-    position: absolute;
-    }
+    // &:after {
+    // content: url(../img/seventh/background.png);
+    // position: absolute;
+    // z-index: 5;
+    // }
  
     &>h2 {
         margin:0%;
@@ -83,6 +84,7 @@
 .iframe {
     width: 41.25rem;
     height: 23.125rem;
+    
     @include tablets {
         width: 36.93rem;
         height: 20.6875rem; 

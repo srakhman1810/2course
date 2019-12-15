@@ -547,27 +547,48 @@ body {
   align-items: center;
   justify-content: center; }
 
+.slider-block {
+  display: flex;
+  align-items: center;
+  width: 50rem;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 10px; }
+  @media screen and (max-width: 768px) {
+    .slider-block {
+      width: 36rem; } }
+  @media screen and (max-width: 480px) {
+    .slider-block {
+      width: 20rem; } }
+
+.slider {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: 0.5s; }
+
 .bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
   height: 50%;
-  width: 96%; }
+  width: 50rem; }
   @media screen and (max-width: 768px) {
     .bar {
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 70%;
-      width: 100%; } }
+      width: 36rem; } }
   @media screen and (max-width: 480px) {
     .bar {
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
       height: 90%;
-      width: 100%; } }
+      width: 20rem; } }
 
 .image-block {
   display: flex;
@@ -624,7 +645,7 @@ body {
 
 .consist {
   position: absolute;
-  top: -5%;
+  top: 10%;
   right: 38%; }
   @media screen and (max-width: 768px) {
     .consist {
@@ -1064,54 +1085,59 @@ body {
       .sixth__container > h2 {
         font-size: 2.5rem; } }
 
-.review__area {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  padding-left: 0%;
-  margin: 0%;
-  margin-bottom: 5%; }
-.review__block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f8faf9;
-  background-image: url("../img/sixth/background2.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  padding: 5%;
-  position: relative; }
-  .review__block:before {
-    content: url(../img/sixth/ellipse.png);
-    position: absolute;
-    top: 0%; }
-  @media screen and (max-width: 768px) {
-    .review__block {
-      flex-direction: column;
-      text-align: center;
-      padding: 10% 2%; } }
-  @media screen and (max-width: 480px) {
-    .review__block {
-      flex-direction: column;
-      text-align: center;
-      width: 20rem;
-      padding: 10% 2%; } }
-.review__image {
-  margin-right: 3%;
-  width: 42.33rem;
-  height: 16.25rem; }
-  @media screen and (max-width: 768px) {
-    .review__image {
-      margin-right: 0%;
-      width: 12.75rem;
-      height: 13.0625rem;
-      margin-bottom: 3%; } }
-  @media screen and (max-width: 480px) {
-    .review__image {
-      margin-right: 0%;
-      width: 7.625rem;
-      height: 7.8125rem;
-      margin-bottom: 3%; } }
+.review {
+  width: 100%; }
+  .review__area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0%;
+    margin: 0%;
+    margin-bottom: 5%;
+    width: 100%; }
+  .review__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8faf9;
+    background-image: url("../img/sixth/background2.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding: 5%;
+    width: 90%;
+    position: relative; }
+    .review__block:before {
+      content: url(../img/sixth/ellipse.png);
+      position: absolute;
+      top: 0%; }
+    @media screen and (max-width: 768px) {
+      .review__block {
+        flex-direction: column;
+        text-align: center;
+        padding: 10% 2%; } }
+    @media screen and (max-width: 480px) {
+      .review__block {
+        flex-direction: column;
+        text-align: center;
+        width: 20rem;
+        padding: 10% 2%; } }
+  .review__image {
+    margin-right: 3%;
+    width: 42.33rem;
+    height: 16.25rem; }
+    @media screen and (max-width: 768px) {
+      .review__image {
+        margin-right: 0%;
+        width: 12.75rem;
+        height: 13.0625rem;
+        margin-bottom: 3%; } }
+    @media screen and (max-width: 480px) {
+      .review__image {
+        margin-right: 0%;
+        width: 7.625rem;
+        height: 7.8125rem;
+        margin-bottom: 3%; } }
 
 .review__content > h3 {
   font-size: 1.875rem;
@@ -1158,7 +1184,7 @@ body {
       min-height: 0px; } }
   @media screen and (max-width: 768px) {
     .seventh {
-      padding: 10%; } }
+      padding: 5%; } }
   @media screen and (max-width: 480px) {
     .seventh {
       padding: 10%; } }
@@ -1196,9 +1222,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative; }
-  .seventh__container:after {
-    content: url(../img/seventh/background.png);
-    position: absolute; }
   .seventh__container > h2 {
     margin: 0%;
     font-size: 3rem;
@@ -1234,7 +1257,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #0b4d3c; }
+  color: #0b4d3c;
+  padding: 1%; }
   .eighth__container > h2 {
     margin: 0%;
     font-size: 3rem;
