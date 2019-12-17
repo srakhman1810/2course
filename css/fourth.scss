@@ -95,6 +95,8 @@
     height: 1rem;
     width: 1rem;
     fill: $green;
+    animation: acv 2s;
+
     &-icon--active {
         display: none;
     }
@@ -123,6 +125,12 @@
 
     &--active {
         height: 5rem;
+        animation: acv 2s;
+        @keyframes acv {
+           from { transform: scaleY(0) ;}   
+           to { transform:  scaleY(1);}
+           }
+        
     }
 
 }

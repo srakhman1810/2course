@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+        padding: 2%
+    }
 }
 
 .slider-block {
@@ -46,15 +50,18 @@
     height: 50%;
     // width: 50rem;
     width: 100%;
-    transition: 0.5s linear;
+    animation: slider 1s;
+    @keyframes slider {
+        from { transform: translateX(100%);}   
+        to { transform:  translateX(0%);}
+    }
 
+   
     @include tablets {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 70%;
-        // width: 36rem;
-        // width: 100%;
     }
 
     @include mobile {
@@ -62,8 +69,6 @@
         align-items: center;
         justify-content: flex-end;
         height: 90%;
-        // width: 20rem;
-        //  width: 100%;
     }
 }
 
@@ -372,3 +377,4 @@
 .link-icon {
     fill: $dark;
 }
+

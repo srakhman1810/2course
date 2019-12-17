@@ -108,8 +108,51 @@ const name = document.querySelectorAll('.employee'),
         });
         }
 
-    
-    
+// слайдшоу
+
+const review = document.querySelector('.review'),
+      slide = document.querySelectorAll('.review__block'),
+      button = document.querySelectorAll('.clients__item'),
+      buttonl = button.length,
+      slidel = slide.length;
+
+      for (let i = 0;
+        i < buttonl;
+        i++) { button[i].addEventListener('click' , function(event){
+
+            for (let i = 0;
+                i < buttonl;
+                i++) {if (button[i].classList.contains('clients__item--active')) {
+                button[i].classList.remove('clients__item--active'); 
+                slide[i].classList.remove('review__block--active');    
+            }
+        }
+              button[i].classList.add('clients__item--active');
+              slide[i].classList.add('review__block--active');
+                
+            })};
+
+            
+   
+
+          
+              
+     
+
+
+       
+
+     
+
+
+
+
+                    
+              
+
+
+
+
     
      
 

@@ -4,13 +4,6 @@
     position: relative;
     font-size: 1.125rem;
 
-    // @include tablets {
-    //    padding: 10%;
-    // }
-    // @include mobile {
-    //    padding: 20%;
-    // }
-
     &:before {
         content: url(../img/sixth/background.png);
         position: absolute;
@@ -62,17 +55,30 @@
 
 .review {
     width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
     overflow: hidden;
 
     &__area {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         list-style-type: none;
         padding-left: 0%;
-        margin:0%;
-        margin-bottom: 5%;
-        width:100%;
+        margin:0 auto;
+    
+        width:86%;
+        height:63%;
+        position: relative;
+        
+        @include mobile {
+            margin-bottom: 5%;
+            height:80%;
+           
+        }
 
     }
 
@@ -84,10 +90,23 @@
         background-image: url('../img/sixth/background2.png');
         background-repeat: no-repeat;
         background-position: right top;
-        padding: 7%;
+        padding: 0% 2%;
+        height:75%;
         width:100%;
-        position: relative;
+        position: absolute;
+        z-index: 1;
+        display: none;
 
+        &--active {
+            display:flex;
+            animation: slideshow 2s;
+            @keyframes slideshow {
+                0% { opacity: 0; }
+                60% { opacity: 0.9; }
+               }
+         
+        }
+     
 
         &:before {
             content: url(../img/sixth/ellipse.png);
@@ -98,14 +117,13 @@
         @include tablets {
             flex-direction: column;
             text-align: center;
-            padding: 10% 2%;
+            height:90%;
         }
     
         @include mobile {
             flex-direction: column;
             text-align: center;
-            width: 20rem;
-            padding: 10% 2%;
+            height:100%;
         }
     }
 
@@ -140,6 +158,7 @@
     }
 
     &>p {
+        font-size: 1rem;
         color: $grey;
         margin: 0% 0% 5%;
     }
