@@ -572,49 +572,53 @@
                         <div class="personal-information">
                             <label class="cell cell__1" for="">
                                 <div class="cell__name">Имя </div>
-                                <input class="cell__input" type="text" tabindex="1" placeholder="">
+                                <input class="cell__input" type="text" tabindex="1" name="name" required>
+                                <div class="error"></div>
                             </label>
                             <label class="cell cell__1" for="">
                                 <div class="cell__name">Телефон </div>
-                                <input class="cell__input" type="text" tabindex="2" placeholder="">
+                                <input class="cell__input" type="text" tabindex="2" name="cellphone" required>
+                                <div class="error"></div>
                             </label>
                             <label class="cell cell__2" for="">
                                 <div class="cell__name"> Улица </div>
-                                <input class="cell__input" type="text" tabindex="3" placeholder="">
+                                <input class="cell__input" type="text" tabindex="3" name="street">
                             </label>
                             <label class="cell cell__3" for="">
                                 <div class="cell__name">Дом </div>
-                                <input class="cell__input" type="text" tabindex="4" placeholder="">
+                                <input class="cell__input" type="text" tabindex="4" name="house">
                             </label>
                             <label class="cell cell__3" for="">
                                 <div class="cell__name">Корпус </div>
-                                <input class="cell__input" type="text" tabindex="5" placeholder="">
+                                <input class="cell__input" type="text" tabindex="5" name="building">
                             </label>
                             <label class="cell cell__3" for="">
                                 <div class="cell__name">Квартира </div>
-                                <input class="cell__input" type="text" tabindex="6" placeholder="">
+                                <input class="cell__input" type="text" tabindex="6" name="apartment">
                             </label>
                             <label class="cell cell__3" for="">
                                 <div class="cell__name">Этаж </div>
-                                <input class="cell__input" type="text" tabindex="7" placeholder="">
+                              
+                                <input class="cell__input" type="text" tabindex="7" name="floor">
                             </label>
                         </div>
                         <div class="comments">
                             <label class="cell cell__comment">
                                 <div class="cell__name">Комментарий</div>
-                                <textarea name="" class="cell__input cell__input--comment" tabindex="8" placeholder="">
+                                <textarea name="text" class="cell__input cell__input--comment" tabindex="8" placeholder="" required>
                                 </textarea>
+                                <div class="error"></div>
                             </label>
                             <div class="comments__checkbox">
                                 <label class="checkbox">
-                                    <input type="radio" name="radio" class="checkbox__choice" checked id="check"
+                                    <input type="radio" name="pay" class="checkbox__choice" checked id="check"
                                         tabindex="9">
                                     <div class="checkbox__circle"></div>
                                     <div class="checkbox__answer"> Потребуется сдача </div>
                                 </label>
                                 <label class="checkbox">
-                                    <input type="radio" name="radio" class="checkbox__choice" checked id="check"
-                                        tabindex="9">
+                                    <input type="radio" name="pay" class="checkbox__choice" id="check"
+                                        tabindex="10">
                                     <div class="checkbox__circle"></div>
                                     <div class="checkbox__answer"> Оплата по карте </div>
                                 </label>
