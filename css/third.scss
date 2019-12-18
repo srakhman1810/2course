@@ -50,12 +50,11 @@
     height: 50%;
     // width: 50rem;
     width: 100%;
-    animation: slider 1s;
+    animation: slider 2s;
     @keyframes slider {
         from { transform: translateX(100%);}   
         to { transform:  translateX(0%);}
     }
-
    
     @include tablets {
         flex-direction: column;

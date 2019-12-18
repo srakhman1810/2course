@@ -265,6 +265,39 @@
         position: absolute;
         right: 0%;
         z-index: 1;
+        animation: 3s swing infinite;
+        @keyframes swing {
+           from {
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+           }
+
+            20% {
+              -webkit-transform: rotate3d(0, 0, 1, 15deg);
+              transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+            40% {
+              -webkit-transform: rotate3d(0, 0, 1, -15deg);
+              transform: rotate3d(0, 0, 1, -15deg);
+            }
+          
+            60% {
+              -webkit-transform: rotate3d(0, 0, 1, 15deg);
+              transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+            80% {
+              -webkit-transform: rotate3d(0, 0, 1, -15deg);
+              transform: rotate3d(0, 0, 1, -15deg);
+            }
+          
+            to {
+              -webkit-transform: rotate3d(0, 0, 1, 0deg);
+              transform: rotate3d(0, 0, 1, 0deg);
+            }
+          }
+          
 
         @include tablets {
             position: static;

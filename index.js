@@ -125,10 +125,15 @@ for (let i = 0;
             i < buttonl;
             i++) {
             if (button[i].classList.contains('clients__item--active')) {
-                button[i].classList.remove('clients__item--active');
-                slide[i].classList.remove('review__block--active');
+                button[i].classList.remove('clients__item--active')
+                for (let i = 0;
+                    i < slidel;
+                    i++) { if (slide[i].classList.contains('review__block--active')){
+                        slide[i].classList.remove('review__block--active');
+                    }
+                    }   
             }
-        }
+        };
         button[i].classList.add('clients__item--active');
         slide[i].classList.add('review__block--active');
 
@@ -139,34 +144,58 @@ for (let i = 0;
 
 const form = document.querySelector('.form'),
     send = document.querySelector('.button__submit'),
-    check = document.querySelectorAll('.checkbox__choice');
+    check = document.querySelectorAll('.checkbox__choice'),
+    modal = document.querySelector('.modal'),
+    sent = document.querySelector('.modal__sent'),
+    error = document.querySelector('.modal__error')
+    ;
 
 send.addEventListener('click', function (e) {
     e.preventDefault();
-
+   
         let formData = new FormData(); 
-        formData.append('file' , { 
-           name: form.elements.name.value ,
-           cellphone:  form.elements.cellphone.value ,
-           comments: form.elements.text.value
-        }
-       );
-
+        formData.append('name', form.elements.name.value);
+        formData.append('cellphone' , form.elements.cellphone.value);
+        formData.append('comments', form.elements.text.value);
+        formData.append('to', 'rakhman992@gmail.com');
+            
         if (validateForm(form)){
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
-        xhr.open('POST' , 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(JSON.stringify(formData));
-        xhr.addEventListener('load', () => {
-           if(xhr.response.status){
-            console.log('все ок')
-           };
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+        // xhr.send(JSON.stringify(formData));
+        xhr.send(formData);
+        xhr.addEventListener('load', e => {
+           if(xhr.status === 200){
+            modal.style.display = "flex";
+            sent.style.display = 'flex';
+            document.body.style.overflow = "hidden";
+           } else {
+            document.body.style.overflow = "hidden";
+            sent.style.display ='none';
+            error.style.display = "flex";
+           }
         });
     }
 
-    // if (validateForm(form)) {
-    //     console.log('все заполнено');
-    // }
+    modal.addEventListener('click' , e => {
+        let element = e.target;
+
+        if (element.tagName === 'INPUT') {
+            modal.style.display = "none";
+            document.body.style.overflow = "scroll";
+        }
+    });
+
+    document.addEventListener('keyup' , e=> {
+        let keyName = e.key;
+        if (keyName === 'Escape') {
+            modal.style.display = "none";
+            document.body.style.overflow = "scroll";
+        }
+    })
+
+
 
 });
 
@@ -191,41 +220,7 @@ function validateForm(form) {
 function validateField(cell) {
     cell.nextElementSibling.textContent = cell.validationMessage;
     return cell.checkValidity();
-}
-
-
-    //  function validateField(field) {
-    //     if (!field.checkValidity()) {
-    //         field.nextElementSibling.textContent = field.validationMessage;
-    //         return false;
-    //      } else { 
-    //         field.nextElementSibling.textContent = '';
-    //         return true;
-    //      }
-    //  }
-
-      //  console.log(form.elements.name.value);
-        //  console.log(form.elements.cellphone.value);
-        //  console.log(form.elements.street.value);
-        //  console.log(form.elements.house.value);
-        //  console.log(form.elements.building.value);
-        //  console.log(form.elements.apartment.value);
-        //  console.log(form.elements.floor.value);
-        //  console.log(form.elements.text.value);
-        //  if (form.elements.checkbox.checked==true) {
-        //     console.log('не перезванивать') }
-        //     else { console.log('перезвонить') 
-        //    } ;
-
-        // if (form.elements.pay.checked == true) {
-        //     console.log('потребуется сдача')}
-        // else { console.log('оплата по карте')};  
-
-
-
-
-
-
+};
 
 
 

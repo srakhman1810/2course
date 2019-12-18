@@ -154,7 +154,7 @@
                             <use class="link-icon" xlink:href="./img/sprite.svg#back"></use>
                         </svg>
                     </a>
-                    <div class="slider-block"> 
+                    <div class="slider-block">
                         <div class="slider">
                             <div class="bar">
                                 <div class="consist">
@@ -350,7 +350,7 @@
                                 </article>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <a href="#" class="link-slide right">
                         <svg class="link-svg">
                             <use class="link-icon" xlink:href="./img/sprite.svg#next"></use>
@@ -367,8 +367,8 @@
                             <a href="#" class="employee">
                                 <svg class="triangle">
                                     <use class="triangle-icon" xlink:href="./img/sprite.svg#down"> </use>
-                                    <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up">
-                                    </use>
+                                    <!-- <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up"> -->
+                                    <!-- </use> -->
                                 </svg>
                                 <span class="employee__name"> Борис Фёдорович</span>
                             </a>
@@ -384,8 +384,8 @@
                             <a href="#" class="employee">
                                 <svg class="triangle">
                                     <use class="triangle-icon" xlink:href="./img/sprite.svg#down"> </use>
-                                    <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up">
-                                    </use>
+                                    <!-- <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up"> -->
+                                    <!-- </use> -->
                                 </svg>
                                 <span class="employee__name"> Алла Иванова </span>
                             </a>
@@ -401,8 +401,8 @@
                             <a href="#" class="employee">
                                 <svg class="triangle">
                                     <use class="triangle-icon" xlink:href="./img/sprite.svg#down"> </use>
-                                    <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up">
-                                    </use>
+                                    <!-- <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up">
+                                    </use> -->
                                 </svg>
                                 <span class="employee__name"> Кирилл Матросов </span>
                             </a>
@@ -418,8 +418,8 @@
                             <a href="#" class="employee">
                                 <svg class="triangle">
                                     <use class="triangle-icon" xlink:href="./img/sprite.svg#down"> </use>
-                                    <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up">
-                                    </use>
+                                    <!-- <use class="triangle-icon triangle-icon--active" xlink:href="./img/sprite.svg#up">
+                                    </use> -->
                                 </svg>
                                 <span class="employee__name"> Милла Рыжкова</span>
                             </a>
@@ -438,8 +438,8 @@
                     <h2> меню </h2>
                     <ul class="bars-type">
                         <li class="bars-type__item">
-                            <a href="#" class="link-acco link-acco--one"> 
-                                <span class="heading-acco"> Батончик с молоком </span> 
+                            <a href="#" class="link-acco link-acco--one">
+                                <span class="heading-acco"> Батончик с молоком </span>
                             </a>
                             <div class="grey-block">
                                 <p> Рекомендуем употреблять батончики вместе с кокосовым
@@ -456,8 +456,8 @@
                             </div>
                         </li>
                         <li class="bars-type__item">
-                            <a href="#" class="link-acco link-acco--two"> 
-                                <span class="heading-acco"> С мёдом и фруктами </span> 
+                            <a href="#" class="link-acco link-acco--two">
+                                <span class="heading-acco"> С мёдом и фруктами </span>
                             </a>
                             <div class="grey-block">
                                 <p> Lorem ipsum dolor sit amet
@@ -473,8 +473,8 @@
                             </div>
                         </li>
                         <li class="bars-type__item">
-                            <a href="#" class="link-acco link-acco--three"> 
-                                <span class="heading-acco"> Дикие ягоды</span> 
+                            <a href="#" class="link-acco link-acco--three">
+                                <span class="heading-acco"> Дикие ягоды</span>
                             </a>
                             <div class="grey-block">
                                 <p> Lorem ipsum dolor sit, amet consectetur
@@ -540,11 +540,11 @@
                                     </p>
                                     <div> Мария Орлова </div>
                                 </div>
-                            </li> 
+                            </li>
                         </ul>
                         <div class="clients">
                             <ul class="clients__list">
-                                <li class="clients__item">
+                                <li class="clients__item clients__item--active">
                                     <img src="./img/sixth/review1.png" alt="" class="clients-image"> </li>
                                 <li class="clients__item">
                                     <img src="./img/sixth/review2.png" alt="" class="clients-image"> </li>
@@ -598,14 +598,15 @@
                             </label>
                             <label class="cell cell__3" for="">
                                 <div class="cell__name">Этаж </div>
-                              
+
                                 <input class="cell__input" type="text" tabindex="7" name="floor">
                             </label>
                         </div>
                         <div class="comments">
                             <label class="cell cell__comment">
                                 <div class="cell__name">Комментарий</div>
-                                <textarea name="text" class="cell__input cell__input--comment" tabindex="8" placeholder="" required>
+                                <textarea name="text" class="cell__input cell__input--comment" tabindex="8"
+                                    placeholder="" required>
                                 </textarea>
                                 <div class="error"></div>
                             </label>
@@ -617,8 +618,7 @@
                                     <div class="checkbox__answer"> Потребуется сдача </div>
                                 </label>
                                 <label class="checkbox">
-                                    <input type="radio" name="pay" class="checkbox__choice" id="check"
-                                        tabindex="10">
+                                    <input type="radio" name="pay" class="checkbox__choice" id="check" tabindex="10">
                                     <div class="checkbox__circle"></div>
                                     <div class="checkbox__answer"> Оплата по карте </div>
                                 </label>
@@ -639,6 +639,13 @@
                             </div>
                         </div>
                     </form>
+                    <div class="modal">
+                        <div class="modal__window">
+                            <p class="modal__sent"> Сообщение отправлено </p>
+                            <p class="modal__error"> Cooбщение не отправлено </p>
+                            <input class="modal__button" type="submit" value="Закрыть"></input>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="ninth" id="ninth">

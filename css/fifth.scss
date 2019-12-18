@@ -1,6 +1,6 @@
 .fifth {
     @include size;
-    background: url(../img/fifth/background.png) center center / cover no-repeat  rgba(0,0,0,.9);
+    background: url(../img/fifth/background.png) center center / cover no-repeat rgba(0, 0, 0, .9);
     color: $white;
     position: relative;
 
@@ -9,6 +9,7 @@
         position: absolute;
         top: -10%;
         left: 3%;
+
         @include mobile {
             display: none;
         }
@@ -19,9 +20,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @include tablets {
         height: 100vh;
     }
+
     @include mobile {
         height: 100vh;
     }
@@ -37,7 +40,7 @@
         @include mobile {
             left: 0%;
         }
-    
+
     }
 }
 
@@ -46,24 +49,22 @@
     margin: 0%;
     padding-left: 0%;
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     position: absolute;
     top: 0%;
     right: 0%;
     height: 100%;
     width: 65%;
    
- 
     &__item {
         display: flex;
         justify-content: flex-end;
-    
-    }
+       
+        @include mobile {
+            width: 100%;
+        }
 
-    @include mobile {
-        width:100%;
     }
-
 }
 
 .link-acco {
@@ -72,7 +73,7 @@
     width: 4.6875rem;
     height: 100%;
     display: block;
-   
+
     &--one {
         background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat rgba($black, .9);
     }
@@ -98,7 +99,7 @@
     white-space: nowrap;
     transform: rotate(-90deg) translateY(-50%);
     margin-top: -40%;
-    
+
 }
 
 .grey-block {
@@ -115,21 +116,21 @@
     }
 }
 
-.bars-type__item--active>.grey-block{
+.bars-type__item--active>.grey-block {
     width: 89%;
 }
 
 .bars-type__item--active {
-     width:50%;
+    width: 50%;
      animation: ach 1s;
      @keyframes ach {
-        from { transform: translateX(80%) ;}   
+        from { transform: translateX(79%) ;}   
         to { transform:  translateX(0%);}
         }
-     
+   
 
-     @include mobile {
-        width:59%;
+    @include mobile {
+        width: 59%;
     }
 }
 
@@ -140,4 +141,3 @@
     top: 3%;
     right: 7%;
 }
-

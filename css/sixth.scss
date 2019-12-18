@@ -99,7 +99,7 @@
 
         &--active {
             display:flex;
-            animation: slideshow 2s;
+            animation: slideshow 1.5s;
             @keyframes slideshow {
                 0% { opacity: 0; }
                 60% { opacity: 0.9; }
