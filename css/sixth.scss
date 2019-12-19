@@ -130,20 +130,17 @@
 
     &__image {
         margin-right: 3%;
-        width: 42.33rem;
-        height: 16.25rem;
+        height: 85%;
         
         @include tablets {
             margin-right: 0%;
-            width: 12.75rem;
-            height: 13.0625rem;
+            height: 50%;
             margin-bottom:3%;
         }
     
         @include mobile {
             margin-right: 0%;
-            width: 7.625rem;
-            height: 7.8125rem;
+            height: 30%;
             margin-bottom:3%;
         }
     }

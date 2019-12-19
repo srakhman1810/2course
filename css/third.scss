@@ -14,21 +14,9 @@
 }
 
 .slider-block {
-    // display: flex;
-    // align-items: center;
-    // width: 50rem;
-    //  width: 100%;
+    width: 85%;
     height:100%;
     overflow: hidden;
-    margin: 0 10px;
-
-    // @include tablets {
-    //     width: 36rem;
-    // }
-
-    // @include mobile {
-    //     width: 20rem;
-    // }
 }
 
 .slider {
@@ -39,52 +27,43 @@
     transition: 0.5s linear;
     right:0%;
     width:200%;
+    
 }
 
 
 .bar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
-    height: 50%;
-    // width: 50rem;
+    height: 65%;
     width: 100%;
-    animation: left 2s;
+    margin: 0 1%;
+
     @keyframes left {
         from {
-          opacity: 0;
-          -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
         }
       
         to {
-          opacity: 1;
-          -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+          transform: translate3d(0%, 0, 0);
         }
-      }
-    animation: right 2s;
-    @keyframes right {
-        from {
-          opacity: 0;
-          -webkit-transform: translate3d(100%, 0, 0);
-          transform: translate3d(100%, 0, 0);
-        }
-      
-        to {
-          opacity: 1;
-          -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-      }
+    }
+        @keyframes right{
+            from {
+              transform: translate3d(0%, 0, 0);
+            }
 
-   
+            to {
+              transform: translate3d(-100%, 0, 0);
+            }
+    }
+
+  
     @include tablets {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 70%;
     }
 
     @include mobile {
@@ -100,15 +79,15 @@
     justify-content: center;
     position: relative;
     width: 48%;
+    height:90%;
 
     @include tablets {
-        width: 50%;
-        height: 50%;
-        margin-bottom: 2rem;
+        width: 40%;
+        height: 45%;
     }
 
     @include mobile {
-        width: 60%;
+        width: 61%;
         height: 40%;
         margin-bottom: 0rem;
     }
@@ -136,7 +115,7 @@
         right: 0%;
 
         @include tablets {
-            bottom: 0%;
+            bottom: 20%;
             right: -10%;
         }
 
@@ -149,12 +128,12 @@
 }
 
 .image {
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
 
     @include tablets {
         width: 100%;
-        height: 100%;
+        height: 80%;
     }
 
     @include mobile {
@@ -165,38 +144,38 @@
 
 .consist {
     position: absolute;
-    top: 10%;
-    right: 38%;
+    top: -10%;
+    right: 37%;
 
     @include tablets {
-        top: -19%;
-        right: 0%;
+        top: 0%;
+        right: 10%;
     }
     
     @include mobile {
         top: -4%;
-        right: 0%;
+        right: -2%;
     }
 }
 
 .about {
     width: 48%;
-    height: 65%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     @include tablets {
-        width: 60%;
+        width: 69%;
         align-items: center;
-        height: 50%;
+        height: 45%;
         text-align: center;
     }
 
     @include mobile {
         width: 100%;
         align-items: center;
-        height: 50%;
+        height: 53%;
         text-align: center;
     }
 
@@ -248,7 +227,6 @@
     }
 
     @include tablets {
-        // width: 25%;
         text-align: left;
     }
 
@@ -281,7 +259,7 @@
         font-weight: lighter;
         color: $dark;
         line-height: 1;
-        margin-right: 5%;
+        margin-right: 4%;
     }
 }
 
@@ -341,6 +319,12 @@
     &:hover {
         cursor: pointer;
     }
+
+    @include mobile {
+    width: 5rem;
+    height: 5rem;
+    }
+
 }
 
 .table {
@@ -351,10 +335,8 @@
     transition: 0.5s linear;
     padding: 2%;
 
-    @include tablets {}
-
     @include mobile {
-        width: 13rem;
+        width: 12rem;
     }
 }
 
@@ -373,7 +355,7 @@
     }
 
     @include mobile {
-        left: -233%;
+        left: -242%;
         border-right: 2rem solid transparent;
         border-left: none;
         z-index: 1;
@@ -389,7 +371,8 @@
 .link-slide {
     display:flex;
     align-items: center;
-    width: 3%;
+    width: 4%;
+    height:10%;
 }
 
 .link-svg {

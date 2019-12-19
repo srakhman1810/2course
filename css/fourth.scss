@@ -54,7 +54,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-
+       
         @include tablets {
             width: 40%; 
         }
@@ -92,7 +92,8 @@
     }
 
     &:focus>svg{
-      animation: tr 2s;
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
     }
 }
 
@@ -100,17 +101,16 @@
     height: 1rem;
     width: 1rem;
     fill: $green;
+    transition: 0.5s;
 
+    // &-icon { 
+    //     animation: tr 1s infinite;
+    //     @keyframes tr{
+    //         from { rotate:(0deg 0deg);}
+    //         to {rotate:(0deg 180deg);}
+    //     }
 
-
-    &-icon { 
-        animation: tr 1s infinite;
-        @keyframes tr{
-            from { rotate:(0deg 0deg);}
-            to {rotate:(0deg 180deg);}
-        }
-
-    }
+    // }
     
 }
 
@@ -136,7 +136,7 @@
     }
 
     &--active {
-        height: 5rem;
+        height: 7rem;
         animation: acv 1s;
         @keyframes acv {
             from {

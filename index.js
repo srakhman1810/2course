@@ -19,13 +19,13 @@ const left = document.querySelector('.left'),
     right = document.querySelector('.right'),
     slider = document.querySelector('.slider'),
     computed = getComputedStyle(slider),
-    bar = document.querySelector('.bar');
+    bar = document.querySelectorAll('.bar');
 
 
 right.addEventListener('click', function (event) {
     event.preventDefault();
     loop('right');
-    bar.style.animation = 'right 2s';
+    
 });
 
 left.addEventListener('click', function (event) {
@@ -36,9 +36,25 @@ left.addEventListener('click', function (event) {
 function loop(direction) {
     if (direction === 'right') {
         slider.appendChild(slider.firstElementChild);
-    } else {
-        slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+        for (let i = 0;
+            i < bar.length;
+            i++) { if (bar[i].style.animation = "right 1s linear") {
+            slider.appendChild(slider.firstElementChild);
+            }
+                                                     
+            }    
     }
+          
+     else {
+        slider.insertBefore(slider.lastElementChild,slider.firstElementChild);
+        for (let i = 0;
+            i < bar.length;
+            i++) { if (bar[i].style.animation = "left 1s linear") {
+                slider.appendChild(slider.lastElementChild); 
+            }  
+        }
+    }
+       
 }
 
 // // горизонтальный аккордеон 
@@ -77,7 +93,8 @@ for (let i = 0;
 const name = document.querySelectorAll('.employee'),
     direction = document.querySelectorAll('.team-direction'),
     nameLength = name.length,
-    directionLength = direction.length;
+    directionLength = direction.length,
+    triangle =document.querySelectorAll('.triangle');
 
 
 for (let i = 0;
@@ -103,10 +120,12 @@ for (let i = 0;
             i++) {
             if (name[i].classList.contains('employee--active')) {
                 direction[i].classList.add('team-direction--active');
+        
             } else {
                 direction[i].classList.remove('team-direction--active');
             }
         }
+ 
     });
 }
 

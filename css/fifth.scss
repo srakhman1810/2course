@@ -55,15 +55,17 @@
     right: 0%;
     height: 100%;
     width: 65%;
+    
    
     &__item {
         display: flex;
         justify-content: flex-end;
-       
-        @include mobile {
-            width: 100%;
-        }
+      
 
+    }
+
+    @include mobile {
+        width:100%;
     }
 }
 
@@ -121,17 +123,15 @@
 }
 
 .bars-type__item--active {
-    width: 50%;
+    width: 70%;
     animation: ach 1s;
     @keyframes ach {
        from { transform: translateX(79%) ;}   
        to { transform:  translateX(0%);}
        }
     
-   
-
     @include mobile {
-        width: 59%;
+        width: 100%;
     }
 }
 
