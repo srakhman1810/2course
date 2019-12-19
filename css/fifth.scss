@@ -122,11 +122,12 @@
 
 .bars-type__item--active {
     width: 50%;
-     animation: ach 1s;
-     @keyframes ach {
-        from { transform: translateX(79%) ;}   
-        to { transform:  translateX(0%);}
-        }
+    animation: ach 1s;
+    @keyframes ach {
+       from { transform: translateX(79%) ;}   
+       to { transform:  translateX(0%);}
+       }
+    
    
 
     @include mobile {

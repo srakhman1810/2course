@@ -18,12 +18,14 @@ x.addEventListener('click', function (e) {
 const left = document.querySelector('.left'),
     right = document.querySelector('.right'),
     slider = document.querySelector('.slider'),
-    computed = getComputedStyle(slider);
+    computed = getComputedStyle(slider),
+    bar = document.querySelector('.bar');
 
 
 right.addEventListener('click', function (event) {
     event.preventDefault();
     loop('right');
+    bar.style.animation = 'right 2s';
 });
 
 left.addEventListener('click', function (event) {
