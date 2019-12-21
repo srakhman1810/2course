@@ -78,10 +78,8 @@
 
 }
 
-
 .employee {
     display: flex;
-    flex-flow: row-reverse;
     align-items: center;
     font-size: 1.3125rem;
     color: $black;
@@ -91,9 +89,19 @@
         font-size: 1rem;
     }
 
-    &:focus>svg{
-      transform: rotate(180deg);
-      -webkit-transform: rotate(180deg);
+    &--active {
+    &:after{
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+    }
+    }
+    
+    &:after{
+    content: "";
+    border: 0.45rem solid transparent;
+    border-top-color:$green;
+    margin-left: 0.3rem;
+    transition: 0.5s linear;
     }
 }
 

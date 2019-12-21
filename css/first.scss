@@ -62,6 +62,16 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+
+    @include tablets {
+    flex-grow: 0;
+    height:9%;
+    }
+
+    @include mobile {
+    height:8%;
+        
+    }
 }
 
 .logo {
@@ -250,8 +260,8 @@
     @include tablets {
         flex-direction: column;
         flex-direction: column-reverse;
-        margin-bottom: 5%;
-        height:70%;
+        // margin-bottom: 5%;
+        height:60%;
         
     }
 
@@ -259,7 +269,7 @@
         flex-direction: column;
         flex-direction: column-reverse;
         margin-top: 0%;
-        margin-bottom: 5%;
+        // margin-bottom: 5%;
         height:70%;
     }
 
@@ -318,12 +328,12 @@
 
         @include tablets {
             position: static;
-            height: 54%;
+            height: 46%;
         }
 
         @include mobile {
             position: static;
-            height: 55%;
+            height: 53%;
         }
     }
 }
@@ -342,7 +352,8 @@
         margin: 0% 0% 3%;
         line-height: 1;
         @include tablets {
-            font-size: 3.5rem;
+            font-size: 3.3rem;
+            margin: 0% 0% 0%;
         }
         @include mobile {
             font-size: 3.3rem;
@@ -364,12 +375,13 @@
     @include tablets {
         align-items: center;
         text-align: center;
-        height:57%;
+        height:54%;
     }
 
     @include mobile {
         align-items: center;
         text-align: center;
+        height:47%;
     }
 }
 
@@ -408,6 +420,8 @@
 
     @include tablets {
         justify-content: center;
+        flex-grow:0;
+        height:15%;
     }
 
     @include mobile {
@@ -482,7 +496,7 @@
 // БУРГЕР
 .link-menu {
     position: absolute;
-    top: 0.2%;
+    top: 0.1%;
     right: 2%;
 
     &:hover {

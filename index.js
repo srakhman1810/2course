@@ -25,7 +25,6 @@ const left = document.querySelector('.left'),
 right.addEventListener('click', function (event) {
     event.preventDefault();
     loop('right');
-    
 });
 
 left.addEventListener('click', function (event) {
@@ -38,23 +37,23 @@ function loop(direction) {
         slider.appendChild(slider.firstElementChild);
         for (let i = 0;
             i < bar.length;
-            i++) { if (bar[i].style.animation = "right 1s linear") {
-            slider.appendChild(slider.firstElementChild);
+            i++) {
+            if (bar[i].style.animation = "right 1s linear") {
+            // slider.appendChild(slider.firstElementChild);
+            slider.insertBefore(slider.firstElementChild, slider.lastElementChild);
             }
-                                                     
-            }    
-    }
-          
-     else {
-        slider.insertBefore(slider.lastElementChild,slider.firstElementChild);
-        for (let i = 0;
-            i < bar.length;
-            i++) { if (bar[i].style.animation = "left 1s linear") {
-                slider.appendChild(slider.lastElementChild); 
-            }  
         }
     }
-       
+
+    else {
+        slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+        for (let i = 0;
+            i < bar.length;
+            i++) { if (bar[i].style.animation = "left 1s linear") 
+             {  slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+            }
+        }
+    }
 }
 
 // // горизонтальный аккордеон 
@@ -93,9 +92,7 @@ for (let i = 0;
 const name = document.querySelectorAll('.employee'),
     direction = document.querySelectorAll('.team-direction'),
     nameLength = name.length,
-    directionLength = direction.length,
-    triangle =document.querySelectorAll('.triangle');
-
+    directionLength = direction.length;
 
 for (let i = 0;
     i < nameLength;
@@ -120,12 +117,12 @@ for (let i = 0;
             i++) {
             if (name[i].classList.contains('employee--active')) {
                 direction[i].classList.add('team-direction--active');
-        
+
             } else {
                 direction[i].classList.remove('team-direction--active');
             }
         }
- 
+
     });
 }
 
@@ -149,10 +146,11 @@ for (let i = 0;
                 button[i].classList.remove('clients__item--active')
                 for (let i = 0;
                     i < slidel;
-                    i++) { if (slide[i].classList.contains('review__block--active')){
+                    i++) {
+                    if (slide[i].classList.contains('review__block--active')) {
                         slide[i].classList.remove('review__block--active');
                     }
-                    }   
+                }
             }
         };
         button[i].classList.add('clients__item--active');
@@ -168,38 +166,38 @@ const form = document.querySelector('.form'),
     check = document.querySelectorAll('.checkbox__choice'),
     modal = document.querySelector('.modal'),
     sent = document.querySelector('.modal__sent'),
-    error = document.querySelector('.modal__error')
-    ;
+    error = document.querySelector('.modal__error'),
+    count = document.querySelectorAll('.count');
 
 send.addEventListener('click', function (e) {
     e.preventDefault();
-   
-        let formData = new FormData(); 
-        formData.append('name', form.elements.name.value);
-        formData.append('cellphone' , form.elements.cellphone.value);
-        formData.append('comments', form.elements.text.value);
-        formData.append('to', 'rakhman992@gmail.com');
-            
-        if (validateForm(form)){
+
+    let formData = new FormData();
+    formData.append('name', form.elements.name.value);
+    formData.append('cellphone', form.elements.cellphone.value);
+    formData.append('comments', form.elements.text.value);
+    formData.append('to', 'rakhman992@gmail.com');
+
+    if (validateForm(form)) {
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
-        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         // xhr.send(JSON.stringify(formData));
         xhr.send(formData);
         xhr.addEventListener('load', e => {
-           if(xhr.status === 200){
-            modal.style.display = "flex";
-            sent.style.display = 'flex';
-            document.body.style.overflow = "hidden";
-           } else {
-            document.body.style.overflow = "hidden";
-            sent.style.display ='none';
-            error.style.display = "flex";
-           }
+            if (xhr.status === 200) {
+                modal.style.display = "flex";
+                sent.style.display = 'flex';
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "hidden";
+                sent.style.display = 'none';
+                error.style.display = "flex";
+            }
         });
     }
 
-    modal.addEventListener('click' , e => {
+    modal.addEventListener('click', e => {
         let element = e.target;
 
         if (element.tagName === 'INPUT') {
@@ -208,16 +206,13 @@ send.addEventListener('click', function (e) {
         }
     });
 
-    document.addEventListener('keyup' , e=> {
+    document.addEventListener('keyup', e => {
         let keyName = e.key;
         if (keyName === 'Escape') {
             modal.style.display = "none";
             document.body.style.overflow = "scroll";
         }
-    })
-
-
-
+    });
 });
 
 function validateForm(form) {
@@ -242,6 +237,30 @@ function validateField(cell) {
     cell.nextElementSibling.textContent = cell.validationMessage;
     return cell.checkValidity();
 };
+// обработка цифр и букв
+for (let i = 0;
+    i < count.length;
+    i++) {
+    count[i].addEventListener('keydown', e => {
+        let c = false;
+        if (e.key >= 0 || e.key <= 9 ||
+            e.key == 'ArrowLeft' || e.key == 'ArrowRight' ||
+            e.key == 'Backspace' || e.key == '-') {
+            c = true;
+        }
+
+        if (!c) {
+            e.preventDefault();
+        }
+        if (!c) {
+            console.log('letter');
+        }
+        else {
+            console.log('count');
+        }
+    });
+
+}
 
 
 
