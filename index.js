@@ -27,8 +27,7 @@ const left = document.querySelector('.left'),
 right.addEventListener('click', function (e) {
     e.preventDefault();
     let currentRight = parseInt(slider.style.right);
-    // currentRight = 0;
- 
+    // currentRight = 0; c ним крутится на правую кнопку 1 раз и на левую туда и обратно 
     if (currentRight !== maxRight) {
         slider.style.right = currentRight + step + '%'; 
     } 
@@ -36,22 +35,17 @@ right.addEventListener('click', function (e) {
         slider.style.right = 0 + '%';
     }
  }); 
-// left.addEventListener('click', function (e) {
+left.addEventListener('click', function (e) {
 
-//     let currentRight = parseInt(getComputedStyle(slider).right);
-//     currentRight = slider.style.right;
-//     currentRight = 0;
-//     e.preventDefault();
-
-//     if (currentRight !== minRight) {
-//         currentRight -= step;
-//         slider.style.right = currentRight + "%";
-//       } 
-//       else { 
-       
-//       }
-  
-// });
+    e.preventDefault();
+    let currentRight = parseInt(slider.style.right);
+    if (currentRight !== 0) {
+        slider.style.right = currentRight - step + '%'; 
+    } 
+    else { 
+        slider.style.right = maxRight + '%';
+    } 
+});
 
 
 // function loop(direction) {
