@@ -927,7 +927,7 @@ body {
 
 .slider {
   height: 100%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   position: relative;
   transition: 1s linear;
@@ -937,7 +937,7 @@ body {
   right: 0%;
   will-change: right; }
 
-.bar {
+.slider__bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -948,12 +948,12 @@ body {
   transition: 0.5s linear;
   transform: scaleX(1); }
   @media screen and (max-width: 768px) {
-    .bar {
+    .slider__bar {
       flex-direction: column;
       align-items: center;
       justify-content: center; } }
   @media screen and (max-width: 480px) {
-    .bar {
+    .slider__bar {
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
@@ -1919,6 +1919,12 @@ body {
 .map {
   width: 100%;
   height: 100vh; }
+
+.balloon {
+  background: #0b4d3c;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white; }
 
 .footer {
   display: flex;

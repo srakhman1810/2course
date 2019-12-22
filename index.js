@@ -18,7 +18,7 @@ x.addEventListener('click', function (e) {
 const left = document.querySelector('.left'),
       right = document.querySelector('.right'),
       slider = document.querySelector('.slider'),
-      bar = document.querySelectorAll('.bar');
+      bar = document.querySelectorAll('.slider__bar');
 
     const step = 100;
     const maxRight = (bar.length - 1)*step;
@@ -27,7 +27,6 @@ const left = document.querySelector('.left'),
 right.addEventListener('click', function (e) {
     e.preventDefault();
     let currentRight = parseInt(slider.style.right);
-    // currentRight = 0; c ним крутится на правую кнопку 1 раз и на левую туда и обратно 
     if (currentRight !== maxRight) {
         slider.style.right = currentRight + step + '%'; 
     } 
@@ -46,7 +45,6 @@ left.addEventListener('click', function (e) {
         slider.style.right = maxRight + '%';
     } 
 });
-
 
 // function loop(direction) {
 //     if (direction === 'right') {
@@ -141,7 +139,6 @@ for (let i = 0;
 }
 
 // слайдшоу
-
 const review = document.querySelector('.review'),
     slide = document.querySelectorAll('.review__block'),
     button = document.querySelectorAll('.clients__item'),
@@ -174,7 +171,6 @@ for (let i = 0;
 };
 
 // форма 
-
 const form = document.querySelector('.form'),
     send = document.querySelector('.button__submit'),
     check = document.querySelectorAll('.checkbox__choice'),
@@ -275,14 +271,3 @@ for (let i = 0;
     });
 
 }
-// карты 
-ymaps.ready(init);
-    function init(){
-        var map = new ymaps.Map('map', { 
-            center: [55.77 ,37.59],
-            zoom: 14,
-            controls: ['zoomControl'],
-            behaviors: ['drag']
-});
-}
- 
