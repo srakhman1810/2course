@@ -62,6 +62,16 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+
+    @include tablets {
+    flex-grow: 0;
+    height:9%;
+    }
+
+    @include mobile {
+    height:8%;
+        
+    }
 }
 
 .logo {
@@ -179,7 +189,6 @@
     }
 }
 
-
 .x-menu {
     width: 1.25rem;
     height: 1.25rem;
@@ -251,29 +260,81 @@
     @include tablets {
         flex-direction: column;
         flex-direction: column-reverse;
-        margin-bottom: 5%
+        // margin-bottom: 5%;
+        flex-grow: 0;
+        height:80%;
+        
     }
 
     @include mobile {
         flex-direction: column;
         flex-direction: column-reverse;
         margin-top: 0%;
-        margin-bottom: 5%;
+        // margin-bottom: 5%;
+        height:80%;
     }
 
     &__image {
         position: absolute;
         right: 0%;
         z-index: 1;
+        animation: 10s swing infinite linear;
+        @keyframes swing {
+            0% {
+            transform: rotate3d(0, 0, 1, 15deg);
+           }
+
+            10% {
+            transform: rotate3d(0, 0, 1, -15deg);
+            }
+          
+            20% {
+              transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+            30% {
+              transform: rotate3d(0, 0, 1, -15deg);
+            }
+          
+            40% {
+              transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+            50% {
+              transform: rotate3d(0, 0, 1, -15deg);
+            }
+
+            60% {
+            transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+            70% {
+              transform: rotate3d(0, 0, 1, -15deg);
+            }
+          
+            80% {
+              transform: rotate3d(0, 0, 1, 15deg);
+            }
+
+            90% {
+                  transform: rotate3d(0, 0, 1, -15deg);
+            }
+
+            100% {
+                transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+          }
+          
 
         @include tablets {
             position: static;
-            width: 70%;
+            height: 60%;
         }
 
         @include mobile {
             position: static;
-            width: 60%;
+            height: 48%;
         }
     }
 }
@@ -291,7 +352,10 @@
         text-transform: uppercase;
         margin: 0% 0% 3%;
         line-height: 1;
-
+        @include tablets {
+            font-size: 3.3rem;
+            margin: 0% 0% 0%;
+        }
         @include mobile {
             font-size: 3.3rem;
         }
@@ -301,7 +365,9 @@
         font-size: 1.25rem;
         margin: 0% 0% 9%;
         white-space: pre-line;
-
+        @include tablets {
+            margin: 0% 0% 3%;
+        }
         @include mobile {
             margin: 0% 0% 3%;
         }
@@ -310,11 +376,13 @@
     @include tablets {
         align-items: center;
         text-align: center;
+        height:40%;
     }
 
     @include mobile {
         align-items: center;
         text-align: center;
+        height:52%;
     }
 }
 
@@ -353,6 +421,8 @@
 
     @include tablets {
         justify-content: center;
+        flex-grow:0;
+        height:11%;
     }
 
     @include mobile {

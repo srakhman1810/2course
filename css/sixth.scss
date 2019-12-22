@@ -4,13 +4,6 @@
     position: relative;
     font-size: 1.125rem;
 
-    // @include tablets {
-    //    padding: 10%;
-    // }
-    // @include mobile {
-    //    padding: 20%;
-    // }
-
     &:before {
         content: url(../img/sixth/background.png);
         position: absolute;
@@ -61,14 +54,30 @@
 }
 
 .review {
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    overflow: hidden;
 
     &__area {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
         list-style-type: none;
         padding-left: 0%;
-        margin:0%;
-        margin-bottom: 5%;
+        margin:0 auto;
+        width:86%;
+        height:63%;
+        position: relative;
+        
+        @include mobile {
+            margin-bottom: 5%;
+            height:80%;
+           
+        }
 
     }
 
@@ -80,10 +89,22 @@
         background-image: url('../img/sixth/background2.png');
         background-repeat: no-repeat;
         background-position: right top;
-        padding: 5%;
-        position: relative;
+        padding: 0% 2%;
+        height:75%;
+        width:100%;
+        position: absolute;
+        z-index: 1;
+        display: none;
 
-
+        &--active {
+            display:flex;
+            animation: slideshow 1.5s;
+            @keyframes slideshow {
+                0% { opacity: 0; }
+                60% { opacity: 0.9; }
+            }
+        }
+     
         &:before {
             content: url(../img/sixth/ellipse.png);
             position: absolute;
@@ -93,34 +114,29 @@
         @include tablets {
             flex-direction: column;
             text-align: center;
-            padding: 10% 2%;
+            height:90%;
         }
     
         @include mobile {
             flex-direction: column;
             text-align: center;
-            width: 20rem;
-            padding: 10% 2%;
+            height:100%;
         }
     }
 
-
     &__image {
         margin-right: 3%;
-        width: 42.33rem;
-        height: 16.25rem;
+        height: 85%;
         
         @include tablets {
             margin-right: 0%;
-            width: 12.75rem;
-            height: 13.0625rem;
+            height: 50%;
             margin-bottom:3%;
         }
     
         @include mobile {
             margin-right: 0%;
-            width: 7.625rem;
-            height: 7.8125rem;
+            height: 30%;
             margin-bottom:3%;
         }
     }
@@ -135,6 +151,7 @@
     }
 
     &>p {
+        font-size: 1rem;
         color: $grey;
         margin: 0% 0% 5%;
     }
@@ -146,29 +163,41 @@
 }
 
 .clients {
+    display: flex;
+    justify-content:center;
+
 
     &__list {
         margin: 0%;
         padding-left: 0%;
         display: flex;
         justify-content: center;
+        height:100%;
+        width:30%;
     }
 
     &__item {
         list-style-type: none;
         margin-right: 1%;
         z-index: 2;
+        display: flex;
+        width:33%;
+        height:100%;
 
         &:nth-last-child {
             margin-right: none;
         }
+
+        &--active{
+            border: 2px solid;
+            border-color: $green;
+            border-radius: 50%;
+        }
     }
 
     &-image {
-        width: 4.0625rem;
-        height: 4.0625rem;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
-        border: 3px solid;
-        border-color: $green;
     }
 }

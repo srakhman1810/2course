@@ -1,6 +1,6 @@
 .fifth {
     @include size;
-    background: url(../img/fifth/background.png) center center / cover no-repeat;
+    background: url(../img/fifth/background.png) center center / cover no-repeat rgba(0, 0, 0, .9);
     color: $white;
     position: relative;
 
@@ -9,6 +9,7 @@
         position: absolute;
         top: -10%;
         left: 3%;
+
         @include mobile {
             display: none;
         }
@@ -19,9 +20,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @include tablets {
         height: 100vh;
     }
+
     @include mobile {
         height: 100vh;
     }
@@ -33,6 +36,11 @@
         position: absolute;
         top: 25%;
         left: 10%;
+
+        @include mobile {
+            left: 0%;
+        }
+
     }
 }
 
@@ -41,15 +49,23 @@
     margin: 0%;
     padding-left: 0%;
     display: flex;
+    justify-content: flex-end;
     position: absolute;
     top: 0%;
     right: 0%;
     height: 100%;
-
+    width: 65%;
+   
+   
     &__item {
-        background-color: rgba($black, .6);
         display: flex;
-        justify-content: flex-end;
+        // justify-content: flex-end;
+        max-width: 4.6875rem;
+        transition: 0.5s linear;
+    }
+
+    @include mobile {
+        width:100%;
     }
 }
 
@@ -60,17 +76,16 @@
     height: 100%;
     display: block;
 
-   
     &--one {
-        background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat;
+        background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat rgba($black, .9);
     }
 
     &--two {
-        background: url(../img/fifth/Granola-Bars-with-calamondin.png) center center / cover no-repeat;
+        background: url(../img/fifth/Granola-Bars-with-calamondin.png) center center / cover no-repeat rgba($black, .9);
     }
 
     &--three {
-        background: url(../img/fifth/shutterstock_684121381.png) center center / cover no-repeat;
+        background: url(../img/fifth/shutterstock_684121381.png) center center / cover no-repeat rgba($black, .9);
     }
 }
 
@@ -86,29 +101,39 @@
     white-space: nowrap;
     transform: rotate(-90deg) translateY(-50%);
     margin-top: -40%;
-    
+
 }
 
 .grey-block {
     overflow: hidden;
-    width: 0;
+    // width: 0;
     position: relative;
     font-size: 1rem;
-    background-color: rgba($black, .6);
+    background-color: rgba($black, .7);
+    // width: 0rem;
+    flex: 1;
 
-    &--active {
-    width: 100%;
-    max-width: 35rem;
+    &>p {
+        margin: 0%;
+        padding: 10% 20% 0 5%;
     }
-
 }
-.text {
-    margin: 0%;
-    padding: 10% 20% 0 5%;
-    display: none;  
 
-    &--active {
-        display: block;
+.bars-type__item--active>.grey-block {
+    flex: 1;
+}
+
+.bars-type__item--active {
+    max-width: 62%;
+    // width: auto;
+    // animation: ach 1s;
+    // @keyframes ach {
+    //    from { transform: translateX(79%) ;}   
+    //    to { transform:  translateX(0%);}
+    // }
+
+    @include mobile {
+        width: 100%;
     }
 }
 
@@ -119,4 +144,3 @@
     top: 3%;
     right: 7%;
 }
-
