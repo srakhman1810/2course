@@ -931,7 +931,6 @@ body {
   align-items: center;
   position: relative;
   transition: 1s linear;
-  width: 200%;
   margin: 0;
   padding-left: 0;
   right: 0%;
@@ -943,8 +942,7 @@ body {
   align-items: center;
   position: relative;
   height: 65%;
-  width: 100%;
-  margin: 0 1%;
+  min-width: 100%;
   transition: 0.5s linear;
   transform: scaleX(1); }
   @media screen and (max-width: 768px) {
