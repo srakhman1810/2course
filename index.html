@@ -538,11 +538,12 @@
             <section class="seventh" id="seventh">
                 <div class="container seventh__container">
                     <h2> как мы работаем </h2>
-                    <div class="video">
-                        <iframe class=iframe src="https://www.youtube.com/embed/4VODDRWDTws" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div> 
+                    <div class="video-block">
+                        <video  class="video" preload="none" poster="img/seventh/video.png" controls >
+                            <source src="./video/videoplayback.mp4" type='video/webm; codecs="vp8, vorbis"'/> 
+                            <source src="video/videoplayback.mp4" type='video/mp4; codecs="avcl.42E01E, mp4.a.40.2"'/> 
+                        </video>
+                    </div>
                 </div>
             </section>
             <section class="eighth" id="eighth">
@@ -627,7 +628,7 @@
             </section>
             <section class="ninth" id="ninth">
                 <div class="container ninth__container">
-                    <img src="" alt="" class="map">
+                    <div class="map" id="map"></div> 
                 </div>
             </section>
         </div>
@@ -696,6 +697,8 @@
         </a>
     </div>
     <script src='./index.js'> </script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=960f5809-db6a-4a35-9628-533c81b806d4&lang=ru_RU" type="text/javascript">
+    </script>
 </body>
 
 </html>

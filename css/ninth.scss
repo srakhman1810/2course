@@ -1,4 +1,16 @@
 .ninth {
     @include size;
-    background: url(../img/ninth/map.png) center center / cover no-repeat;
+    background: $green; 
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
 }
+
+.map {
+    width: 100%;
+    height: 100vh;
+}
+

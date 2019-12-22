@@ -61,6 +61,7 @@
         display: flex;
         // justify-content: flex-end;
         max-width: 4.6875rem;
+        transition: 0.5s linear;
     }
 
     @include mobile {
@@ -105,11 +106,12 @@
 
 .grey-block {
     overflow: hidden;
-    width: 0;
+    // width: 0;
     position: relative;
     font-size: 1rem;
     background-color: rgba($black, .7);
-    width: 0rem;
+    // width: 0rem;
+    flex: 1;
 
     &>p {
         margin: 0%;
@@ -122,14 +124,14 @@
 }
 
 .bars-type__item--active {
-    max-width: 100%;
-    width: auto;
-    animation: ach 1s;
-    @keyframes ach {
-       from { transform: translateX(79%) ;}   
-       to { transform:  translateX(0%);}
-    }
-   
+    max-width: 62%;
+    // width: auto;
+    // animation: ach 1s;
+    // @keyframes ach {
+    //    from { transform: translateX(79%) ;}   
+    //    to { transform:  translateX(0%);}
+    // }
+
     @include mobile {
         width: 100%;
     }
