@@ -15,7 +15,7 @@
 
 .slider-block {
     width: 85%;
-    height:90%;
+    height: 90%;
     overflow: hidden;
 }
 
@@ -23,11 +23,13 @@
     height: 100%;
     display: flex;
     align-items: center;
-    position:relative;
-    transition: 0.5s linear;
-    // right:0%;
-    width:200%; 
-    // will-change: right;
+    position: relative;
+    transition: 1s linear;
+    width: 200%;
+    margin: 0;
+    padding-left: 0;
+    right: 0%;
+    will-change: right;
 }
 
 .bar {
@@ -39,25 +41,26 @@
     width: 100%;
     margin: 0 1%;
     transition: 0.5s linear;
+    transform: scaleX(1);
 
-    @keyframes left {
-        from {
-          transform: translate3d(-100%, 0, 0);
-        }
-      
-        to {
-          transform: translate3d(0%, 0, 0);
-        }
-    }
-      @keyframes right{
-          from {
-            transform: translate3d(100%, 0, 0);
-          }
+    // @keyframes left {
+    //     from {
+    //       transform: translate3d(-100%, 0, 0);
+    //     }
 
-          to {
-            transform: translate3d(0%, 0, 0);
-          }
-  }
+    //     to {
+    //       transform: translate3d(0%, 0, 0);
+    //     }
+    // }
+    //   @keyframes right{
+    //       from {
+    //         transform: translate3d(100%, 0, 0);
+    //       }
+
+    //       to {
+    //         transform: translate3d(0%, 0, 0);
+    //       }
+    //   }
 
     @include tablets {
         flex-direction: column;
@@ -78,7 +81,7 @@
     justify-content: center;
     position: relative;
     width: 48%;
-    height:90%;
+    height: 90%;
 
     @include tablets {
         width: 40%;
@@ -98,7 +101,7 @@
         left: -1%;
 
         @include tablets {
-          left: -13%;
+            left: -13%;
         }
 
         @include mobile {
@@ -150,7 +153,7 @@
         top: 0%;
         right: 10%;
     }
-    
+
     @include mobile {
         top: -4%;
         right: -2%;
@@ -259,7 +262,7 @@
         color: $dark;
         line-height: 1;
         margin-right: 4%;
-        width:53%;
+        width: 53%;
     }
 }
 
@@ -299,11 +302,11 @@
     text-transform: uppercase;
     color: $white;
 
-    &:hover + .hide-table {
+    &:hover+.hide-table {
         display: flex;
     }
-    
-    &:focus + .hide-table {
+
+    &:focus+.hide-table {
         display: flex;
     }
 
@@ -321,8 +324,8 @@
     }
 
     @include mobile {
-    width: 5rem;
-    height: 5rem;
+        width: 5rem;
+        height: 5rem;
     }
 
 }
@@ -369,10 +372,10 @@
 
 
 .link-slide {
-    display:flex;
+    display: flex;
     align-items: center;
     width: 4%;
-    height:10%;
+    height: 10%;
 }
 
 .link-svg {
@@ -383,4 +386,3 @@
 .link-icon {
     fill: $dark;
 }
-

@@ -98,9 +98,10 @@
     
     &:after{
     content: "";
-    border: 0.45rem solid transparent;
+    border: 0.35rem solid transparent;
     border-top-color:$green;
     margin-left: 0.3rem;
+    margin-top: 0.2rem;
     transition: 0.5s linear;
     }
 }

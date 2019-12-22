@@ -15,46 +15,66 @@ x.addEventListener('click', function (e) {
 });
 
 // слайдер
-const left = document.querySelector('.left'),
-    right = document.querySelector('.right'),
-    slider = document.querySelector('.slider'),
-    computed = getComputedStyle(slider),
-    bar = document.querySelectorAll('.bar');
+// const left = document.querySelector('.left'),
+//       right = document.querySelector('.right'),
+//       slider = document.querySelector('.slider'),
+//       bar = document.querySelectorAll('.bar');
+
+//     const step = 100;
+//     const maxRight = (bar.length - 1)*step;
+
+  
+// right.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     let currentRight = parseInt(slider.style.right);
+//     currentRight = 0;
+
+//     if (currentRight !== maxRight) {
+//         slider.style.right = currentRight += step + '%'; 
+//     } 
+//     else { 
+//         slider.style.right = 0 + '%';
+//     }
+//  }); 
+// left.addEventListener('click', function (e) {
+
+//     let currentRight = parseInt(getComputedStyle(slider).right);
+//     currentRight = slider.style.right;
+//     currentRight = 0;
+//     e.preventDefault();
+
+//     if (currentRight !== minRight) {
+//         currentRight -= step;
+//         slider.style.right = currentRight + "%";
+//       } 
+//       else { 
+       
+//       }
+  
+// });
 
 
-right.addEventListener('click', function (event) {
-    event.preventDefault();
-    loop('right');
-});
-
-left.addEventListener('click', function (event) {
-    event.preventDefault();
-    loop('left');
-});
-
-function loop(direction) {
-    if (direction === 'right') {
-        slider.appendChild(slider.firstElementChild);
-        for (let i = 0;
-            i < bar.length;
-            i++) {
-            if (bar[i].style.animation = "right 1s linear") {
-            // slider.appendChild(slider.firstElementChild);
-            slider.insertBefore(slider.firstElementChild, slider.lastElementChild);
-            }
-        }
-    }
-
-    else {
-        slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
-        for (let i = 0;
-            i < bar.length;
-            i++) { if (bar[i].style.animation = "left 1s linear") 
-             {  slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
-            }
-        }
-    }
-}
+// function loop(direction) {
+//     if (direction === 'right') {
+//         slider.appendChild(slider.firstElementChild);
+//         // for (let i = 0;
+//         //     i < bar.length;
+//         //     i++) { if (bar[i].style.animation = "right 1s linear") {
+//         //     slider.appendChild(slider.firstElementChild);
+//         //     }
+                                                     
+//         //     }    
+//     }
+//     else {
+//         slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+//         // for (let i = 0;
+//         //     i < bar.length;
+//         //     i++) { if (bar[i].style.animation = "left 1s linear") {
+//         //     slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+//         //     }  
+//         // }
+//     }
+// }
 
 // // горизонтальный аккордеон 
 const fifth = document.querySelector('#fifth'),

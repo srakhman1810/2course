@@ -261,7 +261,8 @@
         flex-direction: column;
         flex-direction: column-reverse;
         // margin-bottom: 5%;
-        height:60%;
+        flex-grow: 0;
+        height:80%;
         
     }
 
@@ -270,7 +271,7 @@
         flex-direction: column-reverse;
         margin-top: 0%;
         // margin-bottom: 5%;
-        height:70%;
+        height:80%;
     }
 
     &__image {
@@ -328,12 +329,12 @@
 
         @include tablets {
             position: static;
-            height: 46%;
+            height: 60%;
         }
 
         @include mobile {
             position: static;
-            height: 53%;
+            height: 48%;
         }
     }
 }
@@ -375,13 +376,13 @@
     @include tablets {
         align-items: center;
         text-align: center;
-        height:54%;
+        height:40%;
     }
 
     @include mobile {
         align-items: center;
         text-align: center;
-        height:47%;
+        height:52%;
     }
 }
 
@@ -421,7 +422,7 @@
     @include tablets {
         justify-content: center;
         flex-grow:0;
-        height:15%;
+        height:11%;
     }
 
     @include mobile {

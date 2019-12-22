@@ -55,13 +55,12 @@
     right: 0%;
     height: 100%;
     width: 65%;
-    
+   
    
     &__item {
         display: flex;
-        justify-content: flex-end;
-      
-
+        // justify-content: flex-end;
+        max-width: 4.6875rem;
     }
 
     @include mobile {
@@ -119,17 +118,18 @@
 }
 
 .bars-type__item--active>.grey-block {
-    width: 89%;
+    flex: 1;
 }
 
 .bars-type__item--active {
-    width: 70%;
+    max-width: 100%;
+    width: auto;
     animation: ach 1s;
     @keyframes ach {
        from { transform: translateX(79%) ;}   
        to { transform:  translateX(0%);}
-       }
-    
+    }
+   
     @include mobile {
         width: 100%;
     }
