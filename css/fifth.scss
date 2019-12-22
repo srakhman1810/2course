@@ -59,9 +59,8 @@
    
     &__item {
         display: flex;
-        // justify-content: flex-end;
         max-width: 4.6875rem;
-        transition: 0.5s linear;
+        transition: 1s linear;
     }
 
     @include mobile {

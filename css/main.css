@@ -1383,7 +1383,7 @@ body {
   .bars-type__item {
     display: flex;
     max-width: 4.6875rem;
-    transition: 0.5s linear; }
+    transition: 1s linear; }
   @media screen and (max-width: 480px) {
     .bars-type {
       width: 100%; } }
