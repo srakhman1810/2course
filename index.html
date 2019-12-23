@@ -543,22 +543,25 @@
                             <source src="./video/videoplayback.mp4" type='video/webm; codecs="vp8, vorbis"' />
                             <source src="video/videoplayback.mp4" type='video/mp4; codecs="avcl.42E01E, mp4.a.40.2"' />
                         </video>
+                        <svg class="video-icon">
+                                <use xlink:href="./img/sprite.svg#play" class="video-icon__style"> </use>
+                        </svg>
                         <div class="pleer" id="pleer">
                             <button class="play" id="play">
-                                <svg class="play-icon play-icon--1">
-                                    <use xlink:href="./img/sprite.svg#play" class="icon"> </use>
+                                <svg class="play-icon">
+                                    <use xlink:href="./img/sprite.svg#play" class="play-icon__style"> </use>
                                 </svg>
-                                <svg class="pause-icon play-icon--1">
-                                    <use xlink:href="./img/sprite.svg#pause" class="icon"> </use>
+                                <svg class="pause-icon">
+                                    <use xlink:href="./img/sprite.svg#pause" class="pause-icon__style"> </use>
                                 </svg>
                             </button>
                             <input class="progress" id="progress" type="range" value="0"></progress>
                             <button class="laut" id="laut" min=0 max=100>  
                                 <svg class="mute-icon">
-                                    <use xlink:href="./img/sprite.svg#mute" class="icon"> </use>
+                                    <use xlink:href="./img/sprite.svg#mute" class="mute-icon__style"> </use>
                                 </svg>
                                 <svg class="volume-icon">
-                                    <use xlink:href="./img/sprite.svg#volume" class="icon"> </use>
+                                    <use xlink:href="./img/sprite.svg#volume" class="volume-icon__style"> </use>
                                 </svg>
                             </button>
                             <input type="range" class="volume" id="volume" min=0 max=100 value="100"></input>

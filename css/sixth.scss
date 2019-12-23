@@ -74,7 +74,7 @@
         position: relative;
         
         @include mobile {
-            margin-bottom: 5%;
+            // margin-bottom: 5%;
             height:80%;
            
         }
@@ -130,7 +130,7 @@
         
         @include tablets {
             margin-right: 0%;
-            height: 50%;
+            height: 44%;
             margin-bottom:3%;
         }
     
