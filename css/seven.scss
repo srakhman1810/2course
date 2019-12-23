@@ -1,15 +1,15 @@
-
 .seventh {
     @include size;
     background-color: $light;
-    position: relative; 
+    position: relative;
     box-sizing: border-box;
     display: flexbx;
+
     @include tablets {
         padding: 5%
     }
 
-    @include mobile { 
+    @include mobile {
         padding: 10%;
     }
 
@@ -24,11 +24,11 @@
             bottom: -22%;
             right: -5%;
         }
-        
+
         @include mobile {
             bottom: -8%;
             right: -19%;
-        
+
         }
     }
 
@@ -43,6 +43,7 @@
             left: -4%;
             top: -17%;
         }
+
         @include mobile {
             left: -4%;
             top: -5%;
@@ -62,37 +63,108 @@
     // position: absolute;
     // z-index: 5;
     // }
- 
+
     &>h2 {
-        margin:0%;
+        margin: 0%;
         font-size: 3rem;
         text-transform: uppercase;
         margin-bottom: 5%;
         text-align: center;
         white-space: nowrap;
         z-index: 1;
+
         @include mobile {
             font-size: 2.5rem;
         }
     }
 }
 
-.video-block { 
+.pleer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.video-block {
     width: 41.25rem;
-    height: 23.125rem;
+    height: 26rem;
     z-index: 1;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     @include tablets {
         width: 36.93rem;
-        height: 20.6875rem; 
+        height: 23.2rem;
     }
+
     @include mobile {
         width: 22.5rem;
-        height: 13rem;
-    } 
+        height: 14.2rem;
+    }
 }
 
 .video {
     width: 100%;
-    height:100%;
+    height: 89%;
+}
+
+.pleer {
+    width: 100%;
+    height: 10%;
+    background: $dark;
+}
+
+.pleer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.play {
+    background: $green;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: flex;
+}
+
+.progress {
+    width: 60%;
+    display: flex;
+}
+
+.laut {
+    background: $dark;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: flex;
+    background: $green;
+}
+
+.volume {
+    width: 20%;
+    display: flex;
+}
+
+.mute-icon,
+.pause-icon,
+.volume-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: $black;
+    z-index: 3;
+    opacity: 0;
+}
+
+.play-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: $black;
+    z-index: 3;
+
+    &--1 {
+        position: relative;
+    }
 }

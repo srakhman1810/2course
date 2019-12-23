@@ -156,7 +156,7 @@
                     </a>
                     <div class="slider-block">
                         <ul class="slider" style="right:0%">
-                            <li class="slider__bar" >
+                            <li class="slider__bar">
                                 <div class="consist">
                                     <div class="button">
                                         <svg class="button__chocolate">
@@ -349,98 +349,6 @@
                                     </div>
                                 </article>
                             </li>
-                            <li class="slider__bar">
-                                <div class="consist">
-                                    <a class="button">
-                                        <svg class="button__chocolate">
-                                            <use class="chocolate-icon" xlink:href="./img/sprite.svg#bar"></use>
-                                        </svg>
-                                        <h5> состав </h5>
-                                    </a>
-                                    <div class="hide-table">
-                                        <table class="table">
-                                            <tr class="table__line">
-                                                <td class="table__line-image">
-                                                    <svg class="table-svg">
-                                                        <use class="grape" xlink:href="./img/sprite.svg#grape"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="table__line-ingredient"> Виноград </td>
-                                                <td class="table__line-weight"> 25г</td>
-                                            </tr>
-                                            <tr class="table__line">
-                                                <td class="table__line-image">
-                                                    <svg class="table-svg">
-                                                        <use class="nut" xlink:href="./img/sprite.svg#nut"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="table__line-ingredient"> Грецкий орех </td>
-                                                <td class="table__line-weight"> 32г </td>
-                                            </tr>
-                                            <tr class="table__line">
-                                                <td class="table__line-image">
-                                                    <svg class="table-svg">
-                                                        <use class="nut" xlink:href="./img/sprite.svg#almond2"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="table__line-ingredient"> Кунжутное семя </td>
-                                                <td class="table__line-weight"> 20г </td>
-                                            </tr>
-                                            <tr class="table__line">
-                                                <td class="table__line-image">
-                                                    <svg class="table-svg">
-                                                        <use class="nut" xlink:href="./img/sprite.svg#milk"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="table__line-ingredient"> Сухое молоко </td>
-                                                <td class="table__line-weight"> 10г </td>
-                                            </tr>
-                                            <tr class="table__line">
-                                                <td class="table__line-image">
-                                                    <svg class="table-svg">
-                                                        <use class="nut" xlink:href="./img/sprite.svg#zucker"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="table__line-ingredient"> Зам. сахара </td>
-                                                <td class="table__line-weight"> 4г </td>
-                                            </tr>
-                                            <tr class="table__line">
-                                                <td class="table__line-image">
-                                                    <svg class="table-svg">
-                                                        <use class="nut" xlink:href="./img/sprite.svg#beans"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="table__line-ingredient"> Какао бобы </td>
-                                                <td class="table__line-weight"> 4г </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <article class="image-block">
-                                    <img src="./img/third/slide2.png" alt="" class="image">
-                                </article>
-                                <article class="about">
-                                    <h1> Батончик “Гранола виноград” </h1>
-                                    <p> Гранола из винограда, грецкого ореха и кунжутных
-                                        семечек. В состав также входят: сухое молоко, заменитель сахара и какао
-                                        бобы.
-                                    </p>
-                                    <ul class="details">
-                                        <li class="details__item">
-                                            <h5>Калорийность</h5>
-                                            <p>110ккал</p>
-                                        </li>
-                                        <li class="details__item">
-                                            <h5>Вес</h5>
-                                            <p>95грамм</p>
-                                        </li>
-                                    </ul>
-                                    <div class="buy">
-                                        <p> 140 ₽ </p>
-                                        <input type="button" value="заказать" class="buy__button">
-                                    </div>
-                                </article>
-                            </li>
                         </ul>
                     </div>
                     <a href="#" class="link-slide right">
@@ -449,7 +357,7 @@
                         </svg>
                     </a>
                 </div>
-            </section> 
+            </section>
             <section class="fourth" id="fourth">
                 <div class="container fourth__container">
                     <h2> команда </h2>
@@ -631,10 +539,30 @@
                 <div class="container seventh__container">
                     <h2> как мы работаем </h2>
                     <div class="video-block">
-                        <video  class="video" preload="none" poster="img/seventh/video.png" controls >
-                            <source src="./video/videoplayback.mp4" type='video/webm; codecs="vp8, vorbis"'/> 
-                            <source src="video/videoplayback.mp4" type='video/mp4; codecs="avcl.42E01E, mp4.a.40.2"'/> 
+                        <video id="video" class="video" preload="none" poster="img/seventh/video.png">
+                            <source src="./video/videoplayback.mp4" type='video/webm; codecs="vp8, vorbis"' />
+                            <source src="video/videoplayback.mp4" type='video/mp4; codecs="avcl.42E01E, mp4.a.40.2"' />
                         </video>
+                        <div class="pleer" id="pleer">
+                            <button class="play" id="play">
+                                <svg class="play-icon play-icon--1">
+                                    <use xlink:href="./img/sprite.svg#play" class="icon"> </use>
+                                </svg>
+                                <svg class="pause-icon play-icon--1">
+                                    <use xlink:href="./img/sprite.svg#pause" class="icon"> </use>
+                                </svg>
+                            </button>
+                            <input class="progress" id="progress" type="range" value="0"></progress>
+                            <button class="laut" id="laut" min=0 max=100>  
+                                <svg class="mute-icon">
+                                    <use xlink:href="./img/sprite.svg#mute" class="icon"> </use>
+                                </svg>
+                                <svg class="volume-icon">
+                                    <use xlink:href="./img/sprite.svg#volume" class="icon"> </use>
+                                </svg>
+                            </button>
+                            <input type="range" class="volume" id="volume" min=0 max=100 value="100"></input>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -677,7 +605,8 @@
                         <div class="comments">
                             <label class="cell cell__comment">
                                 <div class="cell__name">Комментарий</div>
-                                <textarea name="text" class="cell__input cell__input--comment" tabindex="8" required></textarea>
+                                <textarea name="text" class="cell__input cell__input--comment" tabindex="8"
+                                    required></textarea>
                                 <div class="error"></div>
                             </label>
                             <div class="comments__checkbox">
@@ -720,7 +649,7 @@
             </section>
             <section class="ninth" id="ninth">
                 <div class="container ninth__container">
-                    <div class="map" id="map"></div> 
+                    <div class="map" id="map"></div>
                 </div>
             </section>
         </div>
@@ -789,8 +718,10 @@
         </a>
     </div>
     <script src='./index.js'> </script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=c3909485-51d4-463b-ac68-868b3fe56dfe&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c3909485-51d4-463b-ac68-868b3fe56dfe&lang=ru_RU"
+        type="text/javascript"></script>
     <script src='./map.js'></script>
+    <script src='./pleer.js'></script>
 </body>
 
 </html>
