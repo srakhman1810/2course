@@ -11,8 +11,9 @@ html {
     }
 }
 
-body {
+html , body {
     margin: 0px;
+    height:100%;
 }
 
 .wrapper {
@@ -20,6 +21,20 @@ body {
     height: 100%;
     overflow: hidden;
     position: relative;
+}
+
+.page{
+    height:100%;
+    transition: transform 0.5s;
+}
+
+.section {
+    height: 100%;
+    width:100%;
+  
+	@include tablets {
+		min-height: initial;
+	}
 }
 
 .container {

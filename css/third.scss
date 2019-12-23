@@ -28,12 +28,10 @@
 
 .slider {
     height: 100%;
-    // display: inline-flex;
     display: flex;
     align-items: center;
     position: relative;
     transition: 1s linear;
-    // width: 200%;
     margin: 0;
     padding-left: 0;
     right: 0%;
@@ -45,9 +43,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    // height: 65%;
     min-width: 100%;
-    // margin: 0 1%;
     transition: 0.5s linear;
     transform: scaleX(1);
 
@@ -61,7 +57,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        // height: 90%;
     }
 }
 
@@ -135,12 +130,12 @@
 
 .consist {
     position: absolute;
-    top: -10%;
+    top: -26%;
     right: 37%;
 
     @include tablets {
-        top: 0%;
-        right: 10%;
+        top: -17%;
+        right: 12%;
     }
 
     @include mobile {

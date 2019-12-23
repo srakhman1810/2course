@@ -22,6 +22,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position:relative;
+    transition: transform 0.1s;
+
+    &--active:before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        border: 1px solid $green;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s;
+    }
   
     &:hover {
         cursor: pointer;
@@ -33,28 +48,6 @@
     height: 0.4375rem;
     border-radius: 50%;
     background: $green;
-    position: relative;
-
-    &:before {
-        content: "";
-        display: none;;
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        border: 1px solid $green;
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-    }
-
-    &:hover:before{
-        display:flex;
-    }
-
-    &:focus:before {
-        display: flex;
-    }
 }
 
 

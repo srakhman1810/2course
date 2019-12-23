@@ -1,6 +1,7 @@
 .ninth {
     @include size;
     background: $green; 
+    position: relative;
 
     &__container {
         display: flex;
@@ -12,7 +13,6 @@
 .map {
     width: 100%;
     height: 100vh;
-    // z-index: 4;
 }
  .balloon {
      background: $green;
