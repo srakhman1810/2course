@@ -30,18 +30,18 @@ html, body {
 .section {
     height: 100%;
     width:100%;
-    // min-height:650px;
-    // position: relative;
+    min-height:650px;
+    position: relative;
     // overflow: hidden;
     display:flex;
 
-	// @include tablets {
-	// 	min-height: 0px;
-    // }
+	@include tablets {
+		min-height: 0px;
+    }
     
-    // @include mobile {
-	// 	min-height: 0px;
-	// }
+    @include mobile {
+		min-height: 0px;
+	}
 }
 
 .container {
