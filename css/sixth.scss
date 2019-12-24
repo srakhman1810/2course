@@ -58,7 +58,7 @@
     height:100%;
     display: flex;
     flex-direction:column;
-    justify-content: space-around;
+    justify-content: flex-start;
     overflow: hidden;
 
     &__area {
@@ -74,7 +74,7 @@
         position: relative;
         
         @include mobile {
-            // margin-bottom: 5%;
+            margin-bottom: 10%;
             height:80%;
            
         }

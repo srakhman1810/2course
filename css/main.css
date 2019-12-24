@@ -1529,7 +1529,7 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   overflow: hidden; }
   .review__area {
     display: flex;
@@ -1544,6 +1544,7 @@ html, body {
     position: relative; }
     @media screen and (max-width: 480px) {
       .review__area {
+        margin-bottom: 10%;
         height: 80%; } }
   .review__block {
     display: flex;
