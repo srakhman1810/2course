@@ -88,14 +88,15 @@ if (isMobile) {
     fingerCount, 
     fingerData) {
     const scrollDirections = direction == 'up' ? 'next' : 'prev';
+    // if ($('.menu').hasStyle('flex')) return;
     scrollToSection(scrollDirections);
+  
     }
 
   });
 
-//   if ($('.menu).hasStyle('flex'){
-//     return
-//   }); 
+
+
 
 }
 
