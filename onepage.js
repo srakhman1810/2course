@@ -76,6 +76,7 @@ $("[data-scroll-to]").on("click", e => {
 
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
+// const menu = $('.menu');
 
 if (isMobile) {
   $("body").swipe({
@@ -89,6 +90,12 @@ if (isMobile) {
     const scrollDirections = direction == 'up' ? 'next' : 'prev';
     scrollToSection(scrollDirections);
     }
+
   });
+
+//   if ($('.menu).hasStyle('flex'){
+//     return
+//   }); 
+
 }
 

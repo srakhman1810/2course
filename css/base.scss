@@ -10,8 +10,7 @@ html {
         font-size: 14px;  
     }
 }
-
-html , body {
+html, body {
     margin: 0px;
     height:100%;
 }
@@ -33,6 +32,10 @@ html , body {
     width:100%;
   
 	@include tablets {
+		min-height: 0%;
+    }
+    
+    @include mobile {
 		min-height: 0%;
 	}
 }

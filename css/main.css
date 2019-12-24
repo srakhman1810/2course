@@ -338,6 +338,9 @@ html, body {
   @media screen and (max-width: 768px) {
     .section {
       min-height: 0%; } }
+  @media screen and (max-width: 480px) {
+    .section {
+      min-height: 0%; } }
 
 .container {
   margin: 0 auto;
