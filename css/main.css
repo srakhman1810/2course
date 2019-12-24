@@ -337,7 +337,7 @@ html, body {
   width: 100%; }
   @media screen and (max-width: 768px) {
     .section {
-      min-height: initial; } }
+      min-height: 0%; } }
 
 .container {
   margin: 0 auto;
@@ -565,7 +565,7 @@ html, body {
       flex-direction: column;
       flex-direction: column-reverse;
       margin-top: 0%;
-      height: 80%; } }
+      height: 77%; } }
   .bars__image {
     position: absolute;
     right: 0%;
@@ -601,7 +601,7 @@ html, body {
     @media screen and (max-width: 480px) {
       .bars__image {
         position: static;
-        height: 48%; } }
+        height: 45%; } }
 
 .bars__information {
   display: flex;
@@ -640,7 +640,7 @@ html, body {
     .bars__information {
       align-items: center;
       text-align: center;
-      height: 52%; } }
+      height: 55%; } }
 
 .bars__button {
   outline: none;
@@ -676,7 +676,8 @@ html, body {
   @media screen and (max-width: 480px) {
     .advantages {
       justify-content: center;
-      font-size: 0.8rem; } }
+      font-size: 0.8rem;
+      height: 15%; } }
   .advantages__list {
     color: white;
     display: flex;
@@ -1850,16 +1851,25 @@ html, body {
     .personal-information {
       margin-right: 0%;
       width: 100%;
-      margin-bottom: 5%; } }
+      margin-bottom: 2%; } }
 
 .cell__1 {
   flex-basis: 49%;
   margin-bottom: 5%; }
+  @media screen and (max-width: 480px) {
+    .cell__1 {
+      margin-bottom: 2%; } }
 .cell__2 {
   flex-basis: 100%;
   margin-bottom: 5%; }
+  @media screen and (max-width: 480px) {
+    .cell__2 {
+      margin-bottom: 2%; } }
 .cell__3 {
   flex-basis: 22%; }
+  @media screen and (max-width: 480px) {
+    .cell__3 {
+      margin-bottom: 2%; } }
 .cell__input {
   height: 3.6875rem;
   width: 100%;
@@ -1875,7 +1885,7 @@ html, body {
     .cell__input {
       height: 3rem; } }
 .cell__comment {
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   width: 100%; }
 .cell__input--comment {
   height: 11.25rem;
@@ -1927,7 +1937,7 @@ html, body {
       margin-bottom: 4%; } }
   @media screen and (max-width: 480px) {
     .checkbox {
-      margin-bottom: 4%; } }
+      margin-bottom: 2%; } }
 
 .button__submit {
   outline: none;

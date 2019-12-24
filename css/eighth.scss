@@ -59,7 +59,7 @@
     @include mobile {
         margin-right: 0%;
         width: 100%;
-        margin-bottom: 5%;
+        margin-bottom: 2%;
     }
 
 }
@@ -69,15 +69,28 @@
     &__1 {
         flex-basis: 49%;
         margin-bottom: 5%;
+
+        @include mobile {
+            margin-bottom: 2%;
+        }
+
     }
 
     &__2 {
         flex-basis: 100%;
         margin-bottom: 5%;
+
+        @include mobile {
+            margin-bottom: 2%;
+        }
     }
 
     &__3 {
         flex-basis: 22%;
+
+        @include mobile {
+            margin-bottom: 2%;
+        }
     }
 
     &__input {
@@ -91,13 +104,14 @@
         font-size: 1rem;
         box-sizing: border-box;
         text-align: left;
+
         @include mobile {
-        height: 3rem;
+            height: 3rem;
         }
     }
 
     &__comment {
-        margin-bottom: 3%;
+        margin-bottom: 2%;
         width: 100%;
     }
 
@@ -105,8 +119,9 @@
     &__input--comment {
         height: 11.25rem;
         resize: none;
+
         @include mobile {
-        height: 8rem;
+            height: 8rem;
         }
     }
 }
@@ -137,7 +152,7 @@
         flex-flow: row wrap;
         width: 100%;
         margin-bottom: 13%;
-        width:25rem;
+        width: 25rem;
 
         @include tablets {
             justify-content: center;
@@ -161,12 +176,13 @@
     &:nth-child(3) {
         margin-right: 0%;
     }
+
     @include tablets {
-       margin-bottom: 4%;
+        margin-bottom: 4%;
     }
 
     @include mobile {
-        margin-bottom: 4%;
+        margin-bottom: 2%;
     }
 }
 

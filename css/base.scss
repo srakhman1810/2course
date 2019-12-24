@@ -33,7 +33,7 @@ html , body {
     width:100%;
   
 	@include tablets {
-		min-height: initial;
+		min-height: 0%;
 	}
 }
 
