@@ -367,7 +367,8 @@ html, body {
       min-height: 0px; } }
   @media screen and (max-width: 480px) {
     .first {
-      min-height: 0px; } }
+      min-height: 0px;
+      height: 100%; } }
   @media screen and (max-width: 768px) {
     .first {
       background-position: right top; } }
@@ -765,7 +766,8 @@ html, body {
       min-height: 0px; } }
   @media screen and (max-width: 480px) {
     .second {
-      min-height: 0px; } }
+      min-height: 0px;
+      height: 100%; } }
   @media screen and (max-width: 480px) {
     .second {
       background: none; } }
@@ -930,7 +932,8 @@ html, body {
       min-height: 0px; } }
   @media screen and (max-width: 480px) {
     .third {
-      min-height: 0px; } }
+      min-height: 0px;
+      height: 100%; } }
 
 .third__container {
   display: flex;
@@ -1237,7 +1240,8 @@ html, body {
       min-height: 0px; } }
   @media screen and (max-width: 480px) {
     .fourth {
-      min-height: 0px; } }
+      min-height: 0px;
+      height: 100%; } }
   .fourth:after {
     content: url(../img/fourth/blueberries.png);
     position: absolute;
@@ -1362,7 +1366,8 @@ html, body {
       min-height: 0px; } }
   @media screen and (max-width: 480px) {
     .fifth {
-      min-height: 0px; } }
+      min-height: 0px;
+      height: 100%; } }
   .fifth:before {
     content: url(../img/fifth/rastberry.png);
     position: absolute;
@@ -1476,7 +1481,8 @@ html, body {
       min-height: 0px; } }
   @media screen and (max-width: 480px) {
     .sixth {
-      min-height: 0px; } }
+      min-height: 0px;
+      height: 100%; } }
   .sixth:before {
     content: url(../img/sixth/background.png);
     position: absolute;
@@ -1642,7 +1648,8 @@ html, body {
       min-height: 0px; } }
   @media screen and (max-width: 480px) {
     .seventh {
-      min-height: 0px; } }
+      min-height: 0px;
+      height: 100%; } }
   @media screen and (max-width: 768px) {
     .seventh {
       padding: 5%; } }
@@ -2036,7 +2043,8 @@ html, body {
       min-height: 0px; } }
   @media screen and (max-width: 480px) {
     .ninth {
-      min-height: 0px; } }
+      min-height: 0px;
+      height: 100%; } }
   .ninth__container {
     display: flex;
     justify-content: center;
