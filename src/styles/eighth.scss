@@ -1,0 +1,287 @@
+.eighth {
+    background: url(../img/eighth/background.png) center center / cover no-repeat;
+}
+
+.eighth__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $green;
+    padding: 1%;
+
+    &>h2 {
+        margin: 0%;
+        font-size: 3rem;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 4%;
+        text-align: center;
+        white-space: nowrap;
+        z-index: 1;
+
+        @include mobile {
+            font-size: 2.1875rem;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.125rem;
+    z-index: 1;
+    width: 100%;
+
+
+    @include tablets {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.personal-information {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 49%;
+
+    @include tablets {
+        margin-right: 0%;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    @include mobile {
+        margin-right: 0%;
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+}
+
+.cell {
+
+    &__1 {
+        flex-basis: 49%;
+        margin-bottom: 5%;
+
+        @include mobile {
+            margin-bottom: 2%;
+        }
+
+    }
+
+    &__2 {
+        flex-basis: 100%;
+        margin-bottom: 5%;
+
+        @include mobile {
+            margin-bottom: 2%;
+        }
+    }
+
+    &__3 {
+        flex-basis: 22%;
+
+        @include mobile {
+            margin-bottom: 2%;
+        }
+    }
+
+    &__input {
+        height: 3.6875rem;
+        width: 100%;
+        background: $white;
+        padding: 3% 3%;
+        outline: none;
+        border: rem(1px) solid transparent;
+        color: $green;
+        font-size: 1rem;
+        box-sizing: border-box;
+        text-align: left;
+
+        @include mobile {
+            height: 3rem;
+        }
+    }
+
+    &__comment {
+        margin-bottom: 2%;
+        width: 100%;
+    }
+
+
+    &__input--comment {
+        height: 11.25rem;
+        resize: none;
+
+        @include mobile {
+            height: 8rem;
+        }
+    }
+}
+
+.cell__input:focus {
+    border-color: $green;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 49%;
+
+    @include tablets {
+        width: 100%;
+        align-items: center;
+    }
+
+    @include mobile {
+        width: 100%;
+        align-items: center;
+    }
+
+
+    &__checkbox {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        margin-bottom: 13%;
+        width: 25rem;
+
+        @include tablets {
+            justify-content: center;
+            margin-bottom: 5%;
+        }
+
+        @include mobile {
+            justify-content: center;
+            margin-bottom: 0%;
+        }
+    }
+
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+    font-size: 1rem;
+
+    &:nth-child(3) {
+        margin-right: 0%;
+    }
+
+    @include tablets {
+        margin-bottom: 4%;
+    }
+
+    @include mobile {
+        margin-bottom: 2%;
+    }
+}
+
+.button__submit {
+    outline: none;
+    margin-right: 10%;
+    width: 9.75rem;
+    height: 3.625rem;
+    background: $green;
+    border: rem(1px);
+    border-radius: 3.125rem;
+    font-size: 1rem;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.2s linear;
+
+    &:hover {
+        cursor: pointer;
+        background: $white;
+        color: $green;
+    }
+
+    &:focus {
+        background: $white;
+        color: $green;
+    }
+}
+
+.button__reset {
+    font-size: 1.125rem;
+    color: $green;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.checkbox__circle {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+        content: "";
+        width: 0.8125rem;
+        height: 0.8125rem;
+        border-radius: 50%;
+        background: $green;
+        opacity: 0;
+    }
+}
+
+.checkbox__choice {
+    opacity: 0;
+
+    &:checked~.checkbox__circle:before {
+        opacity: 1;
+    }
+
+    &:checked:checked+.checkbox__square>.mark {
+        opacity: 1;
+    }
+}
+
+.checkbox__square {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    background: $white;
+    margin-right: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mark {
+    opacity: 0;
+    width: 0.9375rem;
+    height: 0.8125rem;
+}
+
+.buttons {
+    @include tablets {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+}

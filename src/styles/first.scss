@@ -1,0 +1,521 @@
+.first {
+    background-color: $blue;
+    background-image: url(../img/first/background.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    @include size;
+    position: relative;
+
+    @include tablets {
+        background-position: right top;
+    }
+
+    @include mobile {
+        background-position: right top;
+    }
+
+    &:after {
+        content: url(../img/first/background2.png);
+        position: absolute;
+        bottom: -8%;
+        right: 0%;
+
+        @include tablets {
+            bottom: 42%;
+            right: 16%;
+        }
+
+        @include mobile {
+            bottom: 45%;
+            right: 0%;
+        }
+    }
+
+    &:before {
+        content: url(../img/first/background3.png);
+        position: absolute;
+        bottom: -8%;
+        left: 0%;
+
+        @include tablets {
+            bottom: 42%;
+            left: 16%;
+        }
+
+        @include mobile {
+            bottom: 42%;
+            left: 5%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+}
+
+// ХЕДЕР
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    @include tablets {
+    flex-grow: 0;
+    height:9%;
+    }
+
+    @include mobile {
+    height:8%;
+        
+    }
+}
+
+.logo {
+    width: 4.3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    color: $white;
+    font-family: 'MuseoSansCyrl', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+
+    @include tablets {
+        width: 100vw;
+        height: 100vh;
+        background-color: $dark;
+        z-index: 4;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        align-items: center;
+        display: none;
+    }
+
+    @include mobile {
+        width: 100vw;
+        height: 100vh;
+        background-color: $dark;
+        z-index: 4;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        align-items: center;
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin: 0%;
+        padding-left: 0%;
+        text-align: center;
+    
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        list-style-type: none;
+        margin-right: 2%;
+        transition: 0.3s linear;
+       
+
+        &:nth-last-child(1) {
+            margin-right: 0%;
+        }
+
+        @include tablets {
+            width: 100%;
+            margin-bottom: 3%;
+            margin-bottom: 20%;
+            padding: 2%;
+
+            &:hover {
+                background: $light;
+                border-radius: 50px;
+            }
+        }
+
+        @include mobile {
+            margin-bottom: 3%;
+            margin-bottom: 20%;
+            padding: 2%;
+
+            &:hover {
+                background: $light;
+                border-radius: 50px;
+            }
+        }
+
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.125rem;
+        white-space: nowrap;
+
+        @include tablets {
+            font-size: 1.5rem;
+
+            &:hover {
+            color: $dark;
+            }
+        }
+
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.x-menu {
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    list-style-type: none;
+    display: none;
+
+    @include tablets {
+        display: flex;
+    }
+
+    @include mobile {
+        display: flex;
+    }
+}
+
+.x-close:focus+.menu {
+    display: none;
+}
+
+.call {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10rem;
+    text-align: center;
+    z-index: 2;
+
+    &__number {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $white;
+        font-style: normal;
+        text-transform: uppercase;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    @include tablets {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.phone {
+    height: 0.6875rem;
+    width: 0.75rem;
+
+    &-icon {
+        fill: $white;
+    }
+}
+
+// ОСНОВНОЕ
+.bars {
+    color: $white;
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+
+    @include tablets {
+        flex-direction: column;
+        flex-direction: column-reverse;
+        flex-grow: 0;
+        height:80%;
+        
+    }
+
+    @include mobile {
+        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-top: 0%;
+        height:77%;
+    }
+
+    &__image {
+        position: absolute;
+        right: 0%;
+        z-index: 1;
+        animation: 10s swing infinite linear;
+        @keyframes swing {
+            0% {
+            transform: rotate3d(0, 0, 1, 15deg);
+           }
+
+            10% {
+            transform: rotate3d(0, 0, 1, -15deg);
+            }
+          
+            20% {
+              transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+            30% {
+              transform: rotate3d(0, 0, 1, -15deg);
+            }
+          
+            40% {
+              transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+            50% {
+              transform: rotate3d(0, 0, 1, -15deg);
+            }
+
+            60% {
+            transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+            70% {
+              transform: rotate3d(0, 0, 1, -15deg);
+            }
+          
+            80% {
+              transform: rotate3d(0, 0, 1, 15deg);
+            }
+
+            90% {
+                  transform: rotate3d(0, 0, 1, -15deg);
+            }
+
+            100% {
+                transform: rotate3d(0, 0, 1, 15deg);
+            }
+          
+          }
+          
+
+        @include tablets {
+            position: static;
+            height: 60%;
+        }
+
+        @include mobile {
+            position: static;
+            height: 45%;
+        }
+    }
+}
+
+.bars__information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25rem;
+    z-index: 3;
+
+
+    &>h1 {
+        font-size: 3.75rem;
+        text-transform: uppercase;
+        margin: 0% 0% 3%;
+        line-height: 1;
+        @include tablets {
+            font-size: 3.3rem;
+            margin: 0% 0% 0%;
+        }
+        @include mobile {
+            font-size: 3.3rem;
+        }
+    }
+
+    &>p {
+        font-size: 1.25rem;
+        margin: 0% 0% 9%;
+        white-space: pre-line;
+        @include tablets {
+            margin: 0% 0% 3%;
+        }
+        @include mobile {
+            margin: 0% 0% 3%;
+        }
+    }
+
+    @include tablets {
+        align-items: center;
+        text-align: center;
+        height:40%;
+    }
+
+    @include mobile {
+        align-items: center;
+        text-align: center;
+        height:55%;
+    }
+}
+
+.bars__button {
+    outline: none;
+    width: 9.75rem;
+    height: 3.625rem;
+    background: $white;
+    border: rem(1px);
+    border-radius: 3.125rem;
+    font-size: 1.125rem;
+    color: $green;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.2s linear;
+
+    &:hover {
+        cursor: pointer;
+        background: $green;
+        color: $white;
+    }
+
+    &:focus {
+        background: $green;
+        color: $white;
+    }
+
+}
+
+.advantages {
+    flex-grow: 1;
+    display: flex;
+    font-size: 1rem;
+    z-index: 1;
+
+    @include tablets {
+        justify-content: center;
+        flex-grow:0;
+        height:11%;
+    }
+
+    @include mobile {
+        justify-content: center;
+        font-size: 0.8rem;
+        height: 15%;
+    }
+
+    &__list {
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 30.31rem;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 2%;
+        margin: rem(0px);
+
+        &:nth-last-child(1) {
+            margin-right: 0;
+        }
+    }
+}
+
+.advantages__item>p {
+    width: 3.75rem;
+    margin: 0;
+}
+
+.icon {
+    fill: none;
+    stroke: #aef5fe;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.leaves-icon {
+    height: 3.125rem;
+    width: 3.75rem;
+
+    @include mobile {
+        height: 2.06rem;
+        width: 2.66rem;
+    }
+}
+
+.track-icon {
+    height: 3.125rem;
+    width: 5rem;
+
+    @include mobile {
+        height: 2.06rem;
+        width: 3.125rem;
+    }
+}
+
+.measure-icon {
+    height: 3.125rem;
+    width: 4.06rem;
+
+    @include mobile {
+        height: 2.06rem;
+        width: 3.125rem;
+    }
+}
+
+// БУРГЕР
+.link-menu {
+    position: absolute;
+    top: 0.1%;
+    right: 2%;
+    z-index:1;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.side-menu {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: none;
+
+    @include tablets {
+        display: block;
+    }
+
+    @include mobile {
+        display: block;
+    }
+
+}

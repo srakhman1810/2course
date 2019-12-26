@@ -1,0 +1,157 @@
+.fourth {
+    color: $black;
+    @include size;
+    background-image: url(../img/fourth/background.png);
+    background-position: right top 5%;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:after {
+        content: url(../img/fourth/blueberries.png);
+        position: absolute;
+        top: -5%;
+        right: 1%;
+
+        @include tablets {
+            right: 0%;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+.fourth__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+
+    &>h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
+        margin: 0% 0% 4%;
+    }
+}
+
+.team {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height:50%;
+    list-style-type: none;
+    margin: 0%;
+    padding-left: 0%;
+
+    &__item {
+        width: 25%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+       
+        @include tablets {
+            width: 40%; 
+        }
+    }
+
+    &__image {
+        width: 90%;
+        margin-bottom: 3%;
+        @include tablets {
+            width: 82%;
+        }
+    }
+   
+    @include tablets {
+       height: 85%;
+    }
+
+    @include mobile {
+        height: 75%;
+    }
+
+}
+
+.employee {
+    display: flex;
+    align-items: center;
+    font-size: 1.3125rem;
+    color: $black;
+    text-decoration: none;
+    margin-bottom: 5%;
+    @include mobile {
+        font-size: 1rem;
+    }
+
+    &--active {
+    &:after{
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+    }
+    }
+    
+    &:after{
+    content: "";
+    border: 0.35rem solid transparent;
+    border-top-color:$green;
+    margin-left: 0.3rem;
+    margin-top: 0.2rem;
+    transition: 0.5s linear;
+    }
+}
+
+.triangle {
+    height: 1rem;
+    width: 1rem;
+    fill: $green;
+    transition: 0.5s;
+
+}
+
+.team-direction {
+    overflow: hidden;
+    height: 0;
+
+    &>h5 {
+        font-size: 1.0625rem;
+        margin: 0%;
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+
+    &>p {
+        font-size: 1.0625rem;
+        margin: 0%;
+        color: $grey;
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+
+    &--active {
+        height: 7rem;
+        animation: acv 1s;
+        @keyframes acv {
+            from {
+              opacity: 0;
+              -webkit-transform: translate3d(0, -40%, 0);
+              transform: translate3d(0, -40%, 0);
+            }
+          
+            to {
+              opacity: 1;
+              -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+            }
+          }
+        
+    }
+
+}

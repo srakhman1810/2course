@@ -1,0 +1,22 @@
+.ninth {
+    @include size;
+    background: $green; 
+    position: relative;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+}
+
+.map {
+    width: 100%;
+    height: 100vh;
+}
+ .balloon {
+     background: $green;
+     text-align: center;
+     font-size: 0.9rem;
+     color: white;
+ }
