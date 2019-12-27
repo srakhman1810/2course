@@ -74,7 +74,7 @@
 }
 
 .video-block {
-    width: 41.25rem;
+    width: 69%;
     height: 26rem;
     z-index: 1;
     display: flex;
@@ -84,19 +84,21 @@
     position:relative;
 
     @include tablets {
-        width: 36.93rem;
+        width: 60%;
+        // width: 36.93rem;
         height: 23.2rem;
     }
 
     @include mobile {
-        width: 22.5rem;
-        height: 14.2rem;
+        width: 100%;
+        // width: 22.5rem;
+        height: 16.2rem;
     }
 }
 
 .video {
     width: 100%;
-    height: 89%;
+    // height: 89%;
 
     &-icon {
         width: 10%;
@@ -118,6 +120,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: $grey;
 }
 
 .play {
@@ -129,7 +132,7 @@
 }
 
 .progress {
-    width: 60%;
+    width: 54%;
     height: 12%;
     border-radius: 50px;
     background: $grey;
@@ -144,10 +147,14 @@
         border-radius: 50px;
         background: $grey;
         cursor: pointer;
+        @include mobile {
+            height: 9px;
+            width: 9px;
+        }
     }
 
     @include mobile {
-        width: 50%;
+        width: 31%;
     }
 }
 
@@ -160,7 +167,7 @@
 }
 
 .volume {
-    width: 18%;
+    width: 13%;
     height: 12%;
     border-radius: 50px;
     background: $grey;
@@ -174,6 +181,11 @@
         border-radius: 50px;
         background: $grey;
         cursor: pointer;
+        @include mobile {
+            height: 9px;
+            width: 9px;
+        }
+
     }
 }
 

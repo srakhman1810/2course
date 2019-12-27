@@ -7,7 +7,9 @@ const video = document.querySelector('.video'),
     pauseIcon = document.querySelector('.pause-icon'),
     muteIcon = document.querySelector('.mute-icon'),
     volumeIcon = document.querySelector('.volume-icon'),
-    playBig = document.querySelector('.video-icon');
+    playBig = document.querySelector('.video-icon'),
+    curtimetext = document.querySelector('.curtimetext'),
+    durtimetext = document.querySelector('.durtimetext');
 
 play.addEventListener('click', function (e) {
     if (video.paused) {
@@ -86,6 +88,18 @@ function progressUpdate() {
     let d = video.duration;
     let c = video.currentTime;
     progress.value = 100 * c / d;
+    var curmins = Math.floor(video.currentTime / 60);
+    var cursecs = Math.floor(video.currentTime - curmins * 60);
+    var durmins = Math.floor(video.duration / 60);
+    var dursecs = Math.round(video.duration - durmins * 60);
+    if (cursecs<10) {
+        cursecs = "0"+cursecs;
+    }
+    if (dursecs<10) {
+        dursecs = "0"+dursecs;
+    }
+    curtimetext.innerHTML = curmins+":"+cursecs;
+    durtimetext.innerHTML=  durmins+":"+dursecs;
 }
 
 progress.addEventListener('click', function(e) {
@@ -96,6 +110,8 @@ progress.addEventListener('click', function(e) {
     video.currentTime = video.duration * (o / w);
     video.play();
 })
+
+
 
 
 
