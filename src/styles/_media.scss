@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap&subset=cyrillic-ext');
+
+@font-face {
+    font-family: MuseoSansCyrl;
+    src: url(fonts/Museo-Sans-Cyr/MuseoSansCyrl_1.otf);
+}
+
+@mixin tablets {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width:480px) {
+        @content;
+    }
+}
+
+@mixin size {
+    height: 100vh;
+    width: 100%;
+    min-height: 650px;
+    box-sizing: border-box;
+
+    @include tablets {
+        min-height: 0px;
+    }
+
+    @include mobile {
+        min-height: 0px;
+        height: 100%;
+    }
+}
+
+$blue: rgb(97, 196, 217);
+$white: rgb(255, 255, 255);
+$green: rgb(11, 77, 60);
+$black: rgb(14, 14, 14);
+$grey: rgb(141, 141, 141);
+$light: rgb(248, 250, 249);
+$dark: rgb(49, 52, 54);
