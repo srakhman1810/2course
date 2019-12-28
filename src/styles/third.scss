@@ -29,6 +29,9 @@
     padding-left: 0;
     right: 0%;
     will-change: right;
+    @include mobile {
+        align-items: flex-end;
+    }
 }
 
 .slider__bar {
