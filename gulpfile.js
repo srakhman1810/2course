@@ -6,7 +6,6 @@ const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
-// const px2rem = require('gulp-smile-px2rem');
 const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
@@ -18,7 +17,8 @@ sass.compiler = require('node-sass');
 const env = process.env.NODE_ENV;
 
 task('copy:html', () => {
-    return src('src/*.html').pipe(dest('dist'))
+    return src('src/*.html')
+    .pipe(dest('dist'))
     .pipe(reload({ stream: true }));
 });
 
@@ -37,7 +37,6 @@ task('style', () => {
         .pipe(concat('main.scss'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        // .pipe(px2rem())
         .pipe(gulpif(env == 'dev',
             autoprefixer({
                 overrideBrowserslist: ['last 2 versions'],
@@ -55,12 +54,12 @@ task('script', () => {
     return src('src/javascript/*.js')
         .pipe(gulpif(env == 'dev', sourcemaps.init()))
         .pipe(concat('main.js'))
-        .pipe(gulpif(env == 'dev',
+        .pipe(gulpif(env == 'prod',
             babel({
                 presets: ['@babel/env']
             })
         ))
-        .pipe(gulpif(env == 'dev', uglify()))
+        .pipe(gulpif(env == 'prod', uglify()))
         .pipe(gulpif(env == 'dev', sourcemaps.write()))
         .pipe(dest('dist'));
 });
