@@ -1,11 +1,11 @@
 .fifth {
     @include size;
-    background: url(../img/fifth/background.png) center center / cover no-repeat rgba(0, 0, 0, .9);
+    background: url(img/fifth/background.png) center center / cover no-repeat rgba(0, 0, 0, .9);
     color: $white;
     position: relative;
 
     &:before {
-        content: url(../img/fifth/rastberry.png);
+        content: url(img/fifth/rastberry.png);
         position: absolute;
         top: -10%;
         left: 3%;
@@ -76,15 +76,15 @@
     display: block;
 
     &--one {
-        background: url(../img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat rgba($black, .9);
+        background: url(img/fifth/kokosovoe-maslo-dlya-zdorovya-i-krasoty_копия.png) center center / cover no-repeat rgba($black, .9);
     }
 
     &--two {
-        background: url(../img/fifth/Granola-Bars-with-calamondin.png) center center / cover no-repeat rgba($black, .9);
+        background: url(img/fifth/Granola-Bars-with-calamondin.png) center center / cover no-repeat rgba($black, .9);
     }
 
     &--three {
-        background: url(../img/fifth/shutterstock_684121381.png) center center / cover no-repeat rgba($black, .9);
+        background: url(img/fifth/shutterstock_684121381.png) center center / cover no-repeat rgba($black, .9);
     }
 }
 
@@ -124,13 +124,7 @@
 
 .bars-type__item--active {
     max-width: 62%;
-    // width: auto;
-    // animation: ach 1s;
-    // @keyframes ach {
-    //    from { transform: translateX(79%) ;}   
-    //    to { transform:  translateX(0%);}
-    // }
-
+  
     @include mobile {
         width: 100%;
     }

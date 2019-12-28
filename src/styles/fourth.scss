@@ -1,13 +1,13 @@
 .fourth {
     color: $black;
     @include size;
-    background-image: url(../img/fourth/background.png);
+    background-image: url(img/fourth/background.png);
     background-position: right top 5%;
     background-repeat: no-repeat;
     position: relative;
 
     &:after {
-        content: url(../img/fourth/blueberries.png);
+        content: url(img/fourth/blueberries.png);
         position: absolute;
         top: -5%;
         right: 1%;

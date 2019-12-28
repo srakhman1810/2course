@@ -1,6 +1,6 @@
 .first {
     background-color: $blue;
-    background-image: url(../img/first/background.png);
+    background-image: url(img/first/background.png);
     background-repeat: no-repeat;
     background-position: right center;
     @include size;
@@ -17,7 +17,7 @@
     &:after {
         content: "";
         display: block;
-        background-image: url(../img/first/background2.png);
+        background-image: url(img/first/background2.png);
         background-repeat: no-repeat;
         background-size: 100%;
         background-position-y: bottom;
@@ -42,7 +42,7 @@
     &:before {
         content: "";
         display: block;
-        background-image: url(../img/first/background3.png);
+        background-image: url(img/first/background3.png);
         background-repeat: no-repeat;
         background-size: 100%;
         background-position-y: bottom;
@@ -343,7 +343,6 @@
           
           }
           
-
         @include tablets {
             position: static;
             height: 60%;
@@ -362,7 +361,6 @@
     align-items: flex-start;
     width: 25rem;
     z-index: 3;
-
 
     &>h1 {
         font-size: 3.75rem;

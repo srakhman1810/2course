@@ -5,7 +5,7 @@
     font-size: 1.125rem;
 
     &:before {
-        content: url(../img/sixth/background.png);
+        content: url(img/sixth/background.png);
         position: absolute;
         bottom: -22%;
         z-index: 1;
@@ -19,7 +19,7 @@
     }
 
     &:after {
-        content: url(../img/sixth/strawberry.png);
+        content: url(img/sixth/strawberry.png);
         position: absolute;
         right: 11%;
         top: 4%;
@@ -86,7 +86,7 @@
         align-items: center;
         justify-content: center;
         background-color: $light;
-        background-image: url('../img/sixth/background2.png');
+        background-image: url('img/sixth/background2.png');
         background-repeat: no-repeat;
         background-position: right top;
         padding: 0% 2%;
@@ -106,7 +106,7 @@
         }
      
         &:before {
-            content: url(../img/sixth/ellipse.png);
+            content: url(img/sixth/ellipse.png);
             position: absolute;
             top: 0%;
         }

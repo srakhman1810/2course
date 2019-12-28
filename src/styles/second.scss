@@ -1,7 +1,7 @@
 
 .second {
     position: relative;
-    background: url('../img/second/background.png') left center no-repeat;
+    background: url('img/second/background.png') left center no-repeat;
     @include size;
 
     @include mobile {
@@ -9,7 +9,7 @@
     }
 
     &:before {
-        content: url(../img/second/snack.png);
+        content: url(img/second/snack.png);
         position: absolute;
         bottom: -13%;
         left: 0%;
@@ -175,7 +175,7 @@
 .description__item:after {
     content: "";
     display: block;
-    background: url(../img/second/rounds.png);
+    background: url(img/second/rounds.png);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 28%;

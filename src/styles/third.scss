@@ -15,15 +15,8 @@
 
 .slider-block {
     width: 80%;
-    height: 80%;
+    height: 90%;
     overflow: hidden;
-
-    @include tablets {
-        height:90%;
-    }
-    @include mobile {
-        height:90%;
-    }
 }
 
 .slider {
@@ -79,7 +72,7 @@
     }
 
     &:before {
-        content: url(../img/third/leaf2.png);
+        content: url(img/third/leaf2.png);
         position: absolute;
         top: 16%;
         left: -1%;
@@ -95,7 +88,7 @@
     }
 
     &:after {
-        content: url(../img/third/leaf1.png);
+        content: url(img/third/leaf1.png);
         position: absolute;
         bottom: 0%;
         right: 0%;
@@ -130,8 +123,8 @@
 
 .consist {
     position: absolute;
-    top: -26%;
-    right: 37%;
+    top: -34%;
+    right: 35%;
 
     @include tablets {
         top: -17%;
