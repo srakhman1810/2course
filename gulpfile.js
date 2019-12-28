@@ -63,6 +63,10 @@ task('script', () => {
         .pipe(gulpif(env == 'dev', sourcemaps.write()))
         .pipe(dest('dist'));
 });
+task('fonts', () => {
+    return src('src/fonts/**/*.otf')
+        .pipe(dest('dist/fonts'));
+});
 
 task('image', () => {
     return src('src/img/**/*.png')
@@ -97,12 +101,12 @@ task('watch', () => {
 
 task('default', series(
     'clean',
-    parallel('copy:html', 'style', 'script', 'image', 'icons', 'video'),
+    parallel('copy:html', 'style', 'script', 'fonts', 'image', 'icons', 'video'),
     parallel('watch', 'server')
 ));
 
 task('build',
-    series(parallel('copy:html', 'style', 'script', 'image', 'icons', 'video'),
+    series(parallel('copy:html', 'style', 'script', 'fonts', 'image', 'icons', 'video'),
     ));
 
 // task('default', series('clean', parallel('copy:html', 'style', 'script', 'image', 'icons', 'video'), 'server'));
