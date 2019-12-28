@@ -173,7 +173,13 @@
 }
 
 .description__item:after {
-    content: url(../img/second/rounds.png);
+    content: "";
+    display: block;
+    background: url(../img/second/rounds.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 28%;
+    height: 18%;
     position: absolute;
     top: 20%;
     right: -13%;
@@ -187,5 +193,5 @@
 }
 
 .description__item:last-child:after {
-    content: "";
+    content:none;
 }

@@ -15,36 +15,54 @@
     }
 
     &:after {
-        content: url(../img/first/background2.png);
+        content: "";
+        display: block;
+        background-image: url(../img/first/background2.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: bottom;
+        width:50%;
+        height:55%;
         position: absolute;
         bottom: -8%;
-        right: 0%;
+        right: -6%;
 
         @include tablets {
-            bottom: 42%;
+            bottom: 12%;
             right: 16%;
         }
 
         @include mobile {
-            bottom: 45%;
-            right: 0%;
+            bottom: 57%;
+            right: 16%;
+            width: 64%;
         }
     }
 
     &:before {
-        content: url(../img/first/background3.png);
+        content: "";
+        display: block;
+        background-image: url(../img/first/background3.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: bottom;
         position: absolute;
+        width: 5%;
+        height: 46%;
         bottom: -8%;
-        left: 0%;
+        left: 6%;
+    
 
         @include tablets {
-            bottom: 42%;
-            left: 16%;
+            bottom: 58%;
+            left: 5%;
+            width: 9%;
         }
 
         @include mobile {
-            bottom: 42%;
+            bottom: 58%;
             left: 5%;
+            width: 9%;
         }
     }
 
@@ -275,6 +293,7 @@
     &__image {
         position: absolute;
         right: 0%;
+        width:60%;
         z-index: 1;
         animation: 10s swing infinite linear;
         @keyframes swing {
@@ -496,12 +515,16 @@
 // БУРГЕР
 .link-menu {
     position: absolute;
-    top: 0.1%;
+    top: 3%;
     right: 2%;
     z-index:1;
 
     &:hover {
         cursor: pointer;
+    }
+
+    @include mobile {
+        top:0%;
     }
 }
 

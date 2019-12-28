@@ -1,51 +1,110 @@
-const {src , dest, task, series, watch} = require("gulp");
+const { src, dest, task, series, watch, parallel } = require("gulp");
 const rm = require('gulp-rm');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
-
+const reload = browserSync.reload;
+const sassGlob = require('gulp-sass-glob');
+const autoprefixer = require('gulp-autoprefixer');
+// const px2rem = require('gulp-smile-px2rem');
+const gcmq = require('gulp-group-css-media-queries');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const gulpif = require('gulp-if');
 sass.compiler = require('node-sass');
 
-task('copy', ()=>{
-    return src('src/styles/**/*.scss').pipe(dest('dist'));
-    // npm run gulp copy
+const env = process.env.NODE_ENV;
+
+task('copy:html', () => {
+    return src('src/*.html').pipe(dest('dist'))
+    .pipe(reload({ stream: true }));
 });
 
-task('clean', ()=>{
-    return src('dist/**/*', {read:false}).pipe(rm());
-    // npm install --save-dev gulp-rm есть 
-    // npm run gulp clean
+task('clean', () => {
+    return src('dist/**/*', { read: false }).pipe(rm());
 });
 
 const style = [
-   'node_modules/normalize.css/normalize.css',
-   // npm install --save normalize.css есть
-   'src/styles/main.scss'
-]
+     "node_modules/normalize.css/normalize.css",
+     "src/styles/main.scss"
+  ];
 
-task('style', ()=>{
+task('style', () => {
     return src(style)
-    .pipe(concat('main.scss'))
-     // npm install --save-dev gulp-concat есть
-    .pipe(sass().on('error', sass.logError))
-    .pipe(dest('dist'));
-    // npm install node-sass gulp-sass --save-dev есть
-    // npm run gulp style
+        .pipe(gulpif(env == 'dev', sourcemaps.init()))
+        .pipe(concat('main.scss'))
+        .pipe(sassGlob())
+        .pipe(sass().on('error', sass.logError))
+        // .pipe(px2rem())
+        .pipe(gulpif(env == 'dev',
+            autoprefixer({
+                overrideBrowserslist: ['last 2 versions'],
+                cascade: false
+            })
+        ))
+        .pipe(gulpif(env == 'prod', gcmq()))
+        .pipe(gulpif(env == 'prod', cleanCSS({ compatibility: 'ie8' })))
+        .pipe(gulpif(env == 'dev', sourcemaps.write()))
+        .pipe(dest('dist'))
+        .pipe(reload({ stream: true }));
 });
 
-// // gulp.task('browser-sync',()=> {
-// //     browserSync.init({
-// //         server: {
-// //             baseDir: "./dist"
-// //         }
-// //     });
-// // });
+task('script', () => {
+    return src('src/javascript/*.js')
+        .pipe(gulpif(env == 'dev', sourcemaps.init()))
+        .pipe(concat('main.js'))
+        .pipe(gulpif(env == 'dev',
+            babel({
+                presets: ['@babel/env']
+            })
+        ))
+        .pipe(gulpif(env == 'dev', uglify()))
+        .pipe(gulpif(env == 'dev', sourcemaps.write()))
+        .pipe(dest('dist'));
+});
 
-watch("./src/styles/**/*.scss", series('style'));
-task('default', series('clean' , 'style'));
-// //  npm run gulp
+task('image', () => {
+    return src('src/img/**/*.png')
+        .pipe(dest('dist/img'));
+});
 
-// // сервер
-// // npm install browser-sync --save-dev
+task('icons', () => {
+    return src('src/img/sprite.svg')
+        .pipe(dest('dist/img'));
+});
+
+task('video', () => {
+    return src('src/video/*.mp4')
+        .pipe(dest('dist/video'));
+});
 
 
+task('server', () => {
+    browserSync.init({
+        server: {
+            baseDir: "./dist"
+        },
+        open: false
+    });
+});
+
+task('watch', () => {
+    watch("./src/styles/**/*.scss", series('style'));
+    watch("./src/*.html", series('copy:html'));
+    watch("./src/javascript/*.js", series('script'));
+});
+
+task('default', series(
+    'clean',
+    parallel('copy:html', 'style', 'script', 'image', 'icons', 'video'),
+    parallel('watch', 'server')
+));
+
+task('build',
+    series(parallel('copy:html', 'style', 'script', 'image', 'icons', 'video'),
+    ));
+
+// task('default', series('clean', parallel('copy:html', 'style', 'script', 'image', 'icons', 'video'), 'server'));
+// // //  npm run gulp
